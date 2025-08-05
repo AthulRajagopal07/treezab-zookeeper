@@ -1,11 +1,11 @@
 # --- Build Stage ---
-FROM maven:3.8.7-openjdk-17 AS builder
+FROM maven:3.9.7-eclipse-temurin-17 AS builder
 WORKDIR /app
 COPY . .
 RUN mvn clean package -DskipTests
 
 # --- Run Stage ---
-FROM openjdk:17-jdk-slim
+FROM eclipse-temurin:17-jdk
 WORKDIR /app
 
 # Copy the built jar from the build stage
