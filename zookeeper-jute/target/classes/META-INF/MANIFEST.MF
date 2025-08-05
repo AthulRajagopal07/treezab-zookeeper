@@ -1,0 +1,34 @@
+Manifest-Version: 1.0
+Build-Jdk-Spec: 17
+Bundle-Description: ZooKeeper jute
+Bundle-DocURL: https://zookeeper.apache.org/doc/current/
+Bundle-License: https://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-ManifestVersion: 2
+Bundle-Name: ZooKeeper Jute Bundle
+Bundle-SymbolicName: org.apache.zookeeper.jute
+Bundle-Vendor: The Apache Software Foundation
+Bundle-Version: 3.10.0.SNAPSHOT
+Created-By: 17.0.15 (Microsoft),Apache Maven Bundle Plugin 5.1.9
+Export-Package: org.apache.zookeeper.data;uses:="org.apache.jute,org.apa
+ che.yetus.audience";version="3.10.0",org.apache.zookeeper.proto;uses:="
+ org.apache.jute,org.apache.yetus.audience,org.apache.zookeeper.data";ve
+ rsion="3.10.0",org.apache.zookeeper.txn;uses:="org.apache.jute,org.apac
+ he.yetus.audience,org.apache.zookeeper.data";version="3.10.0",org.apach
+ e.jute;uses:="org.apache.yetus.audience";version="3.10.0",org.apache.ju
+ te.compiler;uses:="org.apache.jute.compiler.generated";version="3.10.0"
+ ,org.apache.jute.compiler.generated;uses:="org.apache.jute.compiler";ve
+ rsion="3.10.0"
+Implementation-Build: 06b418b62d281c2259dee3eccb9885393532a204-dirty
+Implementation-Title: Apache ZooKeeper - Jute
+Implementation-Vendor: The Apache Software Foundation
+Implementation-Version: 3.10.0-SNAPSHOT
+Import-Package: org.apache.jute;resolution:=optional,org.apache.jute.com
+ piler;resolution:=optional,org.apache.jute.compiler.generated;resolutio
+ n:=optional,org.apache.yetus.audience;resolution:=optional,org.apache.z
+ ookeeper.data;resolution:=optional
+Merge-Headers: !Implementation-Build,*
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Specification-Title: Apache ZooKeeper - Jute
+Specification-Vendor: The Apache Software Foundation
+Specification-Version: 3.10
+Tool: Bnd-6.3.1.202206071316

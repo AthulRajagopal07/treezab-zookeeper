@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------
+Test set: org.apache.zookeeper.ClientCnxnSocketFragilityTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 19.715 s <<< FAILURE! - in org.apache.zookeeper.ClientCnxnSocketFragilityTest
+testClientCnxnSocketFragility  Time elapsed: 16.966 s  <<< ERROR!
+org.apache.zookeeper.KeeperException$ConnectionLossException: KeeperErrorCode = ConnectionLoss for /testClientCnxnSocketFragility
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:101)
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:53)
+	at org.apache.zookeeper.ZooKeeper.create(ZooKeeper.java:1400)
+	at org.apache.zookeeper.ClientCnxnSocketFragilityTest.testClientCnxnSocketFragility(ClientCnxnSocketFragilityTest.java:113)
+

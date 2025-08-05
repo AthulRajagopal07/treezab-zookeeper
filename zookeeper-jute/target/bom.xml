@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bom version="1" xmlns="http://cyclonedx.org/schema/bom/1.4">
+  <metadata>
+    <tools>
+      <tool>
+        <vendor>OWASP Foundation</vendor>
+        <name>CycloneDX Maven plugin</name>
+        <version>2.7.9</version>
+        <hashes>
+          <hash alg="MD5">8e595cdb67f17e4b41e046456970591d</hash>
+          <hash alg="SHA-1">69e8ca804520d09ce4657e7235bae84d01cbffa6</hash>
+          <hash alg="SHA-256">aa09074fe5aa403c008cd4fc7ef8ce41cd244489337f16b3e91a3914158a4db8</hash>
+          <hash alg="SHA-512">1488a8112da8e675813d7585f57c5efb178aed32901118186ee12d0e4ae3d19c53774c7f860bf70d17d70f050119b69443a2637cf641675b4b5d9cdcdd69b89b</hash>
+          <hash alg="SHA-384">b097295dfbf10887abc6eec58d4d0822cde5a73d1f5c1cf183a57bf569016ad5ced9d34efae3e574d82bb62837540c6c</hash>
+          <hash alg="SHA3-384">289f9520bd73a2031276248a6ef8f0891c691062c2d1ea86a2bc9ea8db2c52377d92a53be9957179e71aee3deda26a8c</hash>
+          <hash alg="SHA3-256">32b50a7efe5d491a4039c0017eca3cf49d98b55fc66d06b3dd06209487323474</hash>
+          <hash alg="SHA3-512">1daf813da53e5d5cda4d0302ff3a5e388aa45d96ebe6dcbe240f35d33f14b1e6390f6bbe7f21f3ed8cf96ebd9f5516a08b18487b7339715109c81cebfc1563df</hash>
+        </hashes>
+      </tool>
+    </tools>
+    <component type="library" bom-ref="pkg:maven/org.apache.zookeeper/zookeeper-jute@3.10.0-SNAPSHOT?type=jar">
+      <publisher>The Apache Software Foundation</publisher>
+      <group>org.apache.zookeeper</group>
+      <name>zookeeper-jute</name>
+      <version>3.10.0-SNAPSHOT</version>
+      <description>ZooKeeper jute</description>
+      <licenses>
+        <license>
+          <id>Apache-2.0</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.apache.zookeeper/zookeeper-jute@3.10.0-SNAPSHOT?type=jar</purl>
+      <externalReferences><reference type="website"><url>http://zookeeper.apache.org/zookeeper-jute</url></reference><reference type="build-system"><url>https://ci-hadoop.apache.org/view/ZooKeeper/</url></reference><reference type="distribution"><url>https://repository.apache.org/service/local/staging/deploy/maven2</url></reference><reference type="issue-tracker"><url>http://issues.apache.org/jira/browse/ZOOKEEPER</url></reference><reference type="mailing-list"><url>http://mail-archives.apache.org/mod_mbox/zookeeper-user/</url></reference><reference type="vcs"><url>https://gitbox.apache.org/repos/asf/zookeeper.git/zookeeper-jute</url></reference></externalReferences>
+    </component>
+    <properties>
+      <property name="maven.goal">makeBom</property>
+      <property name="maven.scopes">compile,provided,runtime,system</property>
+      <property name="maven.reproducible">enabled</property>
+    </properties>
+  </metadata>
+  <components>
+    <component type="library" bom-ref="pkg:maven/org.apache.yetus/audience-annotations@0.12.0?type=jar">
+      <publisher>The Apache Software Foundation</publisher>
+      <group>org.apache.yetus</group>
+      <name>audience-annotations</name>
+      <version>0.12.0</version>
+      <description>Annotations for defining API boundaries and tools for managing javadocs</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">76ba71bbe18c4724d96bec68bbe12ff1</hash>
+        <hash alg="SHA-1">e0efa60318229590103e31c69ebdaae56d903644</hash>
+        <hash alg="SHA-256">ffb101fc066360ff3c77457c927fd7967fb096a6ee9e046ab7071447d8208efc</hash>
+        <hash alg="SHA-512">264a5251272ec55eca1fae5a8fb9336d1eca1ee3bfb586d1ebc382fcfd37077c21cbfa9e198daf4e1eebe9f6fa90487bec2f85bc1c55cf5666cbbfc4d18b1715</hash>
+        <hash alg="SHA-384">f936d92b5c3b3c88428fc7452871e4df112935dd25356396d15deb73dd39790f45909a3d14f038e9f585cee79622ad47</hash>
+        <hash alg="SHA3-384">67ca97a525d98c3dab9ffda40e11d6c683f6f4208ae4a5b28dbd3e2b8b37187dfdcd1d9b89222dc69e5b84ac212f4428</hash>
+        <hash alg="SHA3-256">fd99b55afe40884b5f6cfd9ffbdcd07fa32833443dead288390ca8e737dd3337</hash>
+        <hash alg="SHA3-512">4aaece7bdadc2c2d9660b16345218cfc68a2ea344374d0ffbcdcc3722ff6be5f06c92231ae68ec3884f1aa9b99956cb5135b4060c5457f463251f3767003ad20</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>Apache-2.0</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.apache.yetus/audience-annotations@0.12.0?type=jar</purl>
+      <externalReferences><reference type="website"><url>https://yetus.apache.org/audience-annotations</url></reference><reference type="distribution"><url>https://repository.apache.org/service/local/staging/deploy/maven2</url></reference><reference type="issue-tracker"><url>https://issues.apache.org/jira/browse/YETUS</url></reference><reference type="mailing-list"><url>https://mail-archives.apache.org/mod_mbox/yetus-dev/</url></reference><reference type="vcs"><url>https://github.com/apache/yetus.git/audience-annotations</url></reference></externalReferences>
+    </component>
+  </components>
+  <dependencies>
+    <dependency ref="pkg:maven/org.apache.zookeeper/zookeeper-jute@3.10.0-SNAPSHOT?type=jar">
+      <dependency ref="pkg:maven/org.apache.yetus/audience-annotations@0.12.0?type=jar"/>
+    </dependency>
+    <dependency ref="pkg:maven/org.apache.yetus/audience-annotations@0.12.0?type=jar"/>
+  </dependencies>
+</bom>

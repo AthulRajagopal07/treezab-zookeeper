@@ -1,0 +1,9 @@
+-------------------------------------------------------------------------------
+Test set: org.apache.zookeeper.ClientRequestTimeoutTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 65.816 s <<< FAILURE! - in org.apache.zookeeper.ClientRequestTimeoutTest
+testClientRequestTimeout  Time elapsed: 36.75 s  <<< ERROR!
+java.util.concurrent.TimeoutException: Failed to connect to ZooKeeper server: connected(false), syncConnected(false), readOnlyConnected(false)
+	at org.apache.zookeeper.test.ClientBase$CountdownWatcher.waitForConnected(ClientBase.java:145)
+	at org.apache.zookeeper.ClientRequestTimeoutTest.testClientRequestTimeout(ClientRequestTimeoutTest.java:83)
+

@@ -1,0 +1,786 @@
+2025-08-05 05:40:08,718 [myid:] - INFO  [main:o.a.z.ZKTestCase@107] - STARTING Optional[void org.apache.zookeeper.ClientRequestTimeoutTest.testClientRequestTimeoutTime() throws java.lang.Exception]
+2025-08-05 05:40:08,807 [myid:] - INFO  [main:o.a.z.PortAssignment@154] - Test process 5/8 using ports from 21993 - 24685.
+2025-08-05 05:40:08,858 [myid:] - INFO  [main:o.a.z.PortAssignment@87] - Assigned port 21994 from range 21993 - 24685.
+2025-08-05 05:40:09,413 [myid:] - INFO  [main:o.a.z.s.q.QuorumPeerTestBase$MainThread@208] - id = 0 tmpDir = /usr/csuser/clouddrive/zookeeper/zookeeper-server/target/surefire/test7512114403143952201.junit.dir clientPort = 21994 adminServerPort = 8080
+2025-08-05 05:40:09,920 [myid:] - INFO  [main:o.a.z.c.FourLetterWordMain@143] - connecting to 127.0.0.1:21994 (secure=false)
+2025-08-05 05:40:09,924 [myid:] - INFO  [main:o.a.z.t.ClientBase@291] - server 127.0.0.1:21994 not up: java.net.ConnectException: Connection refused
+2025-08-05 05:40:10,053 [myid:] - INFO  [Thread-0:o.a.z.s.q.QuorumPeerConfig@178] - Reading configuration from: /usr/csuser/clouddrive/zookeeper/zookeeper-server/target/surefire/test7512114403143952201.junit.dir/zoo.cfg
+2025-08-05 05:40:10,175 [myid:] - INFO  [main:o.a.z.c.FourLetterWordMain@143] - connecting to 127.0.0.1:21994 (secure=false)
+2025-08-05 05:40:10,176 [myid:] - INFO  [main:o.a.z.t.ClientBase@291] - server 127.0.0.1:21994 not up: java.net.ConnectException: Connection refused
+2025-08-05 05:40:10,191 [myid:] - INFO  [Thread-0:o.a.z.s.q.QuorumPeerConfig@445] - clientPortAddress is 0.0.0.0:21994
+2025-08-05 05:40:10,191 [myid:] - INFO  [Thread-0:o.a.z.s.q.QuorumPeerConfig@449] - secureClientPort is not set
+2025-08-05 05:40:10,191 [myid:] - INFO  [Thread-0:o.a.z.s.q.QuorumPeerConfig@465] - observerMasterPort is not set
+2025-08-05 05:40:10,191 [myid:] - INFO  [Thread-0:o.a.z.s.q.QuorumPeerConfig@482] - metricsProvider.className is org.apache.zookeeper.metrics.impl.DefaultMetricsProvider
+2025-08-05 05:40:10,340 [myid:0] - INFO  [Thread-0:o.a.z.s.DatadirCleanupManager@78] - autopurge.snapRetainCount set to 3
+2025-08-05 05:40:10,340 [myid:0] - INFO  [Thread-0:o.a.z.s.DatadirCleanupManager@79] - autopurge.purgeInterval set to 0
+2025-08-05 05:40:10,340 [myid:0] - INFO  [Thread-0:o.a.z.s.DatadirCleanupManager@101] - Purge task is not scheduled.
+2025-08-05 05:40:10,340 [myid:0] - WARN  [Thread-0:o.a.z.s.q.QuorumPeerMain@139] - Either no config or no quorum defined in config, running in standalone mode
+2025-08-05 05:40:10,426 [myid:] - INFO  [main:o.a.z.c.FourLetterWordMain@143] - connecting to 127.0.0.1:21994 (secure=false)
+2025-08-05 05:40:10,427 [myid:] - INFO  [main:o.a.z.t.ClientBase@291] - server 127.0.0.1:21994 not up: java.net.ConnectException: Connection refused
+2025-08-05 05:40:10,441 [myid:0] - INFO  [Thread-0:o.a.z.j.ManagedUtil@46] - Log4j 1.2 jmx support not found; jmx disabled.
+2025-08-05 05:40:10,476 [myid:0] - INFO  [Thread-0:o.a.z.s.q.QuorumPeerConfig@178] - Reading configuration from: /usr/csuser/clouddrive/zookeeper/zookeeper-server/target/surefire/test7512114403143952201.junit.dir/zoo.cfg
+2025-08-05 05:40:10,508 [myid:0] - INFO  [Thread-0:o.a.z.s.q.QuorumPeerConfig@445] - clientPortAddress is 0.0.0.0:21994
+2025-08-05 05:40:10,508 [myid:0] - INFO  [Thread-0:o.a.z.s.q.QuorumPeerConfig@449] - secureClientPort is not set
+2025-08-05 05:40:10,508 [myid:0] - INFO  [Thread-0:o.a.z.s.q.QuorumPeerConfig@465] - observerMasterPort is not set
+2025-08-05 05:40:10,508 [myid:0] - INFO  [Thread-0:o.a.z.s.q.QuorumPeerConfig@482] - metricsProvider.className is org.apache.zookeeper.metrics.impl.DefaultMetricsProvider
+2025-08-05 05:40:10,512 [myid:0] - INFO  [Thread-0:o.a.z.s.ZooKeeperServerMain@123] - Starting server
+2025-08-05 05:40:10,690 [myid:] - INFO  [main:o.a.z.c.FourLetterWordMain@143] - connecting to 127.0.0.1:21994 (secure=false)
+2025-08-05 05:40:10,691 [myid:] - INFO  [main:o.a.z.t.ClientBase@291] - server 127.0.0.1:21994 not up: java.net.ConnectException: Connection refused
+2025-08-05 05:40:10,941 [myid:] - INFO  [main:o.a.z.c.FourLetterWordMain@143] - connecting to 127.0.0.1:21994 (secure=false)
+2025-08-05 05:40:10,942 [myid:] - INFO  [main:o.a.z.t.ClientBase@291] - server 127.0.0.1:21994 not up: java.net.ConnectException: Connection refused
+2025-08-05 05:40:11,193 [myid:] - INFO  [main:o.a.z.c.FourLetterWordMain@143] - connecting to 127.0.0.1:21994 (secure=false)
+2025-08-05 05:40:11,194 [myid:] - INFO  [main:o.a.z.t.ClientBase@291] - server 127.0.0.1:21994 not up: java.net.ConnectException: Connection refused
+2025-08-05 05:40:11,374 [myid:0] - INFO  [Thread-0:o.a.z.s.ServerMetrics@64] - ServerMetrics initialized with provider org.apache.zookeeper.metrics.impl.DefaultMetricsProvider@32d30042
+2025-08-05 05:40:11,377 [myid:0] - INFO  [Thread-0:o.a.z.s.a.DigestAuthenticationProvider@51] - ACL digest algorithm is: SHA1
+2025-08-05 05:40:11,390 [myid:0] - INFO  [Thread-0:o.a.z.s.a.DigestAuthenticationProvider@65] - zookeeper.DigestAuthenticationProvider.enabled = true
+2025-08-05 05:40:11,444 [myid:] - INFO  [main:o.a.z.c.FourLetterWordMain@143] - connecting to 127.0.0.1:21994 (secure=false)
+2025-08-05 05:40:11,445 [myid:] - INFO  [main:o.a.z.t.ClientBase@291] - server 127.0.0.1:21994 not up: java.net.ConnectException: Connection refused
+2025-08-05 05:40:11,634 [myid:0] - INFO  [Thread-0:o.a.z.s.p.FileTxnSnapLog@124] - zookeeper.snapshot.trust.empty : false
+2025-08-05 05:40:11,695 [myid:] - INFO  [main:o.a.z.c.FourLetterWordMain@143] - connecting to 127.0.0.1:21994 (secure=false)
+2025-08-05 05:40:11,696 [myid:] - INFO  [main:o.a.z.t.ClientBase@291] - server 127.0.0.1:21994 not up: java.net.ConnectException: Connection refused
+2025-08-05 05:40:11,947 [myid:] - INFO  [main:o.a.z.c.FourLetterWordMain@143] - connecting to 127.0.0.1:21994 (secure=false)
+2025-08-05 05:40:11,948 [myid:] - INFO  [main:o.a.z.t.ClientBase@291] - server 127.0.0.1:21994 not up: java.net.ConnectException: Connection refused
+2025-08-05 05:40:12,198 [myid:] - INFO  [main:o.a.z.c.FourLetterWordMain@143] - connecting to 127.0.0.1:21994 (secure=false)
+2025-08-05 05:40:12,199 [myid:] - INFO  [main:o.a.z.t.ClientBase@291] - server 127.0.0.1:21994 not up: java.net.ConnectException: Connection refused
+2025-08-05 05:40:12,449 [myid:] - INFO  [main:o.a.z.c.FourLetterWordMain@143] - connecting to 127.0.0.1:21994 (secure=false)
+2025-08-05 05:40:12,452 [myid:] - INFO  [main:o.a.z.t.ClientBase@291] - server 127.0.0.1:21994 not up: java.net.ConnectException: Connection refused
+2025-08-05 05:40:12,490 [myid:0] - INFO  [Thread-0:o.a.z.ZookeeperBanner@42] - 
+2025-08-05 05:40:12,490 [myid:0] - INFO  [Thread-0:o.a.z.ZookeeperBanner@42] -   ______                  _                                          
+2025-08-05 05:40:12,490 [myid:0] - INFO  [Thread-0:o.a.z.ZookeeperBanner@42] -  |___  /                 | |                                         
+2025-08-05 05:40:12,490 [myid:0] - INFO  [Thread-0:o.a.z.ZookeeperBanner@42] -     / /    ___     ___   | | __   ___    ___   _ __     ___   _ __   
+2025-08-05 05:40:12,490 [myid:0] - INFO  [Thread-0:o.a.z.ZookeeperBanner@42] -    / /    / _ \   / _ \  | |/ /  / _ \  / _ \ | '_ \   / _ \ | '__|
+2025-08-05 05:40:12,490 [myid:0] - INFO  [Thread-0:o.a.z.ZookeeperBanner@42] -   / /__  | (_) | | (_) | |   <  |  __/ |  __/ | |_) | |  __/ | |    
+2025-08-05 05:40:12,491 [myid:0] - INFO  [Thread-0:o.a.z.ZookeeperBanner@42] -  /_____|  \___/   \___/  |_|\_\  \___|  \___| | .__/   \___| |_|
+2025-08-05 05:40:12,491 [myid:0] - INFO  [Thread-0:o.a.z.ZookeeperBanner@42] -                                               | |                     
+2025-08-05 05:40:12,491 [myid:0] - INFO  [Thread-0:o.a.z.ZookeeperBanner@42] -                                               |_|                     
+2025-08-05 05:40:12,491 [myid:0] - INFO  [Thread-0:o.a.z.ZookeeperBanner@42] - 
+2025-08-05 05:40:12,497 [myid:0] - INFO  [Thread-0:o.a.z.Environment@98] - Server environment:zookeeper.version=3.10.0-SNAPSHOT-06b418b62d281c2259dee3eccb9885393532a204-dirty, built on 2025-08-05 05:37 UTC
+2025-08-05 05:40:12,497 [myid:0] - INFO  [Thread-0:o.a.z.Environment@98] - Server environment:host.name=localhost
+2025-08-05 05:40:12,497 [myid:0] - INFO  [Thread-0:o.a.z.Environment@98] - Server environment:java.version=17.0.15
+2025-08-05 05:40:12,497 [myid:0] - INFO  [Thread-0:o.a.z.Environment@98] - Server environment:java.vendor=Microsoft
+2025-08-05 05:40:12,497 [myid:0] - INFO  [Thread-0:o.a.z.Environment@98] - Server environment:java.home=/usr/lib/jvm/msopenjdk-17
+2025-08-05 05:40:12,497 [myid:0] - INFO  [Thread-0:o.a.z.Environment@98] - Server environment:java.class.path=/usr/csuser/clouddrive/zookeeper/zookeeper-server/target/test-classes:/usr/csuser/clouddrive/zookeeper/zookeeper-server/target/classes:/home/athul/.m2/repository/com/github/spotbugs/spotbugs-annotations/4.0.2/spotbugs-annotations-4.0.2.jar:/home/athul/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/home/athul/.m2/repository/org/hamcrest/hamcrest-library/2.2/hamcrest-library-2.2.jar:/home/athul/.m2/repository/org/hamcrest/hamcrest-core/2.2/hamcrest-core-2.2.jar:/home/athul/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/home/athul/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/usr/csuser/clouddrive/zookeeper/zookeeper-jute/target/zookeeper-jute-3.10.0-SNAPSHOT.jar:/home/athul/.m2/repository/commons-cli/commons-cli/1.5.0/commons-cli-1.5.0.jar:/home/athul/.m2/repository/org/apache/yetus/audience-annotations/0.12.0/audience-annotations-0.12.0.jar:/home/athul/.m2/repository/io/netty/netty-handler/4.1.119.Final/netty-handler-4.1.119.Final.jar:/home/athul/.m2/repository/io/netty/netty-common/4.1.119.Final/netty-common-4.1.119.Final.jar:/home/athul/.m2/repository/io/netty/netty-resolver/4.1.119.Final/netty-resolver-4.1.119.Final.jar:/home/athul/.m2/repository/io/netty/netty-buffer/4.1.119.Final/netty-buffer-4.1.119.Final.jar:/home/athul/.m2/repository/io/netty/netty-transport/4.1.119.Final/netty-transport-4.1.119.Final.jar:/home/athul/.m2/repository/io/netty/netty-transport-native-unix-common/4.1.119.Final/netty-transport-native-unix-common-4.1.119.Final.jar:/home/athul/.m2/repository/io/netty/netty-codec/4.1.119.Final/netty-codec-4.1.119.Final.jar:/home/athul/.m2/repository/io/netty/netty-transport-native-epoll/4.1.119.Final/netty-transport-native-epoll-4.1.119.Final-linux-x86_64.jar:/home/athul/.m2/repository/io/netty/netty-transport-classes-epoll/4.1.119.Final/netty-transport-classes-epoll-4.1.119.Final.jar:/home/athul/.m2/repository/io/netty/netty-tcnative-boringssl-static/2.0.70.Final/netty-tcnative-boringssl-static-2.0.70.Final.jar:/home/athul/.m2/repository/io/netty/netty-tcnative-classes/2.0.70.Final/netty-tcnative-classes-2.0.70.Final.jar:/home/athul/.m2/repository/io/netty/netty-tcnative-boringssl-static/2.0.70.Final/netty-tcnative-boringssl-static-2.0.70.Final-linux-x86_64.jar:/home/athul/.m2/repository/io/netty/netty-tcnative-boringssl-static/2.0.70.Final/netty-tcnative-boringssl-static-2.0.70.Final-linux-aarch_64.jar:/home/athul/.m2/repository/io/netty/netty-tcnative-boringssl-static/2.0.70.Final/netty-tcnative-boringssl-static-2.0.70.Final-osx-x86_64.jar:/home/athul/.m2/repository/io/netty/netty-tcnative-boringssl-static/2.0.70.Final/netty-tcnative-boringssl-static-2.0.70.Final-osx-aarch_64.jar:/home/athul/.m2/repository/io/netty/netty-tcnative-boringssl-static/2.0.70.Final/netty-tcnative-boringssl-static-2.0.70.Final-windows-x86_64.jar:/home/athul/.m2/repository/org/slf4j/slf4j-api/2.0.13/slf4j-api-2.0.13.jar:/home/athul/.m2/repository/ch/qos/logback/logback-classic/1.3.15/logback-classic-1.3.15.jar:/home/athul/.m2/repository/ch/qos/logback/logback-core/1.3.15/logback-core-1.3.15.jar:/home/athul/.m2/repository/org/eclipse/jetty/jetty-server/9.4.57.v20241219/jetty-server-9.4.57.v20241219.jar:/home/athul/.m2/repository/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar:/home/athul/.m2/repository/org/eclipse/jetty/jetty-http/9.4.57.v20241219/jetty-http-9.4.57.v20241219.jar:/home/athul/.m2/repository/org/eclipse/jetty/jetty-util/9.4.57.v20241219/jetty-util-9.4.57.v20241219.jar:/home/athul/.m2/repository/org/eclipse/jetty/jetty-io/9.4.57.v20241219/jetty-io-9.4.57.v20241219.jar:/home/athul/.m2/repository/org/eclipse/jetty/jetty-servlet/9.4.57.v20241219/jetty-servlet-9.4.57.v20241219.jar:/home/athul/.m2/repository/org/eclipse/jetty/jetty-security/9.4.57.v20241219/jetty-security-9.4.57.v20241219.jar:/home/athul/.m2/repository/org/eclipse/jetty/jetty-util-ajax/9.4.57.v20241219/jetty-util-ajax-9.4.57.v20241219.jar:/home/athul/.m2/repository/org/eclipse/jetty/jetty-client/9.4.57.v20241219/jetty-client-9.4.57.v20241219.jar:/home/athul/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.2/jackson-databind-2.15.2.jar:/home/athul/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.2/jackson-annotations-2.15.2.jar:/home/athul/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.2/jackson-core-2.15.2.jar:/home/athul/.m2/repository/org/bouncycastle/bcprov-jdk18on/1.78/bcprov-jdk18on-1.78.jar:/home/athul/.m2/repository/org/bouncycastle/bcpkix-jdk18on/1.78/bcpkix-jdk18on-1.78.jar:/home/athul/.m2/repository/org/bouncycastle/bcutil-jdk18on/1.78/bcutil-jdk18on-1.78.jar:/home/athul/.m2/repository/jline/jline/2.14.6/jline-2.14.6.jar:/home/athul/.m2/repository/io/dropwizard/metrics/metrics-core/4.1.12.1/metrics-core-4.1.12.1.jar:/home/athul/.m2/repository/org/apache/kerby/kerb-core/2.0.0/kerb-core-2.0.0.jar:/home/athul/.m2/repository/org/apache/kerby/kerby-pkix/2.0.0/kerby-pkix-2.0.0.jar:/home/athul/.m2/repository/org/apache/kerby/kerby-asn1/2.0.0/kerby-asn1-2.0.0.jar:/home/athul/.m2/repository/org/apache/kerby/kerby-util/2.0.0/kerby-util-2.0.0.jar:/home/athul/.m2/repository/org/apache/kerby/kerb-simplekdc/2.0.0/kerb-simplekdc-2.0.0.jar:/home/athul/.m2/repository/org/apache/kerby/kerb-client/2.0.0/kerb-client-2.0.0.jar:/home/athul/.m2/repository/org/apache/kerby/kerb-common/2.0.0/kerb-common-2.0.0.jar:/home/athul/.m2/repository/org/apache/kerby/kerb-crypto/2.0.0/kerb-crypto-2.0.0.jar:/home/athul/.m2/repository/org/apache/kerby/kerb-util/2.0.0/kerb-util-2.0.0.jar:/home/athul/.m2/repository/org/apache/kerby/token-provider/2.0.0/token-provider-2.0.0.jar:/home/athul/.m2/repository/com/nimbusds/nimbus-jose-jwt/4.41.2/nimbus-jose-jwt-4.41.2.jar:/home/athul/.m2/repository/com/github/stephenc/jcip/jcip-annotations/1.0-1/jcip-annotations-1.0-1.jar:/home/athul/.m2/repository/net/minidev/json-smart/2.3/json-smart-2.3.jar:/home/athul/.m2/repository/net/minidev/accessors-smart/1.2/accessors-smart-1.2.jar:/home/athul/.m2/repository/org/ow2/asm/asm/5.0.4/asm-5.0.4.jar:/home/athul/.m2/repository/org/apache/kerby/kerb-admin/2.0.0/kerb-admin-2.0.0.jar:/home/athul/.m2/repository/org/apache/kerby/kerb-server/2.0.0/kerb-server-2.0.0.jar:/home/athul/.m2/repository/org/apache/kerby/kerb-identity/2.0.0/kerb-identity-2.0.0.jar:/home/athul/.m2/repository/org/apache/kerby/kerby-xdr/2.0.0/kerby-xdr-2.0.0.jar:/home/athul/.m2/repository/org/apache/kerby/kerby-config/2.0.0/kerby-config-2.0.0.jar:/home/athul/.m2/repository/org/mockito/mockito-core/4.9.0/mockito-core-4.9.0.jar:/home/athul/.m2/repository/net/bytebuddy/byte-buddy/1.12.16/byte-buddy-1.12.16.jar:/home/athul/.m2/repository/net/bytebuddy/byte-buddy-agent/1.12.16/byte-buddy-agent-1.12.16.jar:/home/athul/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/home/athul/.m2/repository/org/mockito/mockito-inline/4.9.0/mockito-inline-4.9.0.jar:/home/athul/.m2/repository/org/jmockit/jmockit/1.48/jmockit-1.48.jar:/home/athul/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.6.2/junit-jupiter-api-5.6.2.jar:/home/athul/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/home/athul/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/athul/.m2/repository/org/junit/platform/junit-platform-commons/1.6.2/junit-platform-commons-1.6.2.jar:/home/athul/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.6.2/junit-jupiter-engine-5.6.2.jar:/home/athul/.m2/repository/org/junit/platform/junit-platform-engine/1.6.2/junit-platform-engine-1.6.2.jar:/home/athul/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.6.2/junit-jupiter-params-5.6.2.jar:/home/athul/.m2/repository/org/junit/platform/junit-platform-runner/1.6.2/junit-platform-runner-1.6.2.jar:/home/athul/.m2/repository/junit/junit/4.13/junit-4.13.jar:/home/athul/.m2/repository/org/junit/platform/junit-platform-launcher/1.6.2/junit-platform-launcher-1.6.2.jar:/home/athul/.m2/repository/org/junit/platform/junit-platform-suite-api/1.6.2/junit-platform-suite-api-1.6.2.jar:/home/athul/.m2/repository/org/burningwave/tools/0.25.4/tools-0.25.4.jar:/home/athul/.m2/repository/org/burningwave/core/12.62.5/core-12.62.5.jar:/home/athul/.m2/repository/org/burningwave/jvm-driver/8.14.0/jvm-driver-8.14.0.jar:/home/athul/.m2/repository/io/github/toolfactory/jvm-driver/9.4.2/jvm-driver-9.4.2.jar:/home/athul/.m2/repository/org/xerial/snappy/snappy-java/1.1.10.5/snappy-java-1.1.10.5.jar:/home/athul/.m2/repository/commons-io/commons-io/2.17.0/commons-io-2.17.0.jar:
+2025-08-05 05:40:12,498 [myid:0] - INFO  [Thread-0:o.a.z.Environment@98] - Server environment:java.library.path=/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib
+2025-08-05 05:40:12,500 [myid:0] - INFO  [Thread-0:o.a.z.Environment@98] - Server environment:java.io.tmpdir=/tmp
+2025-08-05 05:40:12,501 [myid:0] - INFO  [Thread-0:o.a.z.Environment@98] - Server environment:java.compiler=<NA>
+2025-08-05 05:40:12,505 [myid:0] - INFO  [Thread-0:o.a.z.Environment@98] - Server environment:os.name=Linux
+2025-08-05 05:40:12,505 [myid:0] - INFO  [Thread-0:o.a.z.Environment@98] - Server environment:os.arch=amd64
+2025-08-05 05:40:12,506 [myid:0] - INFO  [Thread-0:o.a.z.Environment@98] - Server environment:os.version=6.1.124.1-microsoft-standard
+2025-08-05 05:40:12,506 [myid:0] - INFO  [Thread-0:o.a.z.Environment@98] - Server environment:user.name=athul
+2025-08-05 05:40:12,506 [myid:0] - INFO  [Thread-0:o.a.z.Environment@98] - Server environment:user.home=/home/athul
+2025-08-05 05:40:12,507 [myid:0] - INFO  [Thread-0:o.a.z.Environment@98] - Server environment:user.dir=/usr/csuser/clouddrive/zookeeper/zookeeper-server
+2025-08-05 05:40:12,507 [myid:0] - INFO  [Thread-0:o.a.z.Environment@98] - Server environment:jvm.memory.free=38MB
+2025-08-05 05:40:12,507 [myid:0] - INFO  [Thread-0:o.a.z.Environment@98] - Server environment:jvm.memory.max=512MB
+2025-08-05 05:40:12,511 [myid:0] - INFO  [Thread-0:o.a.z.Environment@98] - Server environment:jvm.memory.total=50MB
+2025-08-05 05:40:12,511 [myid:0] - INFO  [Thread-0:o.a.z.s.ZooKeeperServer@151] - zookeeper.enableEagerACLCheck = false
+2025-08-05 05:40:12,512 [myid:0] - INFO  [Thread-0:o.a.z.s.ZooKeeperServer@164] - zookeeper.digest.enabled = true
+2025-08-05 05:40:12,513 [myid:0] - INFO  [Thread-0:o.a.z.s.ZooKeeperServer@168] - zookeeper.closeSessionTxn.enabled = true
+2025-08-05 05:40:12,513 [myid:0] - INFO  [Thread-0:o.a.z.s.ZooKeeperServer@2237] - zookeeper.serializeLastProcessedZxid.enabled = true
+2025-08-05 05:40:12,514 [myid:0] - INFO  [Thread-0:o.a.z.s.ZooKeeperServer@1585] - zookeeper.flushDelay = 0 ms
+2025-08-05 05:40:12,516 [myid:0] - INFO  [Thread-0:o.a.z.s.ZooKeeperServer@1594] - zookeeper.maxWriteQueuePollTime = 0 ms
+2025-08-05 05:40:12,516 [myid:0] - INFO  [Thread-0:o.a.z.s.ZooKeeperServer@1603] - zookeeper.maxBatchSize=1000
+2025-08-05 05:40:12,516 [myid:0] - INFO  [Thread-0:o.a.z.s.ZooKeeperServer@289] - zookeeper.intBufferStartingSizeBytes = 1024
+2025-08-05 05:40:12,648 [myid:0] - INFO  [Thread-0:o.a.z.s.BlueThrottle@141] - Weighed connection throttling is disabled
+2025-08-05 05:40:12,702 [myid:0] - INFO  [Thread-0:o.a.z.s.AuthenticationHelper@66] - zookeeper.enforce.auth.enabled = false
+2025-08-05 05:40:12,702 [myid:0] - INFO  [Thread-0:o.a.z.s.AuthenticationHelper@67] - zookeeper.enforce.auth.schemes = []
+2025-08-05 05:40:12,702 [myid:] - INFO  [main:o.a.z.c.FourLetterWordMain@143] - connecting to 127.0.0.1:21994 (secure=false)
+2025-08-05 05:40:12,703 [myid:] - INFO  [main:o.a.z.t.ClientBase@291] - server 127.0.0.1:21994 not up: java.net.ConnectException: Connection refused
+2025-08-05 05:40:12,794 [myid:0] - INFO  [Thread-0:o.a.z.s.ZooKeeperServer@1395] - minSessionTimeout set to 8000 ms
+2025-08-05 05:40:12,794 [myid:0] - INFO  [Thread-0:o.a.z.s.ZooKeeperServer@1404] - maxSessionTimeout set to 80000 ms
+2025-08-05 05:40:12,929 [myid:0] - INFO  [Thread-0:o.a.z.s.ResponseCache@50] - getData response cache size is initialized with value 400.
+2025-08-05 05:40:12,930 [myid:0] - INFO  [Thread-0:o.a.z.s.ResponseCache@50] - getChildren response cache size is initialized with value 400.
+2025-08-05 05:40:12,953 [myid:] - INFO  [main:o.a.z.c.FourLetterWordMain@143] - connecting to 127.0.0.1:21994 (secure=false)
+2025-08-05 05:40:12,954 [myid:] - INFO  [main:o.a.z.t.ClientBase@291] - server 127.0.0.1:21994 not up: java.net.ConnectException: Connection refused
+2025-08-05 05:40:13,012 [myid:0] - INFO  [Thread-0:o.a.z.s.u.RequestPathMetricsCollector@109] - zookeeper.pathStats.slotCapacity = 60
+2025-08-05 05:40:13,013 [myid:0] - INFO  [Thread-0:o.a.z.s.u.RequestPathMetricsCollector@110] - zookeeper.pathStats.slotDuration = 15
+2025-08-05 05:40:13,013 [myid:0] - INFO  [Thread-0:o.a.z.s.u.RequestPathMetricsCollector@111] - zookeeper.pathStats.maxDepth = 6
+2025-08-05 05:40:13,013 [myid:0] - INFO  [Thread-0:o.a.z.s.u.RequestPathMetricsCollector@112] - zookeeper.pathStats.initialDelay = 5
+2025-08-05 05:40:13,013 [myid:0] - INFO  [Thread-0:o.a.z.s.u.RequestPathMetricsCollector@113] - zookeeper.pathStats.delay = 5
+2025-08-05 05:40:13,014 [myid:0] - INFO  [Thread-0:o.a.z.s.u.RequestPathMetricsCollector@114] - zookeeper.pathStats.enabled = false
+2025-08-05 05:40:13,110 [myid:0] - INFO  [Thread-0:o.a.z.s.ZooKeeperServer@1622] - The max bytes for all large requests are set to 104857600
+2025-08-05 05:40:13,111 [myid:0] - INFO  [Thread-0:o.a.z.s.ZooKeeperServer@1636] - The large request threshold is set to -1
+2025-08-05 05:40:13,111 [myid:0] - INFO  [Thread-0:o.a.z.s.ZooKeeperServer@387] - Created server with tickTime 4000 ms minSessionTimeout 8000 ms maxSessionTimeout 80000 ms clientPortListenBacklog -1 dataLogdir /usr/csuser/clouddrive/zookeeper/zookeeper-server/target/surefire/test7512114403143952201.junit.dir/data/version-2 snapdir /usr/csuser/clouddrive/zookeeper/zookeeper-server/target/surefire/test7512114403143952201.junit.dir/data/version-2
+2025-08-05 05:40:13,204 [myid:] - INFO  [main:o.a.z.c.FourLetterWordMain@143] - connecting to 127.0.0.1:21994 (secure=false)
+2025-08-05 05:40:13,205 [myid:] - INFO  [main:o.a.z.t.ClientBase@291] - server 127.0.0.1:21994 not up: java.net.ConnectException: Connection refused
+2025-08-05 05:40:13,456 [myid:] - INFO  [main:o.a.z.c.FourLetterWordMain@143] - connecting to 127.0.0.1:21994 (secure=false)
+2025-08-05 05:40:13,457 [myid:] - INFO  [main:o.a.z.t.ClientBase@291] - server 127.0.0.1:21994 not up: java.net.ConnectException: Connection refused
+2025-08-05 05:40:13,707 [myid:] - INFO  [main:o.a.z.c.FourLetterWordMain@143] - connecting to 127.0.0.1:21994 (secure=false)
+2025-08-05 05:40:13,708 [myid:] - INFO  [main:o.a.z.t.ClientBase@291] - server 127.0.0.1:21994 not up: java.net.ConnectException: Connection refused
+2025-08-05 05:40:13,719 [myid:0] - INFO  [Thread-0:o.a.z.s.ServerCnxnFactory@172] - Using org.apache.zookeeper.server.NIOServerCnxnFactory as server connection factory
+2025-08-05 05:40:13,725 [myid:0] - WARN  [Thread-0:o.a.z.s.ServerCnxnFactory@337] - maxCnxns is not configured, using default value 0.
+2025-08-05 05:40:13,830 [myid:0] - INFO  [Thread-0:o.a.z.s.NIOServerCnxnFactory@652] - Configuring NIO connection handler with 10s sessionless connection timeout, 1 selector thread(s), 4 worker threads, and 64 kB direct buffers.
+2025-08-05 05:40:13,958 [myid:] - INFO  [main:o.a.z.c.FourLetterWordMain@143] - connecting to 127.0.0.1:21994 (secure=false)
+2025-08-05 05:40:13,959 [myid:] - INFO  [main:o.a.z.t.ClientBase@291] - server 127.0.0.1:21994 not up: java.net.ConnectException: Connection refused
+2025-08-05 05:40:14,017 [myid:0] - INFO  [Thread-0:o.a.z.s.NIOServerCnxnFactory@660] - binding to port 0.0.0.0/0.0.0.0:21994
+2025-08-05 05:40:14,210 [myid:] - INFO  [main:o.a.z.c.FourLetterWordMain@143] - connecting to 127.0.0.1:21994 (secure=false)
+2025-08-05 05:40:14,599 [myid:] - INFO  [NIOWorkerThread-1:o.a.z.s.c.FourLetterCommands@223] - The list of known four letter word commands is : [{1936881266=srvr, 1937006964=stat, 2003003491=wchc, 1685417328=dump, 1668445044=crst, 1936880500=srst, 1701738089=envi, 1668247142=conf, -720899=telnet close, 1751217000=hash, 2003003507=wchs, 2003003504=wchp, 1684632179=dirs, 1668247155=cons, 1835955314=mntr, 1769173615=isro, 1920298859=ruok, 1735683435=gtmk, 1937010027=stmk}]
+2025-08-05 05:40:14,600 [myid:] - INFO  [NIOWorkerThread-1:o.a.z.s.c.FourLetterCommands@224] - The list of enabled four letter word commands is : [[wchs, stat, wchp, dirs, stmk, conf, ruok, mntr, srvr, wchc, envi, srst, isro, dump, gtmk, telnet close, crst, hash, cons]]
+2025-08-05 05:40:14,600 [myid:] - INFO  [NIOWorkerThread-1:o.a.z.s.NIOServerCnxn@532] - Processing stat command from /127.0.0.1:56248
+2025-08-05 05:40:15,063 [myid:0] - INFO  [Thread-0:o.a.z.s.w.WatchManagerFactory@42] - Using org.apache.zookeeper.server.watch.WatchManager as watch manager
+2025-08-05 05:40:15,064 [myid:0] - INFO  [Thread-0:o.a.z.s.w.WatchManagerFactory@42] - Using org.apache.zookeeper.server.watch.WatchManager as watch manager
+2025-08-05 05:40:15,064 [myid:0] - INFO  [Thread-0:o.a.z.s.ZKDatabase@137] - zookeeper.snapshotSizeFactor = 0.33
+2025-08-05 05:40:15,064 [myid:0] - INFO  [Thread-0:o.a.z.s.ZKDatabase@157] - zookeeper.commitLogCount=500
+2025-08-05 05:40:15,247 [myid:0] - INFO  [Thread-0:o.a.z.s.p.FileTxnSnapLog@260] - Initialize file found, an empty database will not block voting participation
+2025-08-05 05:40:15,341 [myid:] - INFO  [main:o.a.z.c.FourLetterWordMain@143] - connecting to 127.0.0.1:21994 (secure=false)
+2025-08-05 05:40:15,350 [myid:] - INFO  [NIOWorkerThread-2:o.a.z.s.NIOServerCnxn@532] - Processing stat command from /127.0.0.1:36086
+2025-08-05 05:40:15,607 [myid:] - INFO  [main:o.a.z.c.FourLetterWordMain@143] - connecting to 127.0.0.1:21994 (secure=false)
+2025-08-05 05:40:15,622 [myid:0] - INFO  [Thread-0:o.a.z.s.p.SnapStream@61] - zookeeper.snapshot.compression.method = CHECKED
+2025-08-05 05:40:15,623 [myid:0] - INFO  [Thread-0:o.a.z.s.p.FileTxnSnapLog@480] - Snapshotting: 0x0 to /usr/csuser/clouddrive/zookeeper/zookeeper-server/target/surefire/test7512114403143952201.junit.dir/data/version-2/snapshot.0
+2025-08-05 05:40:15,624 [myid:] - INFO  [NIOWorkerThread-3:o.a.z.s.NIOServerCnxn@532] - Processing stat command from /127.0.0.1:36100
+2025-08-05 05:40:15,869 [myid:0] - INFO  [Thread-0:o.a.z.s.ZKDatabase@294] - Snapshot loaded in 805 ms, highest zxid is 0x0, digest is 1371985504
+2025-08-05 05:40:15,870 [myid:0] - INFO  [Thread-0:o.a.z.s.p.FileTxnSnapLog@480] - Snapshotting: 0x0 to /usr/csuser/clouddrive/zookeeper/zookeeper-server/target/surefire/test7512114403143952201.junit.dir/data/version-2/snapshot.0
+2025-08-05 05:40:15,890 [myid:] - INFO  [main:o.a.z.c.FourLetterWordMain@143] - connecting to 127.0.0.1:21994 (secure=false)
+2025-08-05 05:40:15,905 [myid:] - INFO  [NIOWorkerThread-4:o.a.z.s.NIOServerCnxn@532] - Processing stat command from /127.0.0.1:36112
+2025-08-05 05:40:15,940 [myid:0] - INFO  [Thread-0:o.a.z.s.ZooKeeperServer@588] - Snapshot taken in 70 ms
+2025-08-05 05:40:16,156 [myid:] - INFO  [main:o.a.z.c.FourLetterWordMain@143] - connecting to 127.0.0.1:21994 (secure=false)
+2025-08-05 05:40:16,157 [myid:] - INFO  [NIOWorkerThread-1:o.a.z.s.NIOServerCnxn@532] - Processing stat command from /127.0.0.1:36126
+2025-08-05 05:40:16,408 [myid:] - INFO  [main:o.a.z.c.FourLetterWordMain@143] - connecting to 127.0.0.1:21994 (secure=false)
+2025-08-05 05:40:16,411 [myid:] - INFO  [NIOWorkerThread-2:o.a.z.s.NIOServerCnxn@532] - Processing stat command from /127.0.0.1:36140
+2025-08-05 05:40:16,662 [myid:] - INFO  [main:o.a.z.c.FourLetterWordMain@143] - connecting to 127.0.0.1:21994 (secure=false)
+2025-08-05 05:40:16,664 [myid:] - INFO  [NIOWorkerThread-3:o.a.z.s.NIOServerCnxn@532] - Processing stat command from /127.0.0.1:36152
+2025-08-05 05:40:16,915 [myid:] - INFO  [main:o.a.z.c.FourLetterWordMain@143] - connecting to 127.0.0.1:21994 (secure=false)
+2025-08-05 05:40:16,916 [myid:] - INFO  [NIOWorkerThread-4:o.a.z.s.NIOServerCnxn@532] - Processing stat command from /127.0.0.1:36158
+2025-08-05 05:40:16,990 [myid:] - INFO  [ProcessThread(sid:0 cport:21994)::o.a.z.s.PrepRequestProcessor@135] - PrepRequestProcessor (sid:0) started, reconfigEnabled=false
+2025-08-05 05:40:17,034 [myid:0] - INFO  [Thread-0:o.a.z.s.RequestThrottler@75] - zookeeper.request_throttler.shutdownTimeout = 10000 ms
+2025-08-05 05:40:17,170 [myid:] - INFO  [main:o.a.z.c.FourLetterWordMain@143] - connecting to 127.0.0.1:21994 (secure=false)
+2025-08-05 05:40:17,171 [myid:] - INFO  [NIOWorkerThread-1:o.a.z.s.NIOServerCnxn@532] - Processing stat command from /127.0.0.1:36174
+2025-08-05 05:40:17,422 [myid:] - INFO  [main:o.a.z.c.FourLetterWordMain@143] - connecting to 127.0.0.1:21994 (secure=false)
+2025-08-05 05:40:17,423 [myid:] - INFO  [NIOWorkerThread-2:o.a.z.s.NIOServerCnxn@532] - Processing stat command from /127.0.0.1:36182
+2025-08-05 05:40:17,675 [myid:] - INFO  [main:o.a.z.c.FourLetterWordMain@143] - connecting to 127.0.0.1:21994 (secure=false)
+2025-08-05 05:40:17,696 [myid:] - INFO  [NIOWorkerThread-3:o.a.z.s.NIOServerCnxn@532] - Processing stat command from /127.0.0.1:36188
+2025-08-05 05:40:17,946 [myid:] - INFO  [main:o.a.z.c.FourLetterWordMain@143] - connecting to 127.0.0.1:21994 (secure=false)
+2025-08-05 05:40:17,948 [myid:] - INFO  [NIOWorkerThread-4:o.a.z.s.NIOServerCnxn@532] - Processing stat command from /127.0.0.1:36190
+2025-08-05 05:40:18,198 [myid:] - INFO  [main:o.a.z.c.FourLetterWordMain@143] - connecting to 127.0.0.1:21994 (secure=false)
+2025-08-05 05:40:18,199 [myid:] - INFO  [NIOWorkerThread-1:o.a.z.s.NIOServerCnxn@532] - Processing stat command from /127.0.0.1:36206
+2025-08-05 05:40:18,412 [myid:0] - INFO  [Thread-0:o.a.z.s.ContainerManager@83] - Using checkIntervalMs=60000 maxPerMinute=10000 maxNeverUsedIntervalMs=0
+2025-08-05 05:40:18,450 [myid:] - INFO  [main:o.a.z.c.FourLetterWordMain@143] - connecting to 127.0.0.1:21994 (secure=false)
+2025-08-05 05:40:18,451 [myid:] - INFO  [NIOWorkerThread-2:o.a.z.s.NIOServerCnxn@532] - Processing stat command from /127.0.0.1:36208
+2025-08-05 05:40:18,495 [myid:0] - INFO  [Thread-0:o.a.z.a.ZKAuditProvider@42] - ZooKeeper audit is disabled.
+2025-08-05 05:40:18,521 [myid:] - INFO  [NIOWorkerThread-2:o.a.z.s.c.StatCommand@52] - Stat command output
+2025-08-05 05:40:18,955 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:zookeeper.version=3.10.0-SNAPSHOT-06b418b62d281c2259dee3eccb9885393532a204-dirty, built on 2025-08-05 05:37 UTC
+2025-08-05 05:40:18,955 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:host.name=localhost
+2025-08-05 05:40:18,955 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:java.version=17.0.15
+2025-08-05 05:40:18,955 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:java.vendor=Microsoft
+2025-08-05 05:40:18,956 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:java.home=/usr/lib/jvm/msopenjdk-17
+2025-08-05 05:40:18,956 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:java.class.path=/usr/csuser/clouddrive/zookeeper/zookeeper-server/target/test-classes:/usr/csuser/clouddrive/zookeeper/zookeeper-server/target/classes:/home/athul/.m2/repository/com/github/spotbugs/spotbugs-annotations/4.0.2/spotbugs-annotations-4.0.2.jar:/home/athul/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/home/athul/.m2/repository/org/hamcrest/hamcrest-library/2.2/hamcrest-library-2.2.jar:/home/athul/.m2/repository/org/hamcrest/hamcrest-core/2.2/hamcrest-core-2.2.jar:/home/athul/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/home/athul/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/usr/csuser/clouddrive/zookeeper/zookeeper-jute/target/zookeeper-jute-3.10.0-SNAPSHOT.jar:/home/athul/.m2/repository/commons-cli/commons-cli/1.5.0/commons-cli-1.5.0.jar:/home/athul/.m2/repository/org/apache/yetus/audience-annotations/0.12.0/audience-annotations-0.12.0.jar:/home/athul/.m2/repository/io/netty/netty-handler/4.1.119.Final/netty-handler-4.1.119.Final.jar:/home/athul/.m2/repository/io/netty/netty-common/4.1.119.Final/netty-common-4.1.119.Final.jar:/home/athul/.m2/repository/io/netty/netty-resolver/4.1.119.Final/netty-resolver-4.1.119.Final.jar:/home/athul/.m2/repository/io/netty/netty-buffer/4.1.119.Final/netty-buffer-4.1.119.Final.jar:/home/athul/.m2/repository/io/netty/netty-transport/4.1.119.Final/netty-transport-4.1.119.Final.jar:/home/athul/.m2/repository/io/netty/netty-transport-native-unix-common/4.1.119.Final/netty-transport-native-unix-common-4.1.119.Final.jar:/home/athul/.m2/repository/io/netty/netty-codec/4.1.119.Final/netty-codec-4.1.119.Final.jar:/home/athul/.m2/repository/io/netty/netty-transport-native-epoll/4.1.119.Final/netty-transport-native-epoll-4.1.119.Final-linux-x86_64.jar:/home/athul/.m2/repository/io/netty/netty-transport-classes-epoll/4.1.119.Final/netty-transport-classes-epoll-4.1.119.Final.jar:/home/athul/.m2/repository/io/netty/netty-tcnative-boringssl-static/2.0.70.Final/netty-tcnative-boringssl-static-2.0.70.Final.jar:/home/athul/.m2/repository/io/netty/netty-tcnative-classes/2.0.70.Final/netty-tcnative-classes-2.0.70.Final.jar:/home/athul/.m2/repository/io/netty/netty-tcnative-boringssl-static/2.0.70.Final/netty-tcnative-boringssl-static-2.0.70.Final-linux-x86_64.jar:/home/athul/.m2/repository/io/netty/netty-tcnative-boringssl-static/2.0.70.Final/netty-tcnative-boringssl-static-2.0.70.Final-linux-aarch_64.jar:/home/athul/.m2/repository/io/netty/netty-tcnative-boringssl-static/2.0.70.Final/netty-tcnative-boringssl-static-2.0.70.Final-osx-x86_64.jar:/home/athul/.m2/repository/io/netty/netty-tcnative-boringssl-static/2.0.70.Final/netty-tcnative-boringssl-static-2.0.70.Final-osx-aarch_64.jar:/home/athul/.m2/repository/io/netty/netty-tcnative-boringssl-static/2.0.70.Final/netty-tcnative-boringssl-static-2.0.70.Final-windows-x86_64.jar:/home/athul/.m2/repository/org/slf4j/slf4j-api/2.0.13/slf4j-api-2.0.13.jar:/home/athul/.m2/repository/ch/qos/logback/logback-classic/1.3.15/logback-classic-1.3.15.jar:/home/athul/.m2/repository/ch/qos/logback/logback-core/1.3.15/logback-core-1.3.15.jar:/home/athul/.m2/repository/org/eclipse/jetty/jetty-server/9.4.57.v20241219/jetty-server-9.4.57.v20241219.jar:/home/athul/.m2/repository/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar:/home/athul/.m2/repository/org/eclipse/jetty/jetty-http/9.4.57.v20241219/jetty-http-9.4.57.v20241219.jar:/home/athul/.m2/repository/org/eclipse/jetty/jetty-util/9.4.57.v20241219/jetty-util-9.4.57.v20241219.jar:/home/athul/.m2/repository/org/eclipse/jetty/jetty-io/9.4.57.v20241219/jetty-io-9.4.57.v20241219.jar:/home/athul/.m2/repository/org/eclipse/jetty/jetty-servlet/9.4.57.v20241219/jetty-servlet-9.4.57.v20241219.jar:/home/athul/.m2/repository/org/eclipse/jetty/jetty-security/9.4.57.v20241219/jetty-security-9.4.57.v20241219.jar:/home/athul/.m2/repository/org/eclipse/jetty/jetty-util-ajax/9.4.57.v20241219/jetty-util-ajax-9.4.57.v20241219.jar:/home/athul/.m2/repository/org/eclipse/jetty/jetty-client/9.4.57.v20241219/jetty-client-9.4.57.v20241219.jar:/home/athul/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.2/jackson-databind-2.15.2.jar:/home/athul/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.2/jackson-annotations-2.15.2.jar:/home/athul/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.2/jackson-core-2.15.2.jar:/home/athul/.m2/repository/org/bouncycastle/bcprov-jdk18on/1.78/bcprov-jdk18on-1.78.jar:/home/athul/.m2/repository/org/bouncycastle/bcpkix-jdk18on/1.78/bcpkix-jdk18on-1.78.jar:/home/athul/.m2/repository/org/bouncycastle/bcutil-jdk18on/1.78/bcutil-jdk18on-1.78.jar:/home/athul/.m2/repository/jline/jline/2.14.6/jline-2.14.6.jar:/home/athul/.m2/repository/io/dropwizard/metrics/metrics-core/4.1.12.1/metrics-core-4.1.12.1.jar:/home/athul/.m2/repository/org/apache/kerby/kerb-core/2.0.0/kerb-core-2.0.0.jar:/home/athul/.m2/repository/org/apache/kerby/kerby-pkix/2.0.0/kerby-pkix-2.0.0.jar:/home/athul/.m2/repository/org/apache/kerby/kerby-asn1/2.0.0/kerby-asn1-2.0.0.jar:/home/athul/.m2/repository/org/apache/kerby/kerby-util/2.0.0/kerby-util-2.0.0.jar:/home/athul/.m2/repository/org/apache/kerby/kerb-simplekdc/2.0.0/kerb-simplekdc-2.0.0.jar:/home/athul/.m2/repository/org/apache/kerby/kerb-client/2.0.0/kerb-client-2.0.0.jar:/home/athul/.m2/repository/org/apache/kerby/kerb-common/2.0.0/kerb-common-2.0.0.jar:/home/athul/.m2/repository/org/apache/kerby/kerb-crypto/2.0.0/kerb-crypto-2.0.0.jar:/home/athul/.m2/repository/org/apache/kerby/kerb-util/2.0.0/kerb-util-2.0.0.jar:/home/athul/.m2/repository/org/apache/kerby/token-provider/2.0.0/token-provider-2.0.0.jar:/home/athul/.m2/repository/com/nimbusds/nimbus-jose-jwt/4.41.2/nimbus-jose-jwt-4.41.2.jar:/home/athul/.m2/repository/com/github/stephenc/jcip/jcip-annotations/1.0-1/jcip-annotations-1.0-1.jar:/home/athul/.m2/repository/net/minidev/json-smart/2.3/json-smart-2.3.jar:/home/athul/.m2/repository/net/minidev/accessors-smart/1.2/accessors-smart-1.2.jar:/home/athul/.m2/repository/org/ow2/asm/asm/5.0.4/asm-5.0.4.jar:/home/athul/.m2/repository/org/apache/kerby/kerb-admin/2.0.0/kerb-admin-2.0.0.jar:/home/athul/.m2/repository/org/apache/kerby/kerb-server/2.0.0/kerb-server-2.0.0.jar:/home/athul/.m2/repository/org/apache/kerby/kerb-identity/2.0.0/kerb-identity-2.0.0.jar:/home/athul/.m2/repository/org/apache/kerby/kerby-xdr/2.0.0/kerby-xdr-2.0.0.jar:/home/athul/.m2/repository/org/apache/kerby/kerby-config/2.0.0/kerby-config-2.0.0.jar:/home/athul/.m2/repository/org/mockito/mockito-core/4.9.0/mockito-core-4.9.0.jar:/home/athul/.m2/repository/net/bytebuddy/byte-buddy/1.12.16/byte-buddy-1.12.16.jar:/home/athul/.m2/repository/net/bytebuddy/byte-buddy-agent/1.12.16/byte-buddy-agent-1.12.16.jar:/home/athul/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/home/athul/.m2/repository/org/mockito/mockito-inline/4.9.0/mockito-inline-4.9.0.jar:/home/athul/.m2/repository/org/jmockit/jmockit/1.48/jmockit-1.48.jar:/home/athul/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.6.2/junit-jupiter-api-5.6.2.jar:/home/athul/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/home/athul/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/athul/.m2/repository/org/junit/platform/junit-platform-commons/1.6.2/junit-platform-commons-1.6.2.jar:/home/athul/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.6.2/junit-jupiter-engine-5.6.2.jar:/home/athul/.m2/repository/org/junit/platform/junit-platform-engine/1.6.2/junit-platform-engine-1.6.2.jar:/home/athul/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.6.2/junit-jupiter-params-5.6.2.jar:/home/athul/.m2/repository/org/junit/platform/junit-platform-runner/1.6.2/junit-platform-runner-1.6.2.jar:/home/athul/.m2/repository/junit/junit/4.13/junit-4.13.jar:/home/athul/.m2/repository/org/junit/platform/junit-platform-launcher/1.6.2/junit-platform-launcher-1.6.2.jar:/home/athul/.m2/repository/org/junit/platform/junit-platform-suite-api/1.6.2/junit-platform-suite-api-1.6.2.jar:/home/athul/.m2/repository/org/burningwave/tools/0.25.4/tools-0.25.4.jar:/home/athul/.m2/repository/org/burningwave/core/12.62.5/core-12.62.5.jar:/home/athul/.m2/repository/org/burningwave/jvm-driver/8.14.0/jvm-driver-8.14.0.jar:/home/athul/.m2/repository/io/github/toolfactory/jvm-driver/9.4.2/jvm-driver-9.4.2.jar:/home/athul/.m2/repository/org/xerial/snappy/snappy-java/1.1.10.5/snappy-java-1.1.10.5.jar:/home/athul/.m2/repository/commons-io/commons-io/2.17.0/commons-io-2.17.0.jar:
+2025-08-05 05:40:18,956 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:java.library.path=/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib
+2025-08-05 05:40:18,956 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:java.io.tmpdir=/tmp
+2025-08-05 05:40:18,956 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:java.compiler=<NA>
+2025-08-05 05:40:18,956 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:os.name=Linux
+2025-08-05 05:40:18,957 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:os.arch=amd64
+2025-08-05 05:40:18,957 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:os.version=6.1.124.1-microsoft-standard
+2025-08-05 05:40:18,957 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:user.name=athul
+2025-08-05 05:40:18,957 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:user.home=/home/athul
+2025-08-05 05:40:18,957 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:user.dir=/usr/csuser/clouddrive/zookeeper/zookeeper-server
+2025-08-05 05:40:18,957 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:jvm.memory.free=27MB
+2025-08-05 05:40:18,957 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:jvm.memory.max=512MB
+2025-08-05 05:40:18,958 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:jvm.memory.total=50MB
+2025-08-05 05:40:19,043 [myid:] - INFO  [main:o.a.z.ZooKeeper@1083] - Initiating client connection, connectString=127.0.0.1:21994 sessionTimeout=30000 watcher=org.apache.zookeeper.test.ClientBase$CountdownWatcher@4b34fff9
+2025-08-05 05:40:19,252 [myid:] - INFO  [main:o.a.z.c.X509Util@81] - Setting -D jdk.tls.rejectClientInitiatedRenegotiation=true to disable client-initiated TLS renegotiation
+2025-08-05 05:40:20,617 [myid:] - INFO  [main:o.a.z.c.X509Util@105] - Default TLS protocol is TLSv1.3, supported TLS protocols are [TLSv1.3, TLSv1.2, TLSv1.1, TLSv1, SSLv3, SSLv2Hello]
+2025-08-05 05:40:21,128 [myid:] - INFO  [main:o.a.z.ClientCnxnSocket@235] - jute.maxbuffer value is 1048575 Bytes
+2025-08-05 05:40:21,539 [myid:] - INFO  [main:o.a.z.ClientCnxn@1674] - zookeeper.request.timeout value is 5000. feature enabled=true
+2025-08-05 05:40:21,890 [myid:127.0.0.1:21994] - INFO  [main-SendThread(127.0.0.1:21994):o.a.z.ClientCnxn$SendThread@1121] - Opening socket connection to server localhost/127.0.0.1:21994.
+2025-08-05 05:40:21,890 [myid:127.0.0.1:21994] - INFO  [main-SendThread(127.0.0.1:21994):o.a.z.ClientCnxn$SendThread@1123] - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2025-08-05 05:40:21,891 [myid:127.0.0.1:21994] - INFO  [main-SendThread(127.0.0.1:21994):o.a.z.ClientCnxn$SendThread@974] - Socket connection established, initiating session, client: /127.0.0.1:36212, server: localhost/127.0.0.1:21994
+2025-08-05 05:40:22,108 [myid:] - INFO  [SyncThread:0:o.a.z.s.p.FileTxnLog@291] - Creating new log file: log.1
+2025-08-05 05:40:22,599 [myid:127.0.0.1:21994] - INFO  [main-SendThread(127.0.0.1:21994):o.a.z.ClientCnxn$SendThread@1378] - Session establishment complete on server localhost/127.0.0.1:21994, session id = 0x10000f3e6d00000, negotiated timeout = 30000
+2025-08-05 05:40:27,821 [myid:] - ERROR [main:o.a.z.ClientCnxn@1551] - Timeout error occurred for the packet 'clientPath:null serverPath:null finished:false header:: 1,1  replyHeader:: 1,2,0  request:: '/testClientRequestTimeout,#6f726967696e616c44617461,v{s{31,s{'world,'anyone}}},2  response:: '/testClientRequestTimeout0000000000 '.
+2025-08-05 05:40:27,849 [myid:] - INFO  [NIOWorkerThread-3:o.a.z.s.NIOServerCnxn@342] - Unable to read additional data from client, it probably closed the socket: address = /127.0.0.1:36212, session = 0x10000f3e6d00000
+2025-08-05 05:40:28,012 [myid:] - INFO  [main:o.a.z.ClientRequestTimeoutTest@136] - testClientRequestTimeoutTime cost:5233
+2025-08-05 05:40:28,669 [myid:] - INFO  [main-EventThread:o.a.z.ClientCnxn$EventThread@548] - EventThread shut down for session: 0x10000f3e6d00000
+2025-08-05 05:40:28,727 [myid:] - INFO  [main:o.a.z.ZooKeeper@1293] - Session: 0x10000f3e6d00000 closed
+2025-08-05 05:40:28,740 [myid:] - INFO  [main:o.a.z.s.q.QuorumPeerTestBase@64] - No servers to shutdown!
+2025-08-05 05:40:28,759 [myid:] - INFO  [main:o.a.z.ZKTestCase@112] - FINISHED Optional[void org.apache.zookeeper.ClientRequestTimeoutTest.testClientRequestTimeoutTime() throws java.lang.Exception]
+2025-08-05 05:40:28,842 [myid:] - INFO  [main:o.a.z.ZKTestCase@107] - STARTING Optional[void org.apache.zookeeper.ClientRequestTimeoutTest.testClientRequestTimeoutTimeSimulatingSpuriousWakeup() throws java.lang.Exception]
+2025-08-05 05:40:28,843 [myid:] - INFO  [main:o.a.z.PortAssignment@87] - Assigned port 21995 from range 21993 - 24685.
+2025-08-05 05:40:28,967 [myid:] - INFO  [main:o.a.z.s.q.QuorumPeerTestBase$MainThread@208] - id = 0 tmpDir = /usr/csuser/clouddrive/zookeeper/zookeeper-server/target/surefire/test4318534316423033170.junit.dir clientPort = 21995 adminServerPort = 8080
+2025-08-05 05:40:29,250 [myid:] - INFO  [main:o.a.z.c.FourLetterWordMain@143] - connecting to 127.0.0.1:21995 (secure=false)
+2025-08-05 05:40:29,251 [myid:] - INFO  [main:o.a.z.t.ClientBase@291] - server 127.0.0.1:21995 not up: java.net.ConnectException: Connection refused
+2025-08-05 05:40:29,252 [myid:] - INFO  [Thread-2:o.a.z.s.q.QuorumPeerConfig@178] - Reading configuration from: /usr/csuser/clouddrive/zookeeper/zookeeper-server/target/surefire/test4318534316423033170.junit.dir/zoo.cfg
+2025-08-05 05:40:29,274 [myid:] - INFO  [Thread-2:o.a.z.s.q.QuorumPeerConfig@445] - clientPortAddress is 0.0.0.0:21995
+2025-08-05 05:40:29,274 [myid:] - INFO  [Thread-2:o.a.z.s.q.QuorumPeerConfig@449] - secureClientPort is not set
+2025-08-05 05:40:29,274 [myid:] - INFO  [Thread-2:o.a.z.s.q.QuorumPeerConfig@465] - observerMasterPort is not set
+2025-08-05 05:40:29,274 [myid:] - INFO  [Thread-2:o.a.z.s.q.QuorumPeerConfig@482] - metricsProvider.className is org.apache.zookeeper.metrics.impl.DefaultMetricsProvider
+2025-08-05 05:40:29,296 [myid:0] - INFO  [Thread-2:o.a.z.s.DatadirCleanupManager@78] - autopurge.snapRetainCount set to 3
+2025-08-05 05:40:29,296 [myid:0] - INFO  [Thread-2:o.a.z.s.DatadirCleanupManager@79] - autopurge.purgeInterval set to 0
+2025-08-05 05:40:29,296 [myid:0] - INFO  [Thread-2:o.a.z.s.DatadirCleanupManager@101] - Purge task is not scheduled.
+2025-08-05 05:40:29,296 [myid:0] - WARN  [Thread-2:o.a.z.s.q.QuorumPeerMain@139] - Either no config or no quorum defined in config, running in standalone mode
+2025-08-05 05:40:29,309 [myid:0] - INFO  [Thread-2:o.a.z.j.ManagedUtil@46] - Log4j 1.2 jmx support not found; jmx disabled.
+2025-08-05 05:40:29,310 [myid:0] - INFO  [Thread-2:o.a.z.s.q.QuorumPeerConfig@178] - Reading configuration from: /usr/csuser/clouddrive/zookeeper/zookeeper-server/target/surefire/test4318534316423033170.junit.dir/zoo.cfg
+2025-08-05 05:40:29,311 [myid:0] - INFO  [Thread-2:o.a.z.s.q.QuorumPeerConfig@445] - clientPortAddress is 0.0.0.0:21995
+2025-08-05 05:40:29,311 [myid:0] - INFO  [Thread-2:o.a.z.s.q.QuorumPeerConfig@449] - secureClientPort is not set
+2025-08-05 05:40:29,311 [myid:0] - INFO  [Thread-2:o.a.z.s.q.QuorumPeerConfig@465] - observerMasterPort is not set
+2025-08-05 05:40:29,311 [myid:0] - INFO  [Thread-2:o.a.z.s.q.QuorumPeerConfig@482] - metricsProvider.className is org.apache.zookeeper.metrics.impl.DefaultMetricsProvider
+2025-08-05 05:40:29,311 [myid:0] - INFO  [Thread-2:o.a.z.s.ZooKeeperServerMain@123] - Starting server
+2025-08-05 05:40:29,312 [myid:0] - INFO  [Thread-2:o.a.z.s.ServerMetrics@64] - ServerMetrics initialized with provider org.apache.zookeeper.metrics.impl.DefaultMetricsProvider@626a80de
+2025-08-05 05:40:29,312 [myid:0] - INFO  [Thread-2:o.a.z.s.a.DigestAuthenticationProvider@65] - zookeeper.DigestAuthenticationProvider.enabled = true
+2025-08-05 05:40:29,312 [myid:0] - INFO  [Thread-2:o.a.z.s.p.FileTxnSnapLog@124] - zookeeper.snapshot.trust.empty : false
+2025-08-05 05:40:29,362 [myid:0] - INFO  [Thread-2:o.a.z.s.AuthenticationHelper@66] - zookeeper.enforce.auth.enabled = false
+2025-08-05 05:40:29,362 [myid:0] - INFO  [Thread-2:o.a.z.s.AuthenticationHelper@67] - zookeeper.enforce.auth.schemes = []
+2025-08-05 05:40:29,363 [myid:0] - INFO  [Thread-2:o.a.z.s.ZooKeeperServer@1395] - minSessionTimeout set to 8000 ms
+2025-08-05 05:40:29,363 [myid:0] - INFO  [Thread-2:o.a.z.s.ZooKeeperServer@1404] - maxSessionTimeout set to 80000 ms
+2025-08-05 05:40:29,363 [myid:0] - INFO  [Thread-2:o.a.z.s.ResponseCache@50] - getData response cache size is initialized with value 400.
+2025-08-05 05:40:29,363 [myid:0] - INFO  [Thread-2:o.a.z.s.ResponseCache@50] - getChildren response cache size is initialized with value 400.
+2025-08-05 05:40:29,363 [myid:0] - INFO  [Thread-2:o.a.z.s.u.RequestPathMetricsCollector@109] - zookeeper.pathStats.slotCapacity = 60
+2025-08-05 05:40:29,363 [myid:0] - INFO  [Thread-2:o.a.z.s.u.RequestPathMetricsCollector@110] - zookeeper.pathStats.slotDuration = 15
+2025-08-05 05:40:29,363 [myid:0] - INFO  [Thread-2:o.a.z.s.u.RequestPathMetricsCollector@111] - zookeeper.pathStats.maxDepth = 6
+2025-08-05 05:40:29,363 [myid:0] - INFO  [Thread-2:o.a.z.s.u.RequestPathMetricsCollector@112] - zookeeper.pathStats.initialDelay = 5
+2025-08-05 05:40:29,363 [myid:0] - INFO  [Thread-2:o.a.z.s.u.RequestPathMetricsCollector@113] - zookeeper.pathStats.delay = 5
+2025-08-05 05:40:29,364 [myid:0] - INFO  [Thread-2:o.a.z.s.u.RequestPathMetricsCollector@114] - zookeeper.pathStats.enabled = false
+2025-08-05 05:40:29,364 [myid:0] - INFO  [Thread-2:o.a.z.s.ZooKeeperServer@1622] - The max bytes for all large requests are set to 104857600
+2025-08-05 05:40:29,364 [myid:0] - INFO  [Thread-2:o.a.z.s.ZooKeeperServer@1636] - The large request threshold is set to -1
+2025-08-05 05:40:29,364 [myid:0] - INFO  [Thread-2:o.a.z.s.ZooKeeperServer@387] - Created server with tickTime 4000 ms minSessionTimeout 8000 ms maxSessionTimeout 80000 ms clientPortListenBacklog -1 dataLogdir /usr/csuser/clouddrive/zookeeper/zookeeper-server/target/surefire/test4318534316423033170.junit.dir/data/version-2 snapdir /usr/csuser/clouddrive/zookeeper/zookeeper-server/target/surefire/test4318534316423033170.junit.dir/data/version-2
+2025-08-05 05:40:29,364 [myid:0] - INFO  [Thread-2:o.a.z.s.ServerCnxnFactory@172] - Using org.apache.zookeeper.server.NIOServerCnxnFactory as server connection factory
+2025-08-05 05:40:29,365 [myid:0] - WARN  [Thread-2:o.a.z.s.ServerCnxnFactory@337] - maxCnxns is not configured, using default value 0.
+2025-08-05 05:40:29,365 [myid:0] - INFO  [Thread-2:o.a.z.s.NIOServerCnxnFactory@652] - Configuring NIO connection handler with 10s sessionless connection timeout, 1 selector thread(s), 4 worker threads, and 64 kB direct buffers.
+2025-08-05 05:40:29,366 [myid:0] - INFO  [Thread-2:o.a.z.s.NIOServerCnxnFactory@660] - binding to port 0.0.0.0/0.0.0.0:21995
+2025-08-05 05:40:29,421 [myid:0] - INFO  [Thread-2:o.a.z.s.w.WatchManagerFactory@42] - Using org.apache.zookeeper.server.watch.WatchManager as watch manager
+2025-08-05 05:40:29,421 [myid:0] - INFO  [Thread-2:o.a.z.s.w.WatchManagerFactory@42] - Using org.apache.zookeeper.server.watch.WatchManager as watch manager
+2025-08-05 05:40:29,421 [myid:0] - INFO  [Thread-2:o.a.z.s.ZKDatabase@137] - zookeeper.snapshotSizeFactor = 0.33
+2025-08-05 05:40:29,421 [myid:0] - INFO  [Thread-2:o.a.z.s.ZKDatabase@157] - zookeeper.commitLogCount=500
+2025-08-05 05:40:29,459 [myid:0] - INFO  [Thread-2:o.a.z.s.p.FileTxnSnapLog@260] - Initialize file found, an empty database will not block voting participation
+2025-08-05 05:40:29,501 [myid:] - INFO  [main:o.a.z.c.FourLetterWordMain@143] - connecting to 127.0.0.1:21995 (secure=false)
+2025-08-05 05:40:29,521 [myid:0] - INFO  [Thread-2:o.a.z.s.p.FileTxnSnapLog@480] - Snapshotting: 0x0 to /usr/csuser/clouddrive/zookeeper/zookeeper-server/target/surefire/test4318534316423033170.junit.dir/data/version-2/snapshot.0
+2025-08-05 05:40:29,526 [myid:] - INFO  [NIOWorkerThread-1:o.a.z.s.NIOServerCnxn@532] - Processing stat command from /127.0.0.1:35898
+2025-08-05 05:40:29,590 [myid:0] - INFO  [Thread-2:o.a.z.s.ZKDatabase@294] - Snapshot loaded in 169 ms, highest zxid is 0x0, digest is 1371985504
+2025-08-05 05:40:29,590 [myid:0] - INFO  [Thread-2:o.a.z.s.p.FileTxnSnapLog@480] - Snapshotting: 0x0 to /usr/csuser/clouddrive/zookeeper/zookeeper-server/target/surefire/test4318534316423033170.junit.dir/data/version-2/snapshot.0
+2025-08-05 05:40:29,668 [myid:0] - INFO  [Thread-2:o.a.z.s.ZooKeeperServer@588] - Snapshot taken in 77 ms
+2025-08-05 05:40:29,735 [myid:] - INFO  [ProcessThread(sid:0 cport:21995)::o.a.z.s.PrepRequestProcessor@135] - PrepRequestProcessor (sid:0) started, reconfigEnabled=false
+2025-08-05 05:40:29,752 [myid:0] - INFO  [Thread-2:o.a.z.s.ContainerManager@83] - Using checkIntervalMs=60000 maxPerMinute=10000 maxNeverUsedIntervalMs=0
+2025-08-05 05:40:29,777 [myid:] - INFO  [main:o.a.z.c.FourLetterWordMain@143] - connecting to 127.0.0.1:21995 (secure=false)
+2025-08-05 05:40:29,810 [myid:] - INFO  [NIOWorkerThread-2:o.a.z.s.NIOServerCnxn@532] - Processing stat command from /127.0.0.1:35914
+2025-08-05 05:40:29,810 [myid:] - INFO  [NIOWorkerThread-2:o.a.z.s.c.StatCommand@52] - Stat command output
+2025-08-05 05:40:29,811 [myid:] - INFO  [main:o.a.z.ZooKeeper@1083] - Initiating client connection, connectString=127.0.0.1:21995 sessionTimeout=30000 watcher=org.apache.zookeeper.test.ClientBase$CountdownWatcher@55322aab
+2025-08-05 05:40:29,811 [myid:] - INFO  [main:o.a.z.ClientCnxnSocket@235] - jute.maxbuffer value is 1048575 Bytes
+2025-08-05 05:40:29,812 [myid:] - INFO  [main:o.a.z.ClientCnxn@1674] - zookeeper.request.timeout value is 5000. feature enabled=true
+2025-08-05 05:40:29,833 [myid:127.0.0.1:21995] - INFO  [main-SendThread(127.0.0.1:21995):o.a.z.ClientCnxn$SendThread@1121] - Opening socket connection to server localhost/127.0.0.1:21995.
+2025-08-05 05:40:29,833 [myid:127.0.0.1:21995] - INFO  [main-SendThread(127.0.0.1:21995):o.a.z.ClientCnxn$SendThread@1123] - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2025-08-05 05:40:29,834 [myid:127.0.0.1:21995] - INFO  [main-SendThread(127.0.0.1:21995):o.a.z.ClientCnxn$SendThread@974] - Socket connection established, initiating session, client: /127.0.0.1:35922, server: localhost/127.0.0.1:21995
+2025-08-05 05:40:29,856 [myid:] - INFO  [SyncThread:0:o.a.z.s.p.FileTxnLog@291] - Creating new log file: log.1
+2025-08-05 05:40:29,945 [myid:127.0.0.1:21995] - INFO  [main-SendThread(127.0.0.1:21995):o.a.z.ClientCnxn$SendThread@1378] - Session establishment complete on server localhost/127.0.0.1:21995, session id = 0x10000f41bb60000, negotiated timeout = 30000
+2025-08-05 05:40:34,957 [myid:] - ERROR [main:o.a.z.ClientCnxn@1551] - Timeout error occurred for the packet 'clientPath:null serverPath:null finished:false header:: 1,1  replyHeader:: 1,2,0  request:: '/testClientRequestTimeout,#6f726967696e616c44617461,v{s{31,s{'world,'anyone}}},2  response:: '/testClientRequestTimeout0000000000 '.
+2025-08-05 05:40:34,958 [myid:] - INFO  [NIOWorkerThread-3:o.a.z.s.NIOServerCnxn@342] - Unable to read additional data from client, it probably closed the socket: address = /127.0.0.1:35922, session = 0x10000f41bb60000
+2025-08-05 05:40:35,058 [myid:] - INFO  [main:o.a.z.ClientRequestTimeoutTest@193] - testClientRequestTimeoutTimeSimulatingSpuriousWakeup cost:5101
+2025-08-05 05:40:35,659 [myid:] - INFO  [main:o.a.z.ZooKeeper@1293] - Session: 0x10000f41bb60000 closed
+2025-08-05 05:40:35,660 [myid:] - INFO  [main:o.a.z.s.q.QuorumPeerTestBase@64] - No servers to shutdown!
+2025-08-05 05:40:35,661 [myid:] - INFO  [main:o.a.z.ZKTestCase@112] - FINISHED Optional[void org.apache.zookeeper.ClientRequestTimeoutTest.testClientRequestTimeoutTimeSimulatingSpuriousWakeup() throws java.lang.Exception]
+2025-08-05 05:40:35,662 [myid:] - INFO  [main-EventThread:o.a.z.ClientCnxn$EventThread@548] - EventThread shut down for session: 0x10000f41bb60000
+2025-08-05 05:40:35,667 [myid:] - INFO  [main:o.a.z.ZKTestCase@107] - STARTING Optional[public void org.apache.zookeeper.ClientRequestTimeoutTest.testClientRequestTimeout() throws java.lang.Exception]
+2025-08-05 05:40:35,719 [myid:] - INFO  [main:o.a.z.PortAssignment@87] - Assigned port 21996 from range 21993 - 24685.
+2025-08-05 05:40:35,719 [myid:] - INFO  [main:o.a.z.PortAssignment@87] - Assigned port 21997 from range 21993 - 24685.
+2025-08-05 05:40:35,720 [myid:] - INFO  [main:o.a.z.PortAssignment@87] - Assigned port 21998 from range 21993 - 24685.
+2025-08-05 05:40:35,720 [myid:] - INFO  [main:o.a.z.PortAssignment@87] - Assigned port 21999 from range 21993 - 24685.
+2025-08-05 05:40:35,720 [myid:] - INFO  [main:o.a.z.PortAssignment@87] - Assigned port 22000 from range 21993 - 24685.
+2025-08-05 05:40:35,720 [myid:] - INFO  [main:o.a.z.PortAssignment@87] - Assigned port 22001 from range 21993 - 24685.
+2025-08-05 05:40:35,721 [myid:] - INFO  [main:o.a.z.PortAssignment@87] - Assigned port 22002 from range 21993 - 24685.
+2025-08-05 05:40:35,722 [myid:] - INFO  [main:o.a.z.PortAssignment@87] - Assigned port 22003 from range 21993 - 24685.
+2025-08-05 05:40:35,722 [myid:] - INFO  [main:o.a.z.PortAssignment@87] - Assigned port 22004 from range 21993 - 24685.
+2025-08-05 05:40:35,844 [myid:] - INFO  [main:o.a.z.s.q.QuorumPeerTestBase$MainThread@208] - id = 0 tmpDir = /usr/csuser/clouddrive/zookeeper/zookeeper-server/target/surefire/test12397985425437232716.junit.dir clientPort = 21996 adminServerPort = 8080
+2025-08-05 05:40:36,101 [myid:] - INFO  [Thread-5:o.a.z.s.q.QuorumPeerConfig@178] - Reading configuration from: /usr/csuser/clouddrive/zookeeper/zookeeper-server/target/surefire/test12397985425437232716.junit.dir/zoo.cfg
+2025-08-05 05:40:36,127 [myid:] - INFO  [Thread-5:o.a.z.s.q.QuorumPeerConfig@445] - clientPortAddress is 0.0.0.0:21996
+2025-08-05 05:40:36,127 [myid:] - INFO  [Thread-5:o.a.z.s.q.QuorumPeerConfig@449] - secureClientPort is not set
+2025-08-05 05:40:36,128 [myid:] - INFO  [Thread-5:o.a.z.s.q.QuorumPeerConfig@465] - observerMasterPort is not set
+2025-08-05 05:40:36,128 [myid:] - INFO  [Thread-5:o.a.z.s.q.QuorumPeerConfig@482] - metricsProvider.className is org.apache.zookeeper.metrics.impl.DefaultMetricsProvider
+2025-08-05 05:40:36,240 [myid:] - INFO  [main:o.a.z.s.q.QuorumPeerTestBase$MainThread@208] - id = 1 tmpDir = /usr/csuser/clouddrive/zookeeper/zookeeper-server/target/surefire/test4170879578603251272.junit.dir clientPort = 21999 adminServerPort = 8080
+2025-08-05 05:40:36,420 [myid:0] - INFO  [Thread-5:o.a.z.s.DatadirCleanupManager@78] - autopurge.snapRetainCount set to 3
+2025-08-05 05:40:36,420 [myid:0] - INFO  [Thread-5:o.a.z.s.DatadirCleanupManager@79] - autopurge.purgeInterval set to 0
+2025-08-05 05:40:36,420 [myid:0] - INFO  [Thread-5:o.a.z.s.DatadirCleanupManager@101] - Purge task is not scheduled.
+2025-08-05 05:40:36,442 [myid:0] - INFO  [Thread-5:o.a.z.j.ManagedUtil@46] - Log4j 1.2 jmx support not found; jmx disabled.
+2025-08-05 05:40:36,442 [myid:0] - INFO  [Thread-5:o.a.z.s.q.QuorumPeerMain@152] - Starting quorum peer, myid=0
+2025-08-05 05:40:36,442 [myid:0] - INFO  [Thread-5:o.a.z.s.ServerMetrics@64] - ServerMetrics initialized with provider org.apache.zookeeper.metrics.impl.DefaultMetricsProvider@218a655a
+2025-08-05 05:40:36,443 [myid:0] - INFO  [Thread-5:o.a.z.s.a.DigestAuthenticationProvider@65] - zookeeper.DigestAuthenticationProvider.enabled = true
+2025-08-05 05:40:36,443 [myid:0] - INFO  [Thread-5:o.a.z.s.ServerCnxnFactory@172] - Using org.apache.zookeeper.server.NIOServerCnxnFactory as server connection factory
+2025-08-05 05:40:36,443 [myid:0] - WARN  [Thread-5:o.a.z.s.ServerCnxnFactory@337] - maxCnxns is not configured, using default value 0.
+2025-08-05 05:40:36,443 [myid:0] - INFO  [Thread-5:o.a.z.s.NIOServerCnxnFactory@652] - Configuring NIO connection handler with 10s sessionless connection timeout, 1 selector thread(s), 4 worker threads, and 64 kB direct buffers.
+2025-08-05 05:40:36,446 [myid:0] - INFO  [Thread-5:o.a.z.s.NIOServerCnxnFactory@660] - binding to port /127.0.0.1:21996
+2025-08-05 05:40:36,502 [myid:] - INFO  [Thread-6:o.a.z.s.q.QuorumPeerConfig@178] - Reading configuration from: /usr/csuser/clouddrive/zookeeper/zookeeper-server/target/surefire/test4170879578603251272.junit.dir/zoo.cfg
+2025-08-05 05:40:36,510 [myid:] - INFO  [Thread-6:o.a.z.s.q.QuorumPeerConfig@445] - clientPortAddress is 0.0.0.0:21999
+2025-08-05 05:40:36,510 [myid:] - INFO  [Thread-6:o.a.z.s.q.QuorumPeerConfig@449] - secureClientPort is not set
+2025-08-05 05:40:36,510 [myid:] - INFO  [Thread-6:o.a.z.s.q.QuorumPeerConfig@465] - observerMasterPort is not set
+2025-08-05 05:40:36,510 [myid:] - INFO  [Thread-6:o.a.z.s.q.QuorumPeerConfig@482] - metricsProvider.className is org.apache.zookeeper.metrics.impl.DefaultMetricsProvider
+2025-08-05 05:40:36,524 [myid:1] - INFO  [Thread-6:o.a.z.s.DatadirCleanupManager@78] - autopurge.snapRetainCount set to 3
+2025-08-05 05:40:36,524 [myid:1] - INFO  [Thread-6:o.a.z.s.DatadirCleanupManager@79] - autopurge.purgeInterval set to 0
+2025-08-05 05:40:36,525 [myid:1] - INFO  [Thread-6:o.a.z.s.DatadirCleanupManager@101] - Purge task is not scheduled.
+2025-08-05 05:40:36,525 [myid:1] - INFO  [Thread-6:o.a.z.j.ManagedUtil@46] - Log4j 1.2 jmx support not found; jmx disabled.
+2025-08-05 05:40:36,525 [myid:1] - INFO  [Thread-6:o.a.z.s.q.QuorumPeerMain@152] - Starting quorum peer, myid=1
+2025-08-05 05:40:36,525 [myid:1] - INFO  [Thread-6:o.a.z.s.ServerMetrics@64] - ServerMetrics initialized with provider org.apache.zookeeper.metrics.impl.DefaultMetricsProvider@4edfb19a
+2025-08-05 05:40:36,525 [myid:1] - INFO  [Thread-6:o.a.z.s.a.DigestAuthenticationProvider@65] - zookeeper.DigestAuthenticationProvider.enabled = true
+2025-08-05 05:40:36,526 [myid:1] - INFO  [Thread-6:o.a.z.s.ServerCnxnFactory@172] - Using org.apache.zookeeper.server.NIOServerCnxnFactory as server connection factory
+2025-08-05 05:40:36,526 [myid:1] - WARN  [Thread-6:o.a.z.s.ServerCnxnFactory@337] - maxCnxns is not configured, using default value 0.
+2025-08-05 05:40:36,526 [myid:1] - INFO  [Thread-6:o.a.z.s.NIOServerCnxnFactory@652] - Configuring NIO connection handler with 10s sessionless connection timeout, 1 selector thread(s), 4 worker threads, and 64 kB direct buffers.
+2025-08-05 05:40:36,526 [myid:1] - INFO  [Thread-6:o.a.z.s.NIOServerCnxnFactory@660] - binding to port /127.0.0.1:21999
+2025-08-05 05:40:36,613 [myid:] - INFO  [main:o.a.z.s.q.QuorumPeerTestBase$MainThread@208] - id = 2 tmpDir = /usr/csuser/clouddrive/zookeeper/zookeeper-server/target/surefire/test14522371397479967717.junit.dir clientPort = 22002 adminServerPort = 8080
+2025-08-05 05:40:36,818 [myid:0] - INFO  [Thread-5:o.a.z.s.q.QuorumPeer@854] - zookeeper.quorumCnxnTimeoutMs=-1
+2025-08-05 05:40:36,842 [myid:] - INFO  [main:o.a.z.c.FourLetterWordMain@143] - connecting to 127.0.0.1:21996 (secure=false)
+2025-08-05 05:40:36,843 [myid:] - INFO  [Thread-7:o.a.z.s.q.QuorumPeerConfig@178] - Reading configuration from: /usr/csuser/clouddrive/zookeeper/zookeeper-server/target/surefire/test14522371397479967717.junit.dir/zoo.cfg
+2025-08-05 05:40:36,852 [myid:] - INFO  [Thread-7:o.a.z.s.q.QuorumPeerConfig@445] - clientPortAddress is 0.0.0.0:22002
+2025-08-05 05:40:36,853 [myid:] - INFO  [Thread-7:o.a.z.s.q.QuorumPeerConfig@449] - secureClientPort is not set
+2025-08-05 05:40:36,853 [myid:] - INFO  [Thread-7:o.a.z.s.q.QuorumPeerConfig@465] - observerMasterPort is not set
+2025-08-05 05:40:36,853 [myid:] - INFO  [Thread-7:o.a.z.s.q.QuorumPeerConfig@482] - metricsProvider.className is org.apache.zookeeper.metrics.impl.DefaultMetricsProvider
+2025-08-05 05:40:36,863 [myid:2] - INFO  [Thread-7:o.a.z.s.DatadirCleanupManager@78] - autopurge.snapRetainCount set to 3
+2025-08-05 05:40:36,864 [myid:2] - INFO  [Thread-7:o.a.z.s.DatadirCleanupManager@79] - autopurge.purgeInterval set to 0
+2025-08-05 05:40:36,864 [myid:2] - INFO  [Thread-7:o.a.z.s.DatadirCleanupManager@101] - Purge task is not scheduled.
+2025-08-05 05:40:36,873 [myid:2] - INFO  [Thread-7:o.a.z.j.ManagedUtil@46] - Log4j 1.2 jmx support not found; jmx disabled.
+2025-08-05 05:40:36,873 [myid:2] - INFO  [Thread-7:o.a.z.s.q.QuorumPeerMain@152] - Starting quorum peer, myid=2
+2025-08-05 05:40:36,873 [myid:2] - INFO  [Thread-7:o.a.z.s.ServerMetrics@64] - ServerMetrics initialized with provider org.apache.zookeeper.metrics.impl.DefaultMetricsProvider@7d4aabea
+2025-08-05 05:40:36,873 [myid:2] - INFO  [Thread-7:o.a.z.s.a.DigestAuthenticationProvider@65] - zookeeper.DigestAuthenticationProvider.enabled = true
+2025-08-05 05:40:36,891 [myid:2] - INFO  [Thread-7:o.a.z.s.ServerCnxnFactory@172] - Using org.apache.zookeeper.server.NIOServerCnxnFactory as server connection factory
+2025-08-05 05:40:36,891 [myid:2] - WARN  [Thread-7:o.a.z.s.ServerCnxnFactory@337] - maxCnxns is not configured, using default value 0.
+2025-08-05 05:40:36,891 [myid:2] - INFO  [Thread-7:o.a.z.s.NIOServerCnxnFactory@652] - Configuring NIO connection handler with 10s sessionless connection timeout, 1 selector thread(s), 4 worker threads, and 64 kB direct buffers.
+2025-08-05 05:40:36,891 [myid:2] - INFO  [Thread-7:o.a.z.s.NIOServerCnxnFactory@660] - binding to port /127.0.0.1:22002
+2025-08-05 05:40:37,162 [myid:0] - INFO  [Thread-5:o.a.z.s.p.FileTxnSnapLog@124] - zookeeper.snapshot.trust.empty : false
+2025-08-05 05:40:37,162 [myid:1] - INFO  [Thread-6:o.a.z.s.p.FileTxnSnapLog@124] - zookeeper.snapshot.trust.empty : false
+2025-08-05 05:40:37,162 [myid:2] - INFO  [Thread-7:o.a.z.s.p.FileTxnSnapLog@124] - zookeeper.snapshot.trust.empty : false
+2025-08-05 05:40:37,245 [myid:2] - INFO  [Thread-7:o.a.z.s.q.QuorumPeer@1841] - Local sessions disabled
+2025-08-05 05:40:37,245 [myid:2] - INFO  [Thread-7:o.a.z.s.q.QuorumPeer@1852] - Local session upgrading disabled
+2025-08-05 05:40:37,245 [myid:2] - INFO  [Thread-7:o.a.z.s.q.QuorumPeer@1819] - tickTime set to 4000
+2025-08-05 05:40:37,245 [myid:2] - INFO  [Thread-7:o.a.z.s.q.QuorumPeer@1863] - minSessionTimeout set to 8000
+2025-08-05 05:40:37,245 [myid:2] - INFO  [Thread-7:o.a.z.s.q.QuorumPeer@1874] - maxSessionTimeout set to 80000
+2025-08-05 05:40:37,245 [myid:2] - INFO  [Thread-7:o.a.z.s.q.QuorumPeer@1909] - initLimit set to 10
+2025-08-05 05:40:37,245 [myid:2] - INFO  [Thread-7:o.a.z.s.q.QuorumPeer@2110] - syncLimit set to 5
+2025-08-05 05:40:37,245 [myid:2] - INFO  [Thread-7:o.a.z.s.q.QuorumPeer@2125] - connectToLearnerMasterLimit set to 5
+2025-08-05 05:40:37,246 [myid:2] - INFO  [Thread-7:o.a.z.s.w.WatchManagerFactory@42] - Using org.apache.zookeeper.server.watch.WatchManager as watch manager
+2025-08-05 05:40:37,246 [myid:2] - INFO  [Thread-7:o.a.z.s.w.WatchManagerFactory@42] - Using org.apache.zookeeper.server.watch.WatchManager as watch manager
+2025-08-05 05:40:37,246 [myid:2] - INFO  [Thread-7:o.a.z.s.ZKDatabase@137] - zookeeper.snapshotSizeFactor = 0.33
+2025-08-05 05:40:37,246 [myid:2] - INFO  [Thread-7:o.a.z.s.ZKDatabase@157] - zookeeper.commitLogCount=500
+2025-08-05 05:40:37,246 [myid:1] - INFO  [Thread-6:o.a.z.s.q.QuorumPeer@1841] - Local sessions disabled
+2025-08-05 05:40:37,246 [myid:1] - INFO  [Thread-6:o.a.z.s.q.QuorumPeer@1852] - Local session upgrading disabled
+2025-08-05 05:40:37,246 [myid:1] - INFO  [Thread-6:o.a.z.s.q.QuorumPeer@1819] - tickTime set to 4000
+2025-08-05 05:40:37,246 [myid:1] - INFO  [Thread-6:o.a.z.s.q.QuorumPeer@1863] - minSessionTimeout set to 8000
+2025-08-05 05:40:37,247 [myid:1] - INFO  [Thread-6:o.a.z.s.q.QuorumPeer@1874] - maxSessionTimeout set to 80000
+2025-08-05 05:40:37,247 [myid:1] - INFO  [Thread-6:o.a.z.s.q.QuorumPeer@1909] - initLimit set to 10
+2025-08-05 05:40:37,247 [myid:1] - INFO  [Thread-6:o.a.z.s.q.QuorumPeer@2110] - syncLimit set to 5
+2025-08-05 05:40:37,247 [myid:1] - INFO  [Thread-6:o.a.z.s.q.QuorumPeer@2125] - connectToLearnerMasterLimit set to 5
+2025-08-05 05:40:37,247 [myid:1] - INFO  [Thread-6:o.a.z.s.w.WatchManagerFactory@42] - Using org.apache.zookeeper.server.watch.WatchManager as watch manager
+2025-08-05 05:40:37,247 [myid:1] - INFO  [Thread-6:o.a.z.s.w.WatchManagerFactory@42] - Using org.apache.zookeeper.server.watch.WatchManager as watch manager
+2025-08-05 05:40:37,247 [myid:1] - INFO  [Thread-6:o.a.z.s.ZKDatabase@137] - zookeeper.snapshotSizeFactor = 0.33
+2025-08-05 05:40:37,247 [myid:1] - INFO  [Thread-6:o.a.z.s.ZKDatabase@157] - zookeeper.commitLogCount=500
+2025-08-05 05:40:37,270 [myid:0] - INFO  [Thread-5:o.a.z.s.q.QuorumPeer@1841] - Local sessions disabled
+2025-08-05 05:40:37,271 [myid:0] - INFO  [Thread-5:o.a.z.s.q.QuorumPeer@1852] - Local session upgrading disabled
+2025-08-05 05:40:37,271 [myid:0] - INFO  [Thread-5:o.a.z.s.q.QuorumPeer@1819] - tickTime set to 4000
+2025-08-05 05:40:37,271 [myid:0] - INFO  [Thread-5:o.a.z.s.q.QuorumPeer@1863] - minSessionTimeout set to 8000
+2025-08-05 05:40:37,271 [myid:0] - INFO  [Thread-5:o.a.z.s.q.QuorumPeer@1874] - maxSessionTimeout set to 80000
+2025-08-05 05:40:37,271 [myid:0] - INFO  [Thread-5:o.a.z.s.q.QuorumPeer@1909] - initLimit set to 10
+2025-08-05 05:40:37,271 [myid:0] - INFO  [Thread-5:o.a.z.s.q.QuorumPeer@2110] - syncLimit set to 5
+2025-08-05 05:40:37,271 [myid:0] - INFO  [Thread-5:o.a.z.s.q.QuorumPeer@2125] - connectToLearnerMasterLimit set to 5
+2025-08-05 05:40:37,271 [myid:0] - INFO  [Thread-5:o.a.z.s.w.WatchManagerFactory@42] - Using org.apache.zookeeper.server.watch.WatchManager as watch manager
+2025-08-05 05:40:37,271 [myid:0] - INFO  [Thread-5:o.a.z.s.w.WatchManagerFactory@42] - Using org.apache.zookeeper.server.watch.WatchManager as watch manager
+2025-08-05 05:40:37,271 [myid:0] - INFO  [Thread-5:o.a.z.s.ZKDatabase@137] - zookeeper.snapshotSizeFactor = 0.33
+2025-08-05 05:40:37,271 [myid:0] - INFO  [Thread-5:o.a.z.s.ZKDatabase@157] - zookeeper.commitLogCount=500
+2025-08-05 05:40:37,352 [myid:0] - INFO  [Thread-5:o.a.z.s.q.QuorumPeer@2189] - Using insecure (non-TLS) quorum communication
+2025-08-05 05:40:37,353 [myid:0] - INFO  [Thread-5:o.a.z.s.q.QuorumPeer@2195] - Port unification disabled
+2025-08-05 05:40:37,353 [myid:0] - INFO  [Thread-5:o.a.z.s.q.QuorumPeer@190] - multiAddress.enabled set to false
+2025-08-05 05:40:37,353 [myid:0] - INFO  [Thread-5:o.a.z.s.q.QuorumPeer@215] - multiAddress.reachabilityCheckEnabled set to true
+2025-08-05 05:40:37,353 [myid:0] - INFO  [Thread-5:o.a.z.s.q.QuorumPeer@202] - multiAddress.reachabilityCheckTimeoutMs set to 1000
+2025-08-05 05:40:37,353 [myid:0] - INFO  [Thread-5:o.a.z.s.q.QuorumPeer@2712] - QuorumPeer communication is not secured! (SASL auth disabled)
+2025-08-05 05:40:37,353 [myid:0] - INFO  [Thread-5:o.a.z.s.q.QuorumPeer@2737] - quorum.cnxn.threads.size set to 20
+2025-08-05 05:40:37,357 [myid:2] - INFO  [Thread-7:o.a.z.s.q.QuorumPeer@2189] - Using insecure (non-TLS) quorum communication
+2025-08-05 05:40:37,358 [myid:2] - INFO  [Thread-7:o.a.z.s.q.QuorumPeer@2195] - Port unification disabled
+2025-08-05 05:40:37,358 [myid:2] - INFO  [Thread-7:o.a.z.s.q.QuorumPeer@190] - multiAddress.enabled set to false
+2025-08-05 05:40:37,358 [myid:2] - INFO  [Thread-7:o.a.z.s.q.QuorumPeer@215] - multiAddress.reachabilityCheckEnabled set to true
+2025-08-05 05:40:37,358 [myid:2] - INFO  [Thread-7:o.a.z.s.q.QuorumPeer@202] - multiAddress.reachabilityCheckTimeoutMs set to 1000
+2025-08-05 05:40:37,358 [myid:2] - INFO  [Thread-7:o.a.z.s.q.QuorumPeer@2712] - QuorumPeer communication is not secured! (SASL auth disabled)
+2025-08-05 05:40:37,358 [myid:2] - INFO  [Thread-7:o.a.z.s.q.QuorumPeer@2737] - quorum.cnxn.threads.size set to 20
+2025-08-05 05:40:37,362 [myid:1] - INFO  [Thread-6:o.a.z.s.q.QuorumPeer@2189] - Using insecure (non-TLS) quorum communication
+2025-08-05 05:40:37,362 [myid:1] - INFO  [Thread-6:o.a.z.s.q.QuorumPeer@2195] - Port unification disabled
+2025-08-05 05:40:37,362 [myid:1] - INFO  [Thread-6:o.a.z.s.q.QuorumPeer@190] - multiAddress.enabled set to false
+2025-08-05 05:40:37,364 [myid:1] - INFO  [Thread-6:o.a.z.s.q.QuorumPeer@215] - multiAddress.reachabilityCheckEnabled set to true
+2025-08-05 05:40:37,364 [myid:1] - INFO  [Thread-6:o.a.z.s.q.QuorumPeer@202] - multiAddress.reachabilityCheckTimeoutMs set to 1000
+2025-08-05 05:40:37,364 [myid:1] - INFO  [Thread-6:o.a.z.s.q.QuorumPeer@2712] - QuorumPeer communication is not secured! (SASL auth disabled)
+2025-08-05 05:40:37,364 [myid:1] - INFO  [Thread-6:o.a.z.s.q.QuorumPeer@2737] - quorum.cnxn.threads.size set to 20
+2025-08-05 05:40:37,405 [myid:0] - INFO  [Thread-5:o.a.z.s.p.FileTxnSnapLog@260] - Initialize file found, an empty database will not block voting participation
+2025-08-05 05:40:37,425 [myid:2] - INFO  [Thread-7:o.a.z.s.p.FileTxnSnapLog@260] - Initialize file found, an empty database will not block voting participation
+2025-08-05 05:40:37,451 [myid:1] - INFO  [Thread-6:o.a.z.s.p.FileTxnSnapLog@260] - Initialize file found, an empty database will not block voting participation
+2025-08-05 05:40:37,470 [myid:0] - INFO  [Thread-5:o.a.z.s.p.FileTxnSnapLog@480] - Snapshotting: 0x0 to /usr/csuser/clouddrive/zookeeper/zookeeper-server/target/surefire/test12397985425437232716.junit.dir/data/version-2/snapshot.0
+2025-08-05 05:40:37,490 [myid:2] - INFO  [Thread-7:o.a.z.s.p.FileTxnSnapLog@480] - Snapshotting: 0x0 to /usr/csuser/clouddrive/zookeeper/zookeeper-server/target/surefire/test14522371397479967717.junit.dir/data/version-2/snapshot.0
+2025-08-05 05:40:37,528 [myid:1] - INFO  [Thread-6:o.a.z.s.p.FileTxnSnapLog@480] - Snapshotting: 0x0 to /usr/csuser/clouddrive/zookeeper/zookeeper-server/target/surefire/test4170879578603251272.junit.dir/data/version-2/snapshot.0
+2025-08-05 05:40:37,550 [myid:2] - INFO  [Thread-7:o.a.z.s.ZKDatabase@294] - Snapshot loaded in 192 ms, highest zxid is 0x0, digest is 1371985504
+2025-08-05 05:40:37,550 [myid:0] - INFO  [Thread-5:o.a.z.s.ZKDatabase@294] - Snapshot loaded in 197 ms, highest zxid is 0x0, digest is 1371985504
+2025-08-05 05:40:37,590 [myid:1] - INFO  [Thread-6:o.a.z.s.ZKDatabase@294] - Snapshot loaded in 226 ms, highest zxid is 0x0, digest is 1371985504
+2025-08-05 05:40:37,620 [myid:2] - INFO  [Thread-7:o.a.z.s.q.QuorumPeer@1220] - currentEpoch not found! Creating with a reasonable default of 0. This should only happen when you are upgrading your installation
+2025-08-05 05:40:37,620 [myid:1] - INFO  [Thread-6:o.a.z.s.q.QuorumPeer@1220] - currentEpoch not found! Creating with a reasonable default of 0. This should only happen when you are upgrading your installation
+2025-08-05 05:40:37,625 [myid:0] - INFO  [Thread-5:o.a.z.s.q.QuorumPeer@1220] - currentEpoch not found! Creating with a reasonable default of 0. This should only happen when you are upgrading your installation
+2025-08-05 05:40:37,855 [myid:0] - INFO  [Thread-5:o.a.z.s.q.QuorumPeer@1248] - acceptedEpoch not found! Creating with a reasonable default of 0. This should only happen when you are upgrading your installation
+2025-08-05 05:40:37,855 [myid:1] - INFO  [Thread-6:o.a.z.s.q.QuorumPeer@1248] - acceptedEpoch not found! Creating with a reasonable default of 0. This should only happen when you are upgrading your installation
+2025-08-05 05:40:37,864 [myid:2] - INFO  [Thread-7:o.a.z.s.q.QuorumPeer@1248] - acceptedEpoch not found! Creating with a reasonable default of 0. This should only happen when you are upgrading your installation
+2025-08-05 05:40:38,062 [myid:1] - INFO  [Thread-6:o.a.z.s.q.QuorumPeer@2754] - Using 20000ms as the quorum cnxn socket timeout
+2025-08-05 05:40:38,062 [myid:0] - INFO  [Thread-5:o.a.z.s.q.QuorumPeer@2754] - Using 20000ms as the quorum cnxn socket timeout
+2025-08-05 05:40:38,091 [myid:2] - INFO  [Thread-7:o.a.z.s.q.QuorumPeer@2754] - Using 20000ms as the quorum cnxn socket timeout
+2025-08-05 05:40:38,107 [myid:] - INFO  [NIOWorkerThread-1:o.a.z.s.NIOServerCnxn@532] - Processing stat command from /127.0.0.1:45228
+2025-08-05 05:40:38,297 [myid:2] - INFO  [Thread-7:o.a.z.s.q.QuorumCnxManager$Listener@924] - Election port bind maximum retries is 3
+2025-08-05 05:40:38,298 [myid:1] - INFO  [Thread-6:o.a.z.s.q.QuorumCnxManager$Listener@924] - Election port bind maximum retries is 3
+2025-08-05 05:40:38,298 [myid:0] - INFO  [Thread-5:o.a.z.s.q.QuorumCnxManager$Listener@924] - Election port bind maximum retries is 3
+2025-08-05 05:40:38,361 [myid:] - INFO  [main:o.a.z.c.FourLetterWordMain@143] - connecting to 127.0.0.1:21996 (secure=false)
+2025-08-05 05:40:38,373 [myid:] - INFO  [NIOWorkerThread-2:o.a.z.s.NIOServerCnxn@532] - Processing stat command from /127.0.0.1:45236
+2025-08-05 05:40:38,409 [myid:2] - INFO  [Thread-7:o.a.z.s.q.FastLeaderElection@90] - zookeeper.fastleader.minNotificationInterval = 200 ms
+2025-08-05 05:40:38,409 [myid:2] - INFO  [Thread-7:o.a.z.s.q.FastLeaderElection@92] - zookeeper.fastleader.maxNotificationInterval = 60000 ms
+2025-08-05 05:40:38,468 [myid:] - INFO  [ListenerHandler-/127.0.0.1:22001:o.a.z.s.q.QuorumCnxManager$Listener$ListenerHandler@1071] - 1 is accepting connections now, my election bind port: /127.0.0.1:22001
+2025-08-05 05:40:38,492 [myid:] - INFO  [ListenerHandler-/127.0.0.1:21998:o.a.z.s.q.QuorumCnxManager$Listener$ListenerHandler@1071] - 0 is accepting connections now, my election bind port: /127.0.0.1:21998
+2025-08-05 05:40:38,505 [myid:] - INFO  [ListenerHandler-/127.0.0.1:22004:o.a.z.s.q.QuorumCnxManager$Listener$ListenerHandler@1071] - 2 is accepting connections now, my election bind port: /127.0.0.1:22004
+2025-08-05 05:40:38,652 [myid:] - INFO  [main:o.a.z.c.FourLetterWordMain@143] - connecting to 127.0.0.1:21996 (secure=false)
+2025-08-05 05:40:38,722 [myid:] - INFO  [NIOWorkerThread-3:o.a.z.s.NIOServerCnxn@532] - Processing stat command from /127.0.0.1:45246
+2025-08-05 05:40:38,974 [myid:] - INFO  [main:o.a.z.c.FourLetterWordMain@143] - connecting to 127.0.0.1:21996 (secure=false)
+2025-08-05 05:40:39,007 [myid:] - INFO  [NIOWorkerThread-4:o.a.z.s.NIOServerCnxn@532] - Processing stat command from /127.0.0.1:45254
+2025-08-05 05:40:39,042 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.q.QuorumPeer@1530] - LOOKING
+2025-08-05 05:40:39,043 [myid:] - INFO  [QuorumPeer[myid=1](plain=127.0.0.1:21999)(secure=disabled):o.a.z.s.q.QuorumPeer@1530] - LOOKING
+2025-08-05 05:40:39,043 [myid:] - INFO  [QuorumPeer[myid=2](plain=127.0.0.1:22002)(secure=disabled):o.a.z.s.q.QuorumPeer@1530] - LOOKING
+2025-08-05 05:40:39,123 [myid:] - INFO  [QuorumPeer[myid=1](plain=127.0.0.1:21999)(secure=disabled):o.a.z.s.q.FastLeaderElection@941] - New election. My id = 1, proposed zxid=0x0
+2025-08-05 05:40:39,124 [myid:] - INFO  [QuorumPeer[myid=2](plain=127.0.0.1:22002)(secure=disabled):o.a.z.s.q.FastLeaderElection@941] - New election. My id = 2, proposed zxid=0x0
+2025-08-05 05:40:39,123 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.q.FastLeaderElection@941] - New election. My id = 0, proposed zxid=0x0
+2025-08-05 05:40:39,253 [myid:] - INFO  [ListenerHandler-/127.0.0.1:21998:o.a.z.s.q.QuorumCnxManager$Listener$ListenerHandler@1076] - Received connection request from /127.0.0.1:49118
+2025-08-05 05:40:39,258 [myid:] - INFO  [main:o.a.z.c.FourLetterWordMain@143] - connecting to 127.0.0.1:21996 (secure=false)
+2025-08-05 05:40:39,259 [myid:] - INFO  [NIOWorkerThread-1:o.a.z.s.NIOServerCnxn@532] - Processing stat command from /127.0.0.1:45270
+2025-08-05 05:40:39,278 [myid:] - INFO  [ListenerHandler-/127.0.0.1:22001:o.a.z.s.q.QuorumCnxManager$Listener$ListenerHandler@1076] - Received connection request from /127.0.0.1:59552
+2025-08-05 05:40:39,296 [myid:] - INFO  [WorkerReceiver[myid=2]:o.a.z.s.q.FastLeaderElection$Messenger$WorkerReceiver@391] - Notification: my state:LOOKING; n.sid:2, n.state:LOOKING, n.leader:2, n.round:0x1, n.peerEpoch:0x0, n.zxid:0x0, message format version:0x2, n.config version:0x0
+2025-08-05 05:40:39,305 [myid:] - INFO  [WorkerReceiver[myid=0]:o.a.z.s.q.FastLeaderElection$Messenger$WorkerReceiver@391] - Notification: my state:LOOKING; n.sid:0, n.state:LOOKING, n.leader:0, n.round:0x1, n.peerEpoch:0x0, n.zxid:0x0, message format version:0x2, n.config version:0x0
+2025-08-05 05:40:39,305 [myid:] - INFO  [QuorumConnectionThread-[myid=0]-1:o.a.z.s.q.QuorumCnxManager@514] - Have smaller server identifier, so dropping the connection: (myId:0 --> sid:1)
+2025-08-05 05:40:39,306 [myid:] - INFO  [ListenerHandler-/127.0.0.1:22004:o.a.z.s.q.QuorumCnxManager$Listener$ListenerHandler@1076] - Received connection request from /127.0.0.1:43748
+2025-08-05 05:40:39,306 [myid:] - INFO  [QuorumConnectionThread-[myid=0]-2:o.a.z.s.q.QuorumCnxManager@514] - Have smaller server identifier, so dropping the connection: (myId:0 --> sid:2)
+2025-08-05 05:40:39,319 [myid:] - INFO  [WorkerReceiver[myid=1]:o.a.z.s.q.FastLeaderElection$Messenger$WorkerReceiver@391] - Notification: my state:LOOKING; n.sid:1, n.state:LOOKING, n.leader:1, n.round:0x1, n.peerEpoch:0x0, n.zxid:0x0, message format version:0x2, n.config version:0x0
+2025-08-05 05:40:39,320 [myid:] - INFO  [ListenerHandler-/127.0.0.1:22001:o.a.z.s.q.QuorumCnxManager$Listener$ListenerHandler@1076] - Received connection request from /127.0.0.1:59560
+2025-08-05 05:40:39,322 [myid:] - INFO  [ListenerHandler-/127.0.0.1:22004:o.a.z.s.q.QuorumCnxManager$Listener$ListenerHandler@1076] - Received connection request from /127.0.0.1:43756
+2025-08-05 05:40:39,323 [myid:] - INFO  [QuorumConnectionThread-[myid=1]-2:o.a.z.s.q.QuorumCnxManager@514] - Have smaller server identifier, so dropping the connection: (myId:1 --> sid:2)
+2025-08-05 05:40:39,442 [myid:] - INFO  [WorkerReceiver[myid=1]:o.a.z.s.q.FastLeaderElection$Messenger$WorkerReceiver@391] - Notification: my state:LOOKING; n.sid:0, n.state:LOOKING, n.leader:0, n.round:0x1, n.peerEpoch:0x0, n.zxid:0x0, message format version:0x2, n.config version:0x0
+2025-08-05 05:40:39,456 [myid:] - INFO  [ListenerHandler-/127.0.0.1:21998:o.a.z.s.q.QuorumCnxManager$Listener$ListenerHandler@1076] - Received connection request from /127.0.0.1:49128
+2025-08-05 05:40:39,461 [myid:] - INFO  [WorkerReceiver[myid=0]:o.a.z.s.q.FastLeaderElection$Messenger$WorkerReceiver@391] - Notification: my state:LOOKING; n.sid:1, n.state:LOOKING, n.leader:1, n.round:0x1, n.peerEpoch:0x0, n.zxid:0x0, message format version:0x2, n.config version:0x0
+2025-08-05 05:40:39,463 [myid:] - INFO  [WorkerReceiver[myid=1]:o.a.z.s.q.FastLeaderElection$Messenger$WorkerReceiver@391] - Notification: my state:LOOKING; n.sid:0, n.state:LOOKING, n.leader:1, n.round:0x1, n.peerEpoch:0x0, n.zxid:0x0, message format version:0x2, n.config version:0x0
+2025-08-05 05:40:39,465 [myid:] - INFO  [WorkerReceiver[myid=0]:o.a.z.s.q.FastLeaderElection$Messenger$WorkerReceiver@391] - Notification: my state:LOOKING; n.sid:0, n.state:LOOKING, n.leader:1, n.round:0x1, n.peerEpoch:0x0, n.zxid:0x0, message format version:0x2, n.config version:0x0
+2025-08-05 05:40:39,491 [myid:] - INFO  [WorkerReceiver[myid=2]:o.a.z.s.q.FastLeaderElection$Messenger$WorkerReceiver@391] - Notification: my state:LOOKING; n.sid:0, n.state:LOOKING, n.leader:1, n.round:0x1, n.peerEpoch:0x0, n.zxid:0x0, message format version:0x2, n.config version:0x0
+2025-08-05 05:40:39,498 [myid:] - INFO  [WorkerReceiver[myid=0]:o.a.z.s.q.FastLeaderElection$Messenger$WorkerReceiver@391] - Notification: my state:LOOKING; n.sid:2, n.state:LOOKING, n.leader:2, n.round:0x1, n.peerEpoch:0x0, n.zxid:0x0, message format version:0x2, n.config version:0x0
+2025-08-05 05:40:39,500 [myid:] - INFO  [WorkerReceiver[myid=0]:o.a.z.s.q.FastLeaderElection$Messenger$WorkerReceiver@391] - Notification: my state:LOOKING; n.sid:0, n.state:LOOKING, n.leader:2, n.round:0x1, n.peerEpoch:0x0, n.zxid:0x0, message format version:0x2, n.config version:0x0
+2025-08-05 05:40:39,500 [myid:] - INFO  [WorkerReceiver[myid=1]:o.a.z.s.q.FastLeaderElection$Messenger$WorkerReceiver@391] - Notification: my state:LOOKING; n.sid:0, n.state:LOOKING, n.leader:2, n.round:0x1, n.peerEpoch:0x0, n.zxid:0x0, message format version:0x2, n.config version:0x0
+2025-08-05 05:40:39,502 [myid:] - INFO  [WorkerReceiver[myid=0]:o.a.z.s.q.FastLeaderElection$Messenger$WorkerReceiver@391] - Notification: my state:LOOKING; n.sid:1, n.state:LOOKING, n.leader:2, n.round:0x1, n.peerEpoch:0x0, n.zxid:0x0, message format version:0x2, n.config version:0x0
+2025-08-05 05:40:39,502 [myid:] - INFO  [WorkerReceiver[myid=1]:o.a.z.s.q.FastLeaderElection$Messenger$WorkerReceiver@391] - Notification: my state:LOOKING; n.sid:1, n.state:LOOKING, n.leader:2, n.round:0x1, n.peerEpoch:0x0, n.zxid:0x0, message format version:0x2, n.config version:0x0
+2025-08-05 05:40:39,503 [myid:] - INFO  [WorkerReceiver[myid=2]:o.a.z.s.q.FastLeaderElection$Messenger$WorkerReceiver@391] - Notification: my state:LOOKING; n.sid:0, n.state:LOOKING, n.leader:2, n.round:0x1, n.peerEpoch:0x0, n.zxid:0x0, message format version:0x2, n.config version:0x0
+2025-08-05 05:40:39,509 [myid:] - INFO  [main:o.a.z.c.FourLetterWordMain@143] - connecting to 127.0.0.1:21996 (secure=false)
+2025-08-05 05:40:39,510 [myid:] - INFO  [NIOWorkerThread-2:o.a.z.s.NIOServerCnxn@532] - Processing stat command from /127.0.0.1:45276
+2025-08-05 05:40:39,546 [myid:] - INFO  [WorkerReceiver[myid=1]:o.a.z.s.q.FastLeaderElection$Messenger$WorkerReceiver@391] - Notification: my state:LOOKING; n.sid:2, n.state:LOOKING, n.leader:2, n.round:0x1, n.peerEpoch:0x0, n.zxid:0x0, message format version:0x2, n.config version:0x0
+2025-08-05 05:40:39,561 [myid:] - INFO  [WorkerReceiver[myid=2]:o.a.z.s.q.FastLeaderElection$Messenger$WorkerReceiver@391] - Notification: my state:LOOKING; n.sid:1, n.state:LOOKING, n.leader:2, n.round:0x1, n.peerEpoch:0x0, n.zxid:0x0, message format version:0x2, n.config version:0x0
+2025-08-05 05:40:39,702 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.q.QuorumPeer@959] - Peer state changed: following
+2025-08-05 05:40:39,703 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.q.QuorumPeer@1614] - FOLLOWING
+2025-08-05 05:40:39,747 [myid:] - INFO  [QuorumPeer[myid=1](plain=127.0.0.1:21999)(secure=disabled):o.a.z.s.q.QuorumPeer@959] - Peer state changed: following
+2025-08-05 05:40:39,748 [myid:] - INFO  [QuorumPeer[myid=1](plain=127.0.0.1:21999)(secure=disabled):o.a.z.s.q.QuorumPeer@1614] - FOLLOWING
+2025-08-05 05:40:39,761 [myid:] - INFO  [main:o.a.z.c.FourLetterWordMain@143] - connecting to 127.0.0.1:21996 (secure=false)
+2025-08-05 05:40:39,763 [myid:] - INFO  [QuorumPeer[myid=2](plain=127.0.0.1:22002)(secure=disabled):o.a.z.s.q.QuorumPeer@959] - Peer state changed: leading
+2025-08-05 05:40:39,763 [myid:] - INFO  [QuorumPeer[myid=2](plain=127.0.0.1:22002)(secure=disabled):o.a.z.s.q.QuorumPeer@1626] - LEADING
+2025-08-05 05:40:39,763 [myid:] - INFO  [NIOWorkerThread-3:o.a.z.s.NIOServerCnxn@532] - Processing stat command from /127.0.0.1:45280
+2025-08-05 05:40:39,928 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.q.Learner@134] - leaderConnectDelayDuringRetryMs: 100
+2025-08-05 05:40:39,928 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.q.Learner@135] - TCP NoDelay set to: true
+2025-08-05 05:40:39,928 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.q.Learner@136] - zookeeper.learner.asyncSending = false
+2025-08-05 05:40:39,928 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.q.Learner@137] - zookeeper.learner.closeSocketAsync = false
+2025-08-05 05:40:39,928 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.AuthenticationHelper@66] - zookeeper.enforce.auth.enabled = false
+2025-08-05 05:40:39,928 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.AuthenticationHelper@67] - zookeeper.enforce.auth.schemes = []
+2025-08-05 05:40:39,929 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.ZooKeeperServer@1395] - minSessionTimeout set to 8000 ms
+2025-08-05 05:40:39,929 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.ZooKeeperServer@1404] - maxSessionTimeout set to 80000 ms
+2025-08-05 05:40:39,929 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.ResponseCache@50] - getData response cache size is initialized with value 400.
+2025-08-05 05:40:39,929 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.ResponseCache@50] - getChildren response cache size is initialized with value 400.
+2025-08-05 05:40:39,929 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.u.RequestPathMetricsCollector@109] - zookeeper.pathStats.slotCapacity = 60
+2025-08-05 05:40:39,929 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.u.RequestPathMetricsCollector@110] - zookeeper.pathStats.slotDuration = 15
+2025-08-05 05:40:39,929 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.u.RequestPathMetricsCollector@111] - zookeeper.pathStats.maxDepth = 6
+2025-08-05 05:40:39,929 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.u.RequestPathMetricsCollector@112] - zookeeper.pathStats.initialDelay = 5
+2025-08-05 05:40:39,929 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.u.RequestPathMetricsCollector@113] - zookeeper.pathStats.delay = 5
+2025-08-05 05:40:39,929 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.u.RequestPathMetricsCollector@114] - zookeeper.pathStats.enabled = false
+2025-08-05 05:40:39,929 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.ZooKeeperServer@1622] - The max bytes for all large requests are set to 104857600
+2025-08-05 05:40:39,929 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.ZooKeeperServer@1636] - The large request threshold is set to -1
+2025-08-05 05:40:39,929 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.ZooKeeperServer@387] - Created server with tickTime 4000 ms minSessionTimeout 8000 ms maxSessionTimeout 80000 ms clientPortListenBacklog -1 dataLogdir /usr/csuser/clouddrive/zookeeper/zookeeper-server/target/surefire/test12397985425437232716.junit.dir/data/version-2 snapdir /usr/csuser/clouddrive/zookeeper/zookeeper-server/target/surefire/test12397985425437232716.junit.dir/data/version-2
+2025-08-05 05:40:39,930 [myid:] - INFO  [QuorumPeer[myid=1](plain=127.0.0.1:21999)(secure=disabled):o.a.z.s.AuthenticationHelper@66] - zookeeper.enforce.auth.enabled = false
+2025-08-05 05:40:39,930 [myid:] - INFO  [QuorumPeer[myid=1](plain=127.0.0.1:21999)(secure=disabled):o.a.z.s.AuthenticationHelper@67] - zookeeper.enforce.auth.schemes = []
+2025-08-05 05:40:39,930 [myid:] - INFO  [QuorumPeer[myid=1](plain=127.0.0.1:21999)(secure=disabled):o.a.z.s.ZooKeeperServer@1395] - minSessionTimeout set to 8000 ms
+2025-08-05 05:40:39,930 [myid:] - INFO  [QuorumPeer[myid=1](plain=127.0.0.1:21999)(secure=disabled):o.a.z.s.ZooKeeperServer@1404] - maxSessionTimeout set to 80000 ms
+2025-08-05 05:40:39,930 [myid:] - INFO  [QuorumPeer[myid=1](plain=127.0.0.1:21999)(secure=disabled):o.a.z.s.ResponseCache@50] - getData response cache size is initialized with value 400.
+2025-08-05 05:40:39,930 [myid:] - INFO  [QuorumPeer[myid=1](plain=127.0.0.1:21999)(secure=disabled):o.a.z.s.ResponseCache@50] - getChildren response cache size is initialized with value 400.
+2025-08-05 05:40:39,930 [myid:] - INFO  [QuorumPeer[myid=1](plain=127.0.0.1:21999)(secure=disabled):o.a.z.s.u.RequestPathMetricsCollector@109] - zookeeper.pathStats.slotCapacity = 60
+2025-08-05 05:40:39,930 [myid:] - INFO  [QuorumPeer[myid=1](plain=127.0.0.1:21999)(secure=disabled):o.a.z.s.u.RequestPathMetricsCollector@110] - zookeeper.pathStats.slotDuration = 15
+2025-08-05 05:40:39,930 [myid:] - INFO  [QuorumPeer[myid=1](plain=127.0.0.1:21999)(secure=disabled):o.a.z.s.u.RequestPathMetricsCollector@111] - zookeeper.pathStats.maxDepth = 6
+2025-08-05 05:40:39,930 [myid:] - INFO  [QuorumPeer[myid=1](plain=127.0.0.1:21999)(secure=disabled):o.a.z.s.u.RequestPathMetricsCollector@112] - zookeeper.pathStats.initialDelay = 5
+2025-08-05 05:40:39,930 [myid:] - INFO  [QuorumPeer[myid=1](plain=127.0.0.1:21999)(secure=disabled):o.a.z.s.u.RequestPathMetricsCollector@113] - zookeeper.pathStats.delay = 5
+2025-08-05 05:40:39,930 [myid:] - INFO  [QuorumPeer[myid=1](plain=127.0.0.1:21999)(secure=disabled):o.a.z.s.u.RequestPathMetricsCollector@114] - zookeeper.pathStats.enabled = false
+2025-08-05 05:40:39,930 [myid:] - INFO  [QuorumPeer[myid=1](plain=127.0.0.1:21999)(secure=disabled):o.a.z.s.ZooKeeperServer@1622] - The max bytes for all large requests are set to 104857600
+2025-08-05 05:40:39,930 [myid:] - INFO  [QuorumPeer[myid=1](plain=127.0.0.1:21999)(secure=disabled):o.a.z.s.ZooKeeperServer@1636] - The large request threshold is set to -1
+2025-08-05 05:40:39,930 [myid:] - INFO  [QuorumPeer[myid=1](plain=127.0.0.1:21999)(secure=disabled):o.a.z.s.ZooKeeperServer@387] - Created server with tickTime 4000 ms minSessionTimeout 8000 ms maxSessionTimeout 80000 ms clientPortListenBacklog -1 dataLogdir /usr/csuser/clouddrive/zookeeper/zookeeper-server/target/surefire/test4170879578603251272.junit.dir/data/version-2 snapdir /usr/csuser/clouddrive/zookeeper/zookeeper-server/target/surefire/test4170879578603251272.junit.dir/data/version-2
+2025-08-05 05:40:39,940 [myid:] - INFO  [QuorumPeer[myid=2](plain=127.0.0.1:22002)(secure=disabled):o.a.z.s.q.LearnerMaster@47] - zookeeper.leader.maxConcurrentSnapSyncs = 10
+2025-08-05 05:40:39,940 [myid:] - INFO  [QuorumPeer[myid=2](plain=127.0.0.1:22002)(secure=disabled):o.a.z.s.q.LearnerMaster@50] - zookeeper.leader.maxConcurrentDiffSyncs = 100
+2025-08-05 05:40:39,940 [myid:] - INFO  [QuorumPeer[myid=2](plain=127.0.0.1:22002)(secure=disabled):o.a.z.s.q.Leader@87] - TCP NoDelay set to: true
+2025-08-05 05:40:39,940 [myid:] - INFO  [QuorumPeer[myid=2](plain=127.0.0.1:22002)(secure=disabled):o.a.z.s.q.Leader@173] - zookeeper.leader.ackLoggingFrequency = 1000
+2025-08-05 05:40:39,940 [myid:] - INFO  [QuorumPeer[myid=2](plain=127.0.0.1:22002)(secure=disabled):o.a.z.s.q.Leader@1584] - zookeeper.leader.maxTimeToWaitForEpoch = -1ms
+2025-08-05 05:40:40,014 [myid:] - INFO  [main:o.a.z.c.FourLetterWordMain@143] - connecting to 127.0.0.1:21996 (secure=false)
+2025-08-05 05:40:40,016 [myid:] - INFO  [NIOWorkerThread-4:o.a.z.s.NIOServerCnxn@532] - Processing stat command from /127.0.0.1:45284
+2025-08-05 05:40:40,045 [myid:] - INFO  [QuorumPeer[myid=2](plain=127.0.0.1:22002)(secure=disabled):o.a.z.s.AuthenticationHelper@66] - zookeeper.enforce.auth.enabled = false
+2025-08-05 05:40:40,045 [myid:] - INFO  [QuorumPeer[myid=2](plain=127.0.0.1:22002)(secure=disabled):o.a.z.s.AuthenticationHelper@67] - zookeeper.enforce.auth.schemes = []
+2025-08-05 05:40:40,045 [myid:] - INFO  [QuorumPeer[myid=2](plain=127.0.0.1:22002)(secure=disabled):o.a.z.s.ZooKeeperServer@1395] - minSessionTimeout set to 8000 ms
+2025-08-05 05:40:40,045 [myid:] - INFO  [QuorumPeer[myid=2](plain=127.0.0.1:22002)(secure=disabled):o.a.z.s.ZooKeeperServer@1404] - maxSessionTimeout set to 80000 ms
+2025-08-05 05:40:40,045 [myid:] - INFO  [QuorumPeer[myid=2](plain=127.0.0.1:22002)(secure=disabled):o.a.z.s.ResponseCache@50] - getData response cache size is initialized with value 400.
+2025-08-05 05:40:40,045 [myid:] - INFO  [QuorumPeer[myid=2](plain=127.0.0.1:22002)(secure=disabled):o.a.z.s.ResponseCache@50] - getChildren response cache size is initialized with value 400.
+2025-08-05 05:40:40,045 [myid:] - INFO  [QuorumPeer[myid=2](plain=127.0.0.1:22002)(secure=disabled):o.a.z.s.u.RequestPathMetricsCollector@109] - zookeeper.pathStats.slotCapacity = 60
+2025-08-05 05:40:40,045 [myid:] - INFO  [QuorumPeer[myid=2](plain=127.0.0.1:22002)(secure=disabled):o.a.z.s.u.RequestPathMetricsCollector@110] - zookeeper.pathStats.slotDuration = 15
+2025-08-05 05:40:40,045 [myid:] - INFO  [QuorumPeer[myid=2](plain=127.0.0.1:22002)(secure=disabled):o.a.z.s.u.RequestPathMetricsCollector@111] - zookeeper.pathStats.maxDepth = 6
+2025-08-05 05:40:40,045 [myid:] - INFO  [QuorumPeer[myid=2](plain=127.0.0.1:22002)(secure=disabled):o.a.z.s.u.RequestPathMetricsCollector@112] - zookeeper.pathStats.initialDelay = 5
+2025-08-05 05:40:40,045 [myid:] - INFO  [QuorumPeer[myid=2](plain=127.0.0.1:22002)(secure=disabled):o.a.z.s.u.RequestPathMetricsCollector@113] - zookeeper.pathStats.delay = 5
+2025-08-05 05:40:40,045 [myid:] - INFO  [QuorumPeer[myid=2](plain=127.0.0.1:22002)(secure=disabled):o.a.z.s.u.RequestPathMetricsCollector@114] - zookeeper.pathStats.enabled = false
+2025-08-05 05:40:40,046 [myid:] - INFO  [QuorumPeer[myid=2](plain=127.0.0.1:22002)(secure=disabled):o.a.z.s.ZooKeeperServer@1622] - The max bytes for all large requests are set to 104857600
+2025-08-05 05:40:40,046 [myid:] - INFO  [QuorumPeer[myid=2](plain=127.0.0.1:22002)(secure=disabled):o.a.z.s.ZooKeeperServer@1636] - The large request threshold is set to -1
+2025-08-05 05:40:40,046 [myid:] - INFO  [QuorumPeer[myid=2](plain=127.0.0.1:22002)(secure=disabled):o.a.z.s.ZooKeeperServer@387] - Created server with tickTime 4000 ms minSessionTimeout 8000 ms maxSessionTimeout 80000 ms clientPortListenBacklog -1 dataLogdir /usr/csuser/clouddrive/zookeeper/zookeeper-server/target/surefire/test14522371397479967717.junit.dir/data/version-2 snapdir /usr/csuser/clouddrive/zookeeper/zookeeper-server/target/surefire/test14522371397479967717.junit.dir/data/version-2
+2025-08-05 05:40:40,125 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.q.Follower@76] - FOLLOWING - LEADER ELECTION TOOK - 1002 MS
+2025-08-05 05:40:40,127 [myid:] - INFO  [QuorumPeer[myid=1](plain=127.0.0.1:21999)(secure=disabled):o.a.z.s.q.Follower@76] - FOLLOWING - LEADER ELECTION TOOK - 1004 MS
+2025-08-05 05:40:40,131 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.q.QuorumPeer@973] - Peer state changed: following - discovery
+2025-08-05 05:40:40,132 [myid:] - INFO  [QuorumPeer[myid=1](plain=127.0.0.1:21999)(secure=disabled):o.a.z.s.q.QuorumPeer@973] - Peer state changed: following - discovery
+2025-08-05 05:40:40,203 [myid:] - INFO  [LeaderConnector-/127.0.0.1:22003:o.a.z.s.q.Learner$LeaderConnector@384] - Successfully connected to leader, using address: /127.0.0.1:22003
+2025-08-05 05:40:40,216 [myid:] - INFO  [LeaderConnector-/127.0.0.1:22003:o.a.z.s.q.Learner$LeaderConnector@384] - Successfully connected to leader, using address: /127.0.0.1:22003
+2025-08-05 05:40:40,228 [myid:] - INFO  [QuorumPeer[myid=2](plain=127.0.0.1:22002)(secure=disabled):o.a.z.s.q.Leader@737] - LEADING - LEADER ELECTION TOOK - 1104 MS
+2025-08-05 05:40:40,230 [myid:] - INFO  [QuorumPeer[myid=2](plain=127.0.0.1:22002)(secure=disabled):o.a.z.s.q.QuorumPeer@973] - Peer state changed: leading - discovery
+2025-08-05 05:40:40,230 [myid:] - INFO  [QuorumPeer[myid=2](plain=127.0.0.1:22002)(secure=disabled):o.a.z.s.p.FileTxnSnapLog@480] - Snapshotting: 0x0 to /usr/csuser/clouddrive/zookeeper/zookeeper-server/target/surefire/test14522371397479967717.junit.dir/data/version-2/snapshot.0
+2025-08-05 05:40:40,268 [myid:] - INFO  [main:o.a.z.c.FourLetterWordMain@143] - connecting to 127.0.0.1:21996 (secure=false)
+2025-08-05 05:40:40,271 [myid:] - INFO  [NIOWorkerThread-1:o.a.z.s.NIOServerCnxn@532] - Processing stat command from /127.0.0.1:45286
+2025-08-05 05:40:40,341 [myid:] - INFO  [QuorumPeer[myid=2](plain=127.0.0.1:22002)(secure=disabled):o.a.z.s.ZooKeeperServer@588] - Snapshot taken in 111 ms
+2025-08-05 05:40:40,521 [myid:] - INFO  [main:o.a.z.c.FourLetterWordMain@143] - connecting to 127.0.0.1:21996 (secure=false)
+2025-08-05 05:40:40,523 [myid:] - INFO  [NIOWorkerThread-2:o.a.z.s.NIOServerCnxn@532] - Processing stat command from /127.0.0.1:45290
+2025-08-05 05:40:40,568 [myid:] - INFO  [LearnerCnxAcceptorHandler-/127.0.0.1:22003:o.a.z.s.q.LearnerHandler@85] - zookeeper.leader.closeSocketAsync = false
+2025-08-05 05:40:40,701 [myid:] - INFO  [LearnerHandler-/127.0.0.1:32802:o.a.z.s.q.LearnerHandler@667] - Follower sid: 0 : info : 127.0.0.1:21997:21998:participant;127.0.0.1:21996
+2025-08-05 05:40:40,702 [myid:] - INFO  [LearnerHandler-/127.0.0.1:32816:o.a.z.s.q.LearnerHandler@667] - Follower sid: 1 : info : 127.0.0.1:22000:22001:participant;127.0.0.1:21999
+2025-08-05 05:40:40,773 [myid:] - INFO  [main:o.a.z.c.FourLetterWordMain@143] - connecting to 127.0.0.1:21996 (secure=false)
+2025-08-05 05:40:40,790 [myid:] - INFO  [NIOWorkerThread-3:o.a.z.s.NIOServerCnxn@532] - Processing stat command from /127.0.0.1:45302
+2025-08-05 05:40:40,892 [myid:] - INFO  [QuorumPeer[myid=2](plain=127.0.0.1:22002)(secure=disabled):o.a.z.s.q.QuorumPeer@1979] - Dynamic reconfig is disabled, we don't store the last seen config.
+2025-08-05 05:40:41,038 [myid:] - INFO  [LearnerHandler-/127.0.0.1:32816:o.a.z.s.ZKDatabase@358] - On disk txn sync enabled with snapshotSizeFactor 0.33
+2025-08-05 05:40:41,039 [myid:] - INFO  [LearnerHandler-/127.0.0.1:32816:o.a.z.s.q.LearnerHandler@988] - Synchronizing with Learner sid: 1 maxCommittedLog=0x0 minCommittedLog=0x0 lastProcessedZxid=0x0 peerLastZxid=0x0
+2025-08-05 05:40:41,039 [myid:] - INFO  [LearnerHandler-/127.0.0.1:32816:o.a.z.s.q.LearnerHandler@1033] - Sending DIFF zxid=0x0 for peer sid: 1
+2025-08-05 05:40:41,040 [myid:] - INFO  [QuorumPeer[myid=1](plain=127.0.0.1:21999)(secure=disabled):o.a.z.s.q.QuorumPeer@973] - Peer state changed: following - synchronization
+2025-08-05 05:40:41,040 [myid:] - INFO  [main:o.a.z.c.FourLetterWordMain@143] - connecting to 127.0.0.1:21996 (secure=false)
+2025-08-05 05:40:41,041 [myid:] - INFO  [NIOWorkerThread-4:o.a.z.s.NIOServerCnxn@532] - Processing stat command from /127.0.0.1:45316
+2025-08-05 05:40:41,042 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.q.QuorumPeer@973] - Peer state changed: following - synchronization
+2025-08-05 05:40:41,042 [myid:] - INFO  [LearnerHandler-/127.0.0.1:32802:o.a.z.s.ZKDatabase@358] - On disk txn sync enabled with snapshotSizeFactor 0.33
+2025-08-05 05:40:41,042 [myid:] - INFO  [LearnerHandler-/127.0.0.1:32802:o.a.z.s.q.LearnerHandler@988] - Synchronizing with Learner sid: 0 maxCommittedLog=0x0 minCommittedLog=0x0 lastProcessedZxid=0x0 peerLastZxid=0x0
+2025-08-05 05:40:41,042 [myid:] - INFO  [LearnerHandler-/127.0.0.1:32802:o.a.z.s.q.LearnerHandler@1033] - Sending DIFF zxid=0x0 for peer sid: 0
+2025-08-05 05:40:41,190 [myid:] - INFO  [QuorumPeer[myid=2](plain=127.0.0.1:22002)(secure=disabled):o.a.z.s.q.QuorumPeer@973] - Peer state changed: leading - synchronization
+2025-08-05 05:40:41,195 [myid:] - INFO  [pool-11-thread-1:o.a.z.s.q.Leader@387] - THROUGHPUT leader commitsPerSec=0
+2025-08-05 05:40:41,208 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.q.Learner@587] - Getting a diff from the leader 0x0
+2025-08-05 05:40:41,209 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.q.QuorumPeer@978] - Peer state changed: following - synchronization - diff
+2025-08-05 05:40:41,225 [myid:] - INFO  [QuorumPeer[myid=1](plain=127.0.0.1:21999)(secure=disabled):o.a.z.s.q.Learner@587] - Getting a diff from the leader 0x0
+2025-08-05 05:40:41,225 [myid:] - INFO  [QuorumPeer[myid=1](plain=127.0.0.1:21999)(secure=disabled):o.a.z.s.q.QuorumPeer@978] - Peer state changed: following - synchronization - diff
+2025-08-05 05:40:41,273 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.q.Learner@748] - Learner received NEWLEADER message
+2025-08-05 05:40:41,274 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.q.QuorumPeer@1979] - Dynamic reconfig is disabled, we don't store the last seen config.
+2025-08-05 05:40:41,274 [myid:] - INFO  [QuorumPeer[myid=1](plain=127.0.0.1:21999)(secure=disabled):o.a.z.s.q.Learner@748] - Learner received NEWLEADER message
+2025-08-05 05:40:41,274 [myid:] - INFO  [QuorumPeer[myid=1](plain=127.0.0.1:21999)(secure=disabled):o.a.z.s.q.QuorumPeer@1979] - Dynamic reconfig is disabled, we don't store the last seen config.
+2025-08-05 05:40:41,294 [myid:] - INFO  [main:o.a.z.c.FourLetterWordMain@143] - connecting to 127.0.0.1:21996 (secure=false)
+2025-08-05 05:40:41,295 [myid:] - INFO  [NIOWorkerThread-1:o.a.z.s.NIOServerCnxn@532] - Processing stat command from /127.0.0.1:45320
+2025-08-05 05:40:41,451 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.q.Learner@814] - Set the current epoch to 1
+2025-08-05 05:40:41,451 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.q.QuorumPeer@978] - Peer state changed: following - synchronization
+2025-08-05 05:40:41,452 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.q.Learner@820] - Sent NEWLEADER ack to leader with zxid 100000000
+2025-08-05 05:40:41,452 [myid:] - INFO  [QuorumPeer[myid=2](plain=127.0.0.1:22002)(secure=disabled):o.a.z.s.q.Leader@1734] - Have quorum of supporters, sids: [[0, 2]]; starting up and setting last processed zxid: 0x100000000
+2025-08-05 05:40:41,452 [myid:] - INFO  [QuorumPeer[myid=2](plain=127.0.0.1:22002)(secure=disabled):o.a.z.s.q.Leader@1756] - Dynamic reconfig feature is disabled, skip designatedLeader calculation and reconfig processing.
+2025-08-05 05:40:41,467 [myid:] - INFO  [QuorumPeer[myid=1](plain=127.0.0.1:21999)(secure=disabled):o.a.z.s.q.Learner@814] - Set the current epoch to 1
+2025-08-05 05:40:41,467 [myid:] - INFO  [QuorumPeer[myid=1](plain=127.0.0.1:21999)(secure=disabled):o.a.z.s.q.QuorumPeer@978] - Peer state changed: following - synchronization
+2025-08-05 05:40:41,467 [myid:] - INFO  [QuorumPeer[myid=1](plain=127.0.0.1:21999)(secure=disabled):o.a.z.s.q.Learner@820] - Sent NEWLEADER ack to leader with zxid 100000000
+2025-08-05 05:40:41,547 [myid:] - INFO  [main:o.a.z.c.FourLetterWordMain@143] - connecting to 127.0.0.1:21996 (secure=false)
+2025-08-05 05:40:41,548 [myid:] - INFO  [NIOWorkerThread-2:o.a.z.s.NIOServerCnxn@532] - Processing stat command from /127.0.0.1:45334
+2025-08-05 05:40:41,620 [myid:] - INFO  [pool-13-thread-1:o.a.z.s.q.LearnerHandler@353] - THROUGHPUT node_id=0, role=follower, timestamp=1754372441620, commit_count=0
+2025-08-05 05:40:41,653 [myid:] - INFO  [pool-14-thread-1:o.a.z.s.q.LearnerHandler@353] - THROUGHPUT node_id=1, role=follower, timestamp=1754372441653, commit_count=0
+2025-08-05 05:40:41,701 [myid:] - INFO  [QuorumPeer[myid=2](plain=127.0.0.1:22002)(secure=disabled):o.a.z.s.q.CommitProcessor@490] - Configuring CommitProcessor with readBatchSize -1 commitBatchSize 1
+2025-08-05 05:40:41,701 [myid:] - INFO  [QuorumPeer[myid=2](plain=127.0.0.1:22002)(secure=disabled):o.a.z.s.q.CommitProcessor@451] - Configuring CommitProcessor with 2 worker threads.
+2025-08-05 05:40:41,799 [myid:] - INFO  [main:o.a.z.c.FourLetterWordMain@143] - connecting to 127.0.0.1:21996 (secure=false)
+2025-08-05 05:40:41,800 [myid:] - INFO  [NIOWorkerThread-3:o.a.z.s.NIOServerCnxn@532] - Processing stat command from /127.0.0.1:45350
+2025-08-05 05:40:41,809 [myid:] - INFO  [QuorumPeer[myid=2](plain=127.0.0.1:22002)(secure=disabled):o.a.z.s.q.ProposalRequestProcessor@57] - zookeeper.forward_learner_requests_to_commit_processor_disabled = false
+2025-08-05 05:40:41,827 [myid:] - INFO  [ProcessThread(sid:2 cport:-1)::o.a.z.s.PrepRequestProcessor@135] - PrepRequestProcessor (sid:2) started, reconfigEnabled=false
+2025-08-05 05:40:41,869 [myid:] - INFO  [QuorumPeer[myid=2](plain=127.0.0.1:22002)(secure=disabled):o.a.z.s.ContainerManager@83] - Using checkIntervalMs=60000 maxPerMinute=10000 maxNeverUsedIntervalMs=0
+2025-08-05 05:40:41,897 [myid:] - INFO  [QuorumPeer[myid=1](plain=127.0.0.1:21999)(secure=disabled):o.a.z.s.q.Learner@732] - Learner received UPTODATE message
+2025-08-05 05:40:41,897 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.q.Learner@732] - Learner received UPTODATE message
+2025-08-05 05:40:41,897 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.q.CommitProcessor@490] - Configuring CommitProcessor with readBatchSize -1 commitBatchSize 1
+2025-08-05 05:40:41,897 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.q.CommitProcessor@451] - Configuring CommitProcessor with 2 worker threads.
+2025-08-05 05:40:41,898 [myid:] - INFO  [QuorumPeer[myid=1](plain=127.0.0.1:21999)(secure=disabled):o.a.z.s.q.CommitProcessor@490] - Configuring CommitProcessor with readBatchSize -1 commitBatchSize 1
+2025-08-05 05:40:41,898 [myid:] - INFO  [QuorumPeer[myid=1](plain=127.0.0.1:21999)(secure=disabled):o.a.z.s.q.CommitProcessor@451] - Configuring CommitProcessor with 2 worker threads.
+2025-08-05 05:40:41,936 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.q.FollowerRequestProcessor@59] - Initialized FollowerRequestProcessor with zookeeper.follower.skipLearnerRequestToNextProcessor as false
+2025-08-05 05:40:41,937 [myid:] - INFO  [QuorumPeer[myid=1](plain=127.0.0.1:21999)(secure=disabled):o.a.z.s.q.FollowerRequestProcessor@59] - Initialized FollowerRequestProcessor with zookeeper.follower.skipLearnerRequestToNextProcessor as false
+2025-08-05 05:40:41,943 [myid:] - INFO  [QuorumPeer[myid=2](plain=127.0.0.1:22002)(secure=disabled):o.a.z.s.q.QuorumPeer@973] - Peer state changed: leading - broadcast
+2025-08-05 05:40:42,051 [myid:] - INFO  [main:o.a.z.c.FourLetterWordMain@143] - connecting to 127.0.0.1:21996 (secure=false)
+2025-08-05 05:40:42,052 [myid:] - INFO  [NIOWorkerThread-4:o.a.z.s.NIOServerCnxn@532] - Processing stat command from /127.0.0.1:45354
+2025-08-05 05:40:42,091 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.q.Learner@843] - 0 txns have been logged asynchronously
+2025-08-05 05:40:42,091 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.q.Learner@848] - 0 txns have been committed
+2025-08-05 05:40:42,091 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.q.QuorumPeer@973] - Peer state changed: following - broadcast
+2025-08-05 05:40:42,114 [myid:] - INFO  [QuorumPeer[myid=1](plain=127.0.0.1:21999)(secure=disabled):o.a.z.s.q.Learner@843] - 0 txns have been logged asynchronously
+2025-08-05 05:40:42,114 [myid:] - INFO  [QuorumPeer[myid=1](plain=127.0.0.1:21999)(secure=disabled):o.a.z.s.q.Learner@848] - 0 txns have been committed
+2025-08-05 05:40:42,114 [myid:] - INFO  [QuorumPeer[myid=1](plain=127.0.0.1:21999)(secure=disabled):o.a.z.s.q.QuorumPeer@973] - Peer state changed: following - broadcast
+2025-08-05 05:40:42,195 [myid:] - INFO  [pool-11-thread-1:o.a.z.s.q.Leader@387] - THROUGHPUT leader commitsPerSec=0
+2025-08-05 05:40:42,303 [myid:] - INFO  [main:o.a.z.c.FourLetterWordMain@143] - connecting to 127.0.0.1:21996 (secure=false)
+2025-08-05 05:40:42,304 [myid:] - INFO  [NIOWorkerThread-1:o.a.z.s.NIOServerCnxn@532] - Processing stat command from /127.0.0.1:45364
+2025-08-05 05:40:42,304 [myid:] - INFO  [NIOWorkerThread-1:o.a.z.s.c.StatCommand@52] - Stat command output
+2025-08-05 05:40:42,306 [myid:] - INFO  [main:o.a.z.c.FourLetterWordMain@143] - connecting to 127.0.0.1:21999 (secure=false)
+2025-08-05 05:40:42,324 [myid:] - INFO  [NIOWorkerThread-1:o.a.z.s.NIOServerCnxn@532] - Processing stat command from /127.0.0.1:58558
+2025-08-05 05:40:42,324 [myid:] - INFO  [NIOWorkerThread-1:o.a.z.s.c.StatCommand@52] - Stat command output
+2025-08-05 05:40:42,327 [myid:] - INFO  [main:o.a.z.c.FourLetterWordMain@143] - connecting to 127.0.0.1:22002 (secure=false)
+2025-08-05 05:40:42,335 [myid:] - INFO  [NIOWorkerThread-1:o.a.z.s.NIOServerCnxn@532] - Processing stat command from /127.0.0.1:36710
+2025-08-05 05:40:42,336 [myid:] - INFO  [NIOWorkerThread-1:o.a.z.s.c.StatCommand@52] - Stat command output
+2025-08-05 05:40:42,344 [myid:] - INFO  [main:o.a.z.ZooKeeper@1083] - Initiating client connection, connectString=127.0.0.1:21996,127.0.0.1:21999,127.0.0.1:22002 sessionTimeout=30000 watcher=org.apache.zookeeper.test.ClientBase$CountdownWatcher@687ef2e0
+2025-08-05 05:40:42,344 [myid:] - INFO  [main:o.a.z.ClientCnxnSocket@235] - jute.maxbuffer value is 1048575 Bytes
+2025-08-05 05:40:42,344 [myid:] - INFO  [main:o.a.z.ClientCnxn@1674] - zookeeper.request.timeout value is 15000. feature enabled=true
+2025-08-05 05:40:42,353 [myid:127.0.0.1:21996] - INFO  [main-SendThread(127.0.0.1:21996):o.a.z.ClientCnxn$SendThread@1121] - Opening socket connection to server localhost/127.0.0.1:21996.
+2025-08-05 05:40:42,354 [myid:127.0.0.1:21996] - INFO  [main-SendThread(127.0.0.1:21996):o.a.z.ClientCnxn$SendThread@1123] - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2025-08-05 05:40:42,357 [myid:127.0.0.1:21996] - INFO  [main-SendThread(127.0.0.1:21996):o.a.z.ClientCnxn$SendThread@974] - Socket connection established, initiating session, client: /127.0.0.1:45368, server: localhost/127.0.0.1:21996
+2025-08-05 05:40:42,361 [myid:] - INFO  [SyncThread:2:o.a.z.s.p.FileTxnLog@291] - Creating new log file: log.100000001
+2025-08-05 05:40:42,415 [myid:] - WARN  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.q.Follower@167] - Got zxid 0x100000001 expected 0x1
+2025-08-05 05:40:42,416 [myid:] - INFO  [SyncThread:0:o.a.z.s.p.FileTxnLog@291] - Creating new log file: log.100000001
+2025-08-05 05:40:42,620 [myid:] - INFO  [pool-13-thread-1:o.a.z.s.q.LearnerHandler@353] - THROUGHPUT node_id=0, role=follower, timestamp=1754372442620, commit_count=0
+2025-08-05 05:40:42,654 [myid:] - INFO  [pool-14-thread-1:o.a.z.s.q.LearnerHandler@353] - THROUGHPUT node_id=1, role=follower, timestamp=1754372442654, commit_count=0
+2025-08-05 05:40:43,195 [myid:] - INFO  [pool-11-thread-1:o.a.z.s.q.Leader@387] - THROUGHPUT leader commitsPerSec=0
+2025-08-05 05:40:43,620 [myid:] - INFO  [pool-13-thread-1:o.a.z.s.q.LearnerHandler@353] - THROUGHPUT node_id=0, role=follower, timestamp=1754372443620, commit_count=0
+2025-08-05 05:40:43,653 [myid:] - INFO  [pool-14-thread-1:o.a.z.s.q.LearnerHandler@353] - THROUGHPUT node_id=1, role=follower, timestamp=1754372443653, commit_count=0
+2025-08-05 05:40:44,195 [myid:] - INFO  [pool-11-thread-1:o.a.z.s.q.Leader@387] - THROUGHPUT leader commitsPerSec=0
+2025-08-05 05:40:44,620 [myid:] - INFO  [pool-13-thread-1:o.a.z.s.q.LearnerHandler@353] - THROUGHPUT node_id=0, role=follower, timestamp=1754372444620, commit_count=0
+2025-08-05 05:40:44,654 [myid:] - INFO  [pool-14-thread-1:o.a.z.s.q.LearnerHandler@353] - THROUGHPUT node_id=1, role=follower, timestamp=1754372444654, commit_count=0
+2025-08-05 05:40:45,195 [myid:] - INFO  [pool-11-thread-1:o.a.z.s.q.Leader@387] - THROUGHPUT leader commitsPerSec=0
+2025-08-05 05:40:45,620 [myid:] - INFO  [pool-13-thread-1:o.a.z.s.q.LearnerHandler@353] - THROUGHPUT node_id=0, role=follower, timestamp=1754372445620, commit_count=0
+2025-08-05 05:40:45,653 [myid:] - INFO  [pool-14-thread-1:o.a.z.s.q.LearnerHandler@353] - THROUGHPUT node_id=1, role=follower, timestamp=1754372445653, commit_count=0
+2025-08-05 05:40:46,195 [myid:] - INFO  [pool-11-thread-1:o.a.z.s.q.Leader@387] - THROUGHPUT leader commitsPerSec=0
+2025-08-05 05:40:46,620 [myid:] - INFO  [pool-13-thread-1:o.a.z.s.q.LearnerHandler@353] - THROUGHPUT node_id=0, role=follower, timestamp=1754372446620, commit_count=0
+2025-08-05 05:40:46,653 [myid:] - INFO  [pool-14-thread-1:o.a.z.s.q.LearnerHandler@353] - THROUGHPUT node_id=1, role=follower, timestamp=1754372446653, commit_count=0
+2025-08-05 05:40:47,195 [myid:] - INFO  [pool-11-thread-1:o.a.z.s.q.Leader@387] - THROUGHPUT leader commitsPerSec=0
+2025-08-05 05:40:47,620 [myid:] - INFO  [pool-13-thread-1:o.a.z.s.q.LearnerHandler@353] - THROUGHPUT node_id=0, role=follower, timestamp=1754372447620, commit_count=0
+2025-08-05 05:40:47,653 [myid:] - INFO  [pool-14-thread-1:o.a.z.s.q.LearnerHandler@353] - THROUGHPUT node_id=1, role=follower, timestamp=1754372447653, commit_count=0
+2025-08-05 05:40:48,195 [myid:] - INFO  [pool-11-thread-1:o.a.z.s.q.Leader@387] - THROUGHPUT leader commitsPerSec=0
+2025-08-05 05:40:48,620 [myid:] - INFO  [pool-13-thread-1:o.a.z.s.q.LearnerHandler@353] - THROUGHPUT node_id=0, role=follower, timestamp=1754372448620, commit_count=0
+2025-08-05 05:40:48,653 [myid:] - INFO  [pool-14-thread-1:o.a.z.s.q.LearnerHandler@353] - THROUGHPUT node_id=1, role=follower, timestamp=1754372448653, commit_count=0
+2025-08-05 05:40:49,195 [myid:] - INFO  [pool-11-thread-1:o.a.z.s.q.Leader@387] - THROUGHPUT leader commitsPerSec=0
+2025-08-05 05:40:49,620 [myid:] - INFO  [pool-13-thread-1:o.a.z.s.q.LearnerHandler@353] - THROUGHPUT node_id=0, role=follower, timestamp=1754372449620, commit_count=0
+2025-08-05 05:40:49,655 [myid:] - INFO  [pool-14-thread-1:o.a.z.s.q.LearnerHandler@353] - THROUGHPUT node_id=1, role=follower, timestamp=1754372449655, commit_count=0
+2025-08-05 05:40:50,195 [myid:] - INFO  [pool-11-thread-1:o.a.z.s.q.Leader@387] - THROUGHPUT leader commitsPerSec=0
+2025-08-05 05:40:50,620 [myid:] - INFO  [pool-13-thread-1:o.a.z.s.q.LearnerHandler@353] - THROUGHPUT node_id=0, role=follower, timestamp=1754372450620, commit_count=0
+2025-08-05 05:40:50,653 [myid:] - INFO  [pool-14-thread-1:o.a.z.s.q.LearnerHandler@353] - THROUGHPUT node_id=1, role=follower, timestamp=1754372450653, commit_count=0
+2025-08-05 05:40:51,195 [myid:] - INFO  [pool-11-thread-1:o.a.z.s.q.Leader@387] - THROUGHPUT leader commitsPerSec=0
+2025-08-05 05:40:51,620 [myid:] - INFO  [pool-13-thread-1:o.a.z.s.q.LearnerHandler@353] - THROUGHPUT node_id=0, role=follower, timestamp=1754372451620, commit_count=0
+2025-08-05 05:40:51,653 [myid:] - INFO  [pool-14-thread-1:o.a.z.s.q.LearnerHandler@353] - THROUGHPUT node_id=1, role=follower, timestamp=1754372451653, commit_count=0
+2025-08-05 05:40:52,195 [myid:] - INFO  [pool-11-thread-1:o.a.z.s.q.Leader@387] - THROUGHPUT leader commitsPerSec=0
+2025-08-05 05:40:52,370 [myid:127.0.0.1:21996] - WARN  [main-SendThread(127.0.0.1:21996):o.a.z.ClientCnxn$SendThread@1252] - Session 0x0 for server localhost/127.0.0.1:21996, Closing socket connection. Attempting reconnect except it is a SessionExpiredException or SessionTimeoutException.
+org.apache.zookeeper.ClientCnxn$ConnectionTimeoutException: Client connection timed out, have not heard from server in 10013ms for session id 0x0
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1209)
+2025-08-05 05:40:52,620 [myid:] - INFO  [pool-13-thread-1:o.a.z.s.q.LearnerHandler@353] - THROUGHPUT node_id=0, role=follower, timestamp=1754372452620, commit_count=0
+2025-08-05 05:40:52,653 [myid:] - INFO  [pool-14-thread-1:o.a.z.s.q.LearnerHandler@353] - THROUGHPUT node_id=1, role=follower, timestamp=1754372452653, commit_count=0
+2025-08-05 05:40:53,196 [myid:] - INFO  [pool-11-thread-1:o.a.z.s.q.Leader@387] - THROUGHPUT leader commitsPerSec=0
+2025-08-05 05:40:53,374 [myid:127.0.0.1:21999] - INFO  [main-SendThread(127.0.0.1:21999):o.a.z.ClientCnxn$SendThread@1121] - Opening socket connection to server localhost/127.0.0.1:21999.
+2025-08-05 05:40:53,374 [myid:127.0.0.1:21999] - INFO  [main-SendThread(127.0.0.1:21999):o.a.z.ClientCnxn$SendThread@1123] - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2025-08-05 05:40:53,374 [myid:127.0.0.1:21999] - INFO  [main-SendThread(127.0.0.1:21999):o.a.z.ClientCnxn$SendThread@974] - Socket connection established, initiating session, client: /127.0.0.1:55538, server: localhost/127.0.0.1:21999
+2025-08-05 05:40:53,620 [myid:] - INFO  [pool-13-thread-1:o.a.z.s.q.LearnerHandler@353] - THROUGHPUT node_id=0, role=follower, timestamp=1754372453620, commit_count=0
+2025-08-05 05:40:53,653 [myid:] - INFO  [pool-14-thread-1:o.a.z.s.q.LearnerHandler@353] - THROUGHPUT node_id=1, role=follower, timestamp=1754372453653, commit_count=0
+2025-08-05 05:40:54,195 [myid:] - INFO  [pool-11-thread-1:o.a.z.s.q.Leader@387] - THROUGHPUT leader commitsPerSec=0
+2025-08-05 05:40:54,620 [myid:] - INFO  [pool-13-thread-1:o.a.z.s.q.LearnerHandler@353] - THROUGHPUT node_id=0, role=follower, timestamp=1754372454620, commit_count=0
+2025-08-05 05:40:54,653 [myid:] - INFO  [pool-14-thread-1:o.a.z.s.q.LearnerHandler@353] - THROUGHPUT node_id=1, role=follower, timestamp=1754372454653, commit_count=0
+2025-08-05 05:40:55,195 [myid:] - INFO  [pool-11-thread-1:o.a.z.s.q.Leader@387] - THROUGHPUT leader commitsPerSec=0
+2025-08-05 05:40:55,620 [myid:] - INFO  [pool-13-thread-1:o.a.z.s.q.LearnerHandler@353] - THROUGHPUT node_id=0, role=follower, timestamp=1754372455620, commit_count=0
+2025-08-05 05:40:55,653 [myid:] - INFO  [pool-14-thread-1:o.a.z.s.q.LearnerHandler@353] - THROUGHPUT node_id=1, role=follower, timestamp=1754372455653, commit_count=0
+2025-08-05 05:40:55,790 [myid:] - INFO  [SessionTracker:o.a.z.s.ZooKeeperServer@730] - Expiring session 0x10000f3e6d00000, timeout of 30000ms exceeded
+2025-08-05 05:40:56,195 [myid:] - INFO  [pool-11-thread-1:o.a.z.s.q.Leader@387] - THROUGHPUT leader commitsPerSec=0
+2025-08-05 05:40:56,620 [myid:] - INFO  [pool-13-thread-1:o.a.z.s.q.LearnerHandler@353] - THROUGHPUT node_id=0, role=follower, timestamp=1754372456620, commit_count=0
+2025-08-05 05:40:56,653 [myid:] - INFO  [pool-14-thread-1:o.a.z.s.q.LearnerHandler@353] - THROUGHPUT node_id=1, role=follower, timestamp=1754372456653, commit_count=0
+2025-08-05 05:40:57,195 [myid:] - INFO  [pool-11-thread-1:o.a.z.s.q.Leader@387] - THROUGHPUT leader commitsPerSec=0
+2025-08-05 05:40:57,620 [myid:] - INFO  [pool-13-thread-1:o.a.z.s.q.LearnerHandler@353] - THROUGHPUT node_id=0, role=follower, timestamp=1754372457620, commit_count=0
+2025-08-05 05:40:57,653 [myid:] - INFO  [pool-14-thread-1:o.a.z.s.q.LearnerHandler@353] - THROUGHPUT node_id=1, role=follower, timestamp=1754372457653, commit_count=0
+2025-08-05 05:40:58,195 [myid:] - INFO  [pool-11-thread-1:o.a.z.s.q.Leader@387] - THROUGHPUT leader commitsPerSec=0
+2025-08-05 05:40:58,620 [myid:] - INFO  [pool-13-thread-1:o.a.z.s.q.LearnerHandler@353] - THROUGHPUT node_id=0, role=follower, timestamp=1754372458620, commit_count=0
+2025-08-05 05:40:58,653 [myid:] - INFO  [pool-14-thread-1:o.a.z.s.q.LearnerHandler@353] - THROUGHPUT node_id=1, role=follower, timestamp=1754372458653, commit_count=0
+2025-08-05 05:40:59,195 [myid:] - INFO  [pool-11-thread-1:o.a.z.s.q.Leader@387] - THROUGHPUT leader commitsPerSec=0
+2025-08-05 05:40:59,620 [myid:] - INFO  [pool-13-thread-1:o.a.z.s.q.LearnerHandler@353] - THROUGHPUT node_id=0, role=follower, timestamp=1754372459620, commit_count=0
+2025-08-05 05:40:59,653 [myid:] - INFO  [pool-14-thread-1:o.a.z.s.q.LearnerHandler@353] - THROUGHPUT node_id=1, role=follower, timestamp=1754372459653, commit_count=0
+2025-08-05 05:41:00,195 [myid:] - INFO  [pool-11-thread-1:o.a.z.s.q.Leader@387] - THROUGHPUT leader commitsPerSec=0
+2025-08-05 05:41:00,620 [myid:] - INFO  [pool-13-thread-1:o.a.z.s.q.LearnerHandler@353] - THROUGHPUT node_id=0, role=follower, timestamp=1754372460620, commit_count=0
+2025-08-05 05:41:00,653 [myid:] - INFO  [pool-14-thread-1:o.a.z.s.q.LearnerHandler@353] - THROUGHPUT node_id=1, role=follower, timestamp=1754372460653, commit_count=0
+2025-08-05 05:41:01,195 [myid:] - INFO  [pool-11-thread-1:o.a.z.s.q.Leader@387] - THROUGHPUT leader commitsPerSec=0
+2025-08-05 05:41:01,620 [myid:] - INFO  [pool-13-thread-1:o.a.z.s.q.LearnerHandler@353] - THROUGHPUT node_id=0, role=follower, timestamp=1754372461620, commit_count=0
+2025-08-05 05:41:01,653 [myid:] - INFO  [pool-14-thread-1:o.a.z.s.q.LearnerHandler@353] - THROUGHPUT node_id=1, role=follower, timestamp=1754372461653, commit_count=0
+2025-08-05 05:41:02,196 [myid:] - INFO  [pool-11-thread-1:o.a.z.s.q.Leader@387] - THROUGHPUT leader commitsPerSec=0
+2025-08-05 05:41:02,620 [myid:] - INFO  [pool-13-thread-1:o.a.z.s.q.LearnerHandler@353] - THROUGHPUT node_id=0, role=follower, timestamp=1754372462620, commit_count=0
+2025-08-05 05:41:02,653 [myid:] - INFO  [pool-14-thread-1:o.a.z.s.q.LearnerHandler@353] - THROUGHPUT node_id=1, role=follower, timestamp=1754372462653, commit_count=0
+2025-08-05 05:41:03,195 [myid:] - INFO  [pool-11-thread-1:o.a.z.s.q.Leader@387] - THROUGHPUT leader commitsPerSec=0
+2025-08-05 05:41:03,390 [myid:127.0.0.1:21999] - WARN  [main-SendThread(127.0.0.1:21999):o.a.z.ClientCnxn$SendThread@1252] - Session 0x0 for server localhost/127.0.0.1:21999, Closing socket connection. Attempting reconnect except it is a SessionExpiredException or SessionTimeoutException.
+org.apache.zookeeper.ClientCnxn$ConnectionTimeoutException: Client connection timed out, have not heard from server in 10016ms for session id 0x0
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1209)
+2025-08-05 05:41:03,620 [myid:] - INFO  [pool-13-thread-1:o.a.z.s.q.LearnerHandler@353] - THROUGHPUT node_id=0, role=follower, timestamp=1754372463620, commit_count=0
+2025-08-05 05:41:03,653 [myid:] - INFO  [pool-14-thread-1:o.a.z.s.q.LearnerHandler@353] - THROUGHPUT node_id=1, role=follower, timestamp=1754372463653, commit_count=0
+2025-08-05 05:41:03,791 [myid:] - INFO  [SessionTracker:o.a.z.s.ZooKeeperServer@730] - Expiring session 0x10000f41bb60000, timeout of 30000ms exceeded
+2025-08-05 05:41:03,946 [myid:] - WARN  [QuorumPeer[myid=2](plain=127.0.0.1:22002)(secure=disabled):o.a.z.s.q.LearnerHandler@1264] - Closing connection to peer due to transaction timeout.
+2025-08-05 05:41:03,947 [myid:] - INFO  [QuorumPeer[myid=2](plain=127.0.0.1:22002)(secure=disabled):o.a.z.s.q.LearnerHandler@1345] - Synchronously closing socket to learner 0.
+2025-08-05 05:41:03,948 [myid:] - WARN  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.q.Follower@127] - Exception when following the leader
+java.io.EOFException: null
+	at java.base/java.io.DataInputStream.readInt(DataInputStream.java:386)
+	at org.apache.jute.BinaryInputArchive.readInt(BinaryInputArchive.java:98)
+	at org.apache.zookeeper.server.quorum.QuorumPacket.deserialize(QuorumPacket.java:88)
+	at org.apache.jute.BinaryInputArchive.readRecord(BinaryInputArchive.java:136)
+	at org.apache.zookeeper.server.quorum.Learner.readPacket(Learner.java:232)
+	at org.apache.zookeeper.server.quorum.Follower.followLeader(Follower.java:123)
+	at org.apache.zookeeper.server.quorum.QuorumPeer.run(QuorumPeer.java:1616)
+2025-08-05 05:41:03,948 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.q.Follower@141] - Disconnected from leader (with address: /127.0.0.1:22003). Was connected for 23743ms. Sync state: true
+2025-08-05 05:41:03,949 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.q.Follower@284] - shutdown Follower
+2025-08-05 05:41:03,949 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.ZooKeeperServer@924] - Shutting down
+2025-08-05 05:41:03,949 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.SyncRequestProcessor@255] - Shutting down
+2025-08-05 05:41:03,949 [myid:] - INFO  [SyncThread:0:o.a.z.s.SyncRequestProcessor@224] - SyncRequestProcessor exited!
+2025-08-05 05:41:03,949 [myid:] - ERROR [LearnerHandler-/127.0.0.1:32802:o.a.z.s.q.LearnerHandler@902] - Unexpected exception in LearnerHandler: 
+java.net.SocketException: Socket closed
+	at java.base/sun.nio.ch.NioSocketImpl.endRead(NioSocketImpl.java:253)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:332)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/java.io.BufferedInputStream.fill(BufferedInputStream.java:244)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:263)
+	at java.base/java.io.DataInputStream.readInt(DataInputStream.java:381)
+	at org.apache.jute.BinaryInputArchive.readInt(BinaryInputArchive.java:98)
+	at org.apache.zookeeper.server.quorum.QuorumPacket.deserialize(QuorumPacket.java:88)
+	at org.apache.jute.BinaryInputArchive.readRecord(BinaryInputArchive.java:136)
+	at org.apache.zookeeper.server.quorum.LearnerHandler.run(LearnerHandler.java:813)
+2025-08-05 05:41:03,950 [myid:] - WARN  [LearnerHandler-/127.0.0.1:32802:o.a.z.s.q.LearnerHandler@918] - ******* GOODBYE sid:0 /127.0.0.1:32802 ********
+2025-08-05 05:41:03,950 [myid:] - WARN  [LearnerHandler-/127.0.0.1:32802:o.a.z.s.q.LearnerHandler@1235] - Ignoring unexpected exception
+java.lang.InterruptedException: null
+	at java.base/java.util.concurrent.locks.ReentrantLock$Sync.lockInterruptibly(ReentrantLock.java:159)
+	at java.base/java.util.concurrent.locks.ReentrantLock.lockInterruptibly(ReentrantLock.java:372)
+	at java.base/java.util.concurrent.LinkedBlockingQueue.put(LinkedBlockingQueue.java:332)
+	at org.apache.zookeeper.server.quorum.LearnerHandler.shutdown(LearnerHandler.java:1233)
+	at org.apache.zookeeper.server.quorum.LearnerHandler.run(LearnerHandler.java:920)
+2025-08-05 05:41:03,950 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.RequestThrottler@256] - Shutting down
+2025-08-05 05:41:03,950 [myid:] - INFO  [RequestThrottler:o.a.z.s.RequestThrottler@217] - Draining request throttler queue
+2025-08-05 05:41:03,950 [myid:] - INFO  [RequestThrottler:o.a.z.s.RequestThrottler@195] - RequestThrottler shutdown. Dropped 0 requests
+2025-08-05 05:41:03,951 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.q.FollowerRequestProcessor@172] - Shutting down
+2025-08-05 05:41:03,951 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.q.CommitProcessor@631] - Shutting down
+2025-08-05 05:41:03,951 [myid:] - INFO  [CommitProcessor:0:o.a.z.s.q.CommitProcessor@419] - CommitProcessor exited loop!
+2025-08-05 05:41:03,951 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.FinalRequestProcessor@668] - shutdown of request processor complete
+2025-08-05 05:41:03,951 [myid:] - INFO  [FollowerRequestProcessor:0:o.a.z.s.q.FollowerRequestProcessor@128] - FollowerRequestProcessor exited loop!
+2025-08-05 05:41:04,016 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.p.FileTxnSnapLog@372] - 2 txns loaded in 1 ms
+2025-08-05 05:41:04,016 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.q.QuorumPeer@973] - Peer state changed: looking
+2025-08-05 05:41:04,016 [myid:] - WARN  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.q.QuorumPeer@1662] - PeerState set to LOOKING
+2025-08-05 05:41:04,016 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.q.QuorumPeer@1530] - LOOKING
+2025-08-05 05:41:04,016 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.q.FastLeaderElection@941] - New election. My id = 0, proposed zxid=0x100000002
+2025-08-05 05:41:04,018 [myid:] - INFO  [WorkerReceiver[myid=0]:o.a.z.s.q.FastLeaderElection$Messenger$WorkerReceiver@391] - Notification: my state:LOOKING; n.sid:0, n.state:LOOKING, n.leader:0, n.round:0x2, n.peerEpoch:0x1, n.zxid:0x100000002, message format version:0x2, n.config version:0x0
+2025-08-05 05:41:04,018 [myid:] - INFO  [WorkerReceiver[myid=1]:o.a.z.s.q.FastLeaderElection$Messenger$WorkerReceiver@391] - Notification: my state:FOLLOWING; n.sid:0, n.state:LOOKING, n.leader:0, n.round:0x2, n.peerEpoch:0x1, n.zxid:0x100000002, message format version:0x2, n.config version:0x0
+2025-08-05 05:41:04,019 [myid:] - INFO  [WorkerReceiver[myid=0]:o.a.z.s.q.FastLeaderElection$Messenger$WorkerReceiver@391] - Notification: my state:LOOKING; n.sid:1, n.state:FOLLOWING, n.leader:2, n.round:0x1, n.peerEpoch:0x1, n.zxid:0x0, message format version:0x2, n.config version:0x0
+2025-08-05 05:41:04,021 [myid:] - INFO  [WorkerReceiver[myid=2]:o.a.z.s.q.FastLeaderElection$Messenger$WorkerReceiver@391] - Notification: my state:LEADING; n.sid:0, n.state:LOOKING, n.leader:0, n.round:0x2, n.peerEpoch:0x1, n.zxid:0x100000002, message format version:0x2, n.config version:0x0
+2025-08-05 05:41:04,022 [myid:] - INFO  [WorkerReceiver[myid=0]:o.a.z.s.q.FastLeaderElection$Messenger$WorkerReceiver@391] - Notification: my state:LOOKING; n.sid:2, n.state:LEADING, n.leader:2, n.round:0x1, n.peerEpoch:0x1, n.zxid:0x0, message format version:0x2, n.config version:0x0
+2025-08-05 05:41:04,022 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.q.QuorumPeer@959] - Peer state changed: following
+2025-08-05 05:41:04,022 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.q.QuorumPeer@1614] - FOLLOWING
+2025-08-05 05:41:04,022 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.AuthenticationHelper@66] - zookeeper.enforce.auth.enabled = false
+2025-08-05 05:41:04,022 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.AuthenticationHelper@67] - zookeeper.enforce.auth.schemes = []
+2025-08-05 05:41:04,023 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.ZooKeeperServer@1395] - minSessionTimeout set to 8000 ms
+2025-08-05 05:41:04,023 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.ZooKeeperServer@1404] - maxSessionTimeout set to 80000 ms
+2025-08-05 05:41:04,023 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.ResponseCache@50] - getData response cache size is initialized with value 400.
+2025-08-05 05:41:04,023 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.ResponseCache@50] - getChildren response cache size is initialized with value 400.
+2025-08-05 05:41:04,023 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.u.RequestPathMetricsCollector@109] - zookeeper.pathStats.slotCapacity = 60
+2025-08-05 05:41:04,023 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.u.RequestPathMetricsCollector@110] - zookeeper.pathStats.slotDuration = 15
+2025-08-05 05:41:04,023 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.u.RequestPathMetricsCollector@111] - zookeeper.pathStats.maxDepth = 6
+2025-08-05 05:41:04,023 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.u.RequestPathMetricsCollector@112] - zookeeper.pathStats.initialDelay = 5
+2025-08-05 05:41:04,023 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.u.RequestPathMetricsCollector@113] - zookeeper.pathStats.delay = 5
+2025-08-05 05:41:04,023 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.u.RequestPathMetricsCollector@114] - zookeeper.pathStats.enabled = false
+2025-08-05 05:41:04,023 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.ZooKeeperServer@1622] - The max bytes for all large requests are set to 104857600
+2025-08-05 05:41:04,023 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.ZooKeeperServer@1636] - The large request threshold is set to -1
+2025-08-05 05:41:04,024 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.ZooKeeperServer@387] - Created server with tickTime 4000 ms minSessionTimeout 8000 ms maxSessionTimeout 80000 ms clientPortListenBacklog -1 dataLogdir /usr/csuser/clouddrive/zookeeper/zookeeper-server/target/surefire/test12397985425437232716.junit.dir/data/version-2 snapdir /usr/csuser/clouddrive/zookeeper/zookeeper-server/target/surefire/test12397985425437232716.junit.dir/data/version-2
+2025-08-05 05:41:04,024 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.q.Follower@76] - FOLLOWING - LEADER ELECTION TOOK - 8 MS
+2025-08-05 05:41:04,024 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.q.QuorumPeer@973] - Peer state changed: following - discovery
+2025-08-05 05:41:04,060 [myid:] - INFO  [LeaderConnector-/127.0.0.1:22003:o.a.z.s.q.Learner$LeaderConnector@384] - Successfully connected to leader, using address: /127.0.0.1:22003
+2025-08-05 05:41:04,091 [myid:] - INFO  [LearnerHandler-/127.0.0.1:41884:o.a.z.s.q.LearnerHandler@667] - Follower sid: 0 : info : 127.0.0.1:21997:21998:participant;127.0.0.1:21996
+2025-08-05 05:41:04,101 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.q.QuorumPeer@973] - Peer state changed: following - synchronization
+2025-08-05 05:41:04,101 [myid:] - INFO  [LearnerHandler-/127.0.0.1:41884:o.a.z.s.ZKDatabase@358] - On disk txn sync enabled with snapshotSizeFactor 0.33
+2025-08-05 05:41:04,101 [myid:] - INFO  [LearnerHandler-/127.0.0.1:41884:o.a.z.s.q.LearnerHandler@988] - Synchronizing with Learner sid: 0 maxCommittedLog=0x0 minCommittedLog=0x0 lastProcessedZxid=0x100000000 peerLastZxid=0x100000002
+2025-08-05 05:41:04,126 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.q.QuorumPeer@978] - Peer state changed: following - synchronization - trunc
+2025-08-05 05:41:04,126 [myid:] - WARN  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.q.Learner@621] - Truncating log to get in sync with the leader 0x100000000
+2025-08-05 05:41:04,126 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.w.WatchManagerFactory@42] - Using org.apache.zookeeper.server.watch.WatchManager as watch manager
+2025-08-05 05:41:04,126 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.w.WatchManagerFactory@42] - Using org.apache.zookeeper.server.watch.WatchManager as watch manager
+2025-08-05 05:41:04,195 [myid:] - INFO  [pool-11-thread-1:o.a.z.s.q.Leader@387] - THROUGHPUT leader commitsPerSec=0
+2025-08-05 05:41:04,216 [myid:127.0.0.1:22002] - INFO  [main-SendThread(127.0.0.1:22002):o.a.z.ClientCnxn$SendThread@1121] - Opening socket connection to server localhost/127.0.0.1:22002.
+2025-08-05 05:41:04,216 [myid:127.0.0.1:22002] - INFO  [main-SendThread(127.0.0.1:22002):o.a.z.ClientCnxn$SendThread@1123] - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2025-08-05 05:41:04,216 [myid:127.0.0.1:22002] - INFO  [main-SendThread(127.0.0.1:22002):o.a.z.ClientCnxn$SendThread@974] - Socket connection established, initiating session, client: /127.0.0.1:35008, server: localhost/127.0.0.1:22002
+2025-08-05 05:41:04,227 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.p.FileSnap@86] - Reading snapshot /usr/csuser/clouddrive/zookeeper/zookeeper-server/target/surefire/test12397985425437232716.junit.dir/data/version-2/snapshot.0
+2025-08-05 05:41:04,227 [myid:] - INFO  [QuorumPeer[myid=0](plain=127.0.0.1:21996)(secure=disabled):o.a.z.s.DataTree@1711] - The digest value is empty in snapshot
