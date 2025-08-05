@@ -7,10 +7,8 @@ RUN mvn clean package -DskipTests
 # --- Run Stage ---
 FROM eclipse-temurin:17-jdk
 WORKDIR /app
-
-# Copy the built jar from the build stage
 COPY --from=builder /app/zookeeper-server/target/*.jar ./zookeeper-server.jar
 
 EXPOSE 2181
 
-ENTRYPOINT ["java", "-jar", "zookeeper-server.jar"]
+ENTRYPOINT ["java", "-cp", "zookeeper-server.jar", "org.apache.zookeeper.server.quorum.QuorumPeerMain", "/app/conf/zoo.cfg"]
