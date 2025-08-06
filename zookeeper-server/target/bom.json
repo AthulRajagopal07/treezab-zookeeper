@@ -239,35 +239,35 @@
       "hashes" : [
         {
           "alg" : "MD5",
-          "content" : "db822219bb3b5f668bd24c1dbbeb76b7"
+          "content" : "4a70232e50d3764265739f220548b696"
         },
         {
           "alg" : "SHA-1",
-          "content" : "66436b82576f92b423225083c5c4ad2d7c1ae21d"
+          "content" : "677bbce1266500e466942fddc6d7c6ce646f9e10"
         },
         {
           "alg" : "SHA-256",
-          "content" : "fcbea99701dbd47b5e4b4d54813733999229e5be31a3e3d205a8888bdc283793"
+          "content" : "4e114b35884f9054c37d9d0dd7b83ae14f28db4f03c93449542bc19b984b0ccb"
         },
         {
           "alg" : "SHA-512",
-          "content" : "605a93106a7a8b741ace169952744c299cc5406f1dac6c7834335f6070d73c99d1653321551126129bf9e2c720a60dc0b31cf02cabdefb3865edcf8e1e0fd8b6"
+          "content" : "96efefa63b3e91cdd05fe7b31b7437aa1b01123578166d4d1633f06dfd5d7d0457c16d76e3006477765e8d2cec402d0e57658cb2cd3ad7f14a48625da59d9113"
         },
         {
           "alg" : "SHA-384",
-          "content" : "530aa8c52b06120d342f0c1cedc89ed14fc68de3b636455dd4dc81274ab7b9bc3c076d68c07805f82ebada48b7709fc0"
+          "content" : "cfadd4d5be35d4255a9fcff1b6d0e7c0fa65971ab7cfd98d60296e40391234466ea12507e827935241a63c3a66c2a091"
         },
         {
           "alg" : "SHA3-384",
-          "content" : "444468507f04658873051fec88f96f3ff8f6262ad90e15de55f365824119c2204d4a9930615c8c5d69653fa35e299b5a"
+          "content" : "9de74822b8063fdee1e26833c5439f1e81c539359cbaf0835075c85655c69feebeb908783728bca83d2e13bee8dc39b1"
         },
         {
           "alg" : "SHA3-256",
-          "content" : "aa5cc79454b43842db0559255002a7662cbfff9de4d5d3bfa2029eda8be0a291"
+          "content" : "2b39475428eda07601a4d11e948663ed24bc83f19a9d81b92e65669749ce4e6d"
         },
         {
           "alg" : "SHA3-512",
-          "content" : "12596a2291afed8b970d2fb63eba4fd324f389c56ad8c56adbf12096898f3ce448c1d2ce047664c942d6a9d1979f5034c4ed25959e85e9e990f67e26cc089baf"
+          "content" : "04221659ebb51ea0bb7fb844f383495c9413588e1ed749e28ae0a8f75b501182536a2a12cda28fc37ff015babc42cfeceb4061f8d84f39f9eeec77f6e8de51cc"
         }
       ],
       "licenses" : [
