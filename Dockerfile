@@ -7,8 +7,14 @@ RUN mvn clean package -DskipTests
 # --- Run Stage ---
 FROM eclipse-temurin:17-jdk
 WORKDIR /app
-COPY --from=builder /app/zookeeper-server/target/*.jar ./zookeeper-server.jar
+# Copy the shaded JAR (with all dependencies and the main manifest)
+COPY --from=builder /app/zookeeper-server/target/*shaded.jar ./zookeeper-server.jar
 
-EXPOSE 2181
+# [Optional] Copy default config directory (not needed if using ConfigMap in K8s)
+# COPY --from=builder /app/conf ./conf
 
-ENTRYPOINT ["java", "-cp", "zookeeper-server.jar", "org.apache.zookeeper.server.quorum.QuorumPeerMain", "/app/conf/zoo.cfg"]
+# Expose official ZooKeeper ports for client and quorum/leader traffic
+EXPOSE 2181 2888 3888
+
+# Start ZooKeeper using shaded jar and external config file
+ENTRYPOINT ["java", "-jar", "zookeeper-server.jar", "/app/conf/zoo.cfg"]
