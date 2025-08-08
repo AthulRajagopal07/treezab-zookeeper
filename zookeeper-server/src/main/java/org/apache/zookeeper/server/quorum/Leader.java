@@ -594,7 +594,6 @@ public class Leader extends LearnerMaster {
                 }
             }
 
-
             private void acceptConnections() throws IOException {
                 Socket socket = null;
                 boolean error = false;
@@ -618,20 +617,13 @@ public class Leader extends LearnerMaster {
                             LearnerHandler fh = new LearnerHandler(socket, is, Leader.this);
                             fh.start();
                         } else {
-                            LOG.warn("No ServerCnxnFactory available; closing client connection");
+                            LOG.warn("Unexpected client connection on leader acceptor; closing socket");
                             socket.close();
                         }
                     } catch (IOException e) {
                         // If we can't read the packet, treat as client connection
-                        is.reset();
-                        ServerCnxnFactory cnxnFactory = zk.getServerCnxnFactory();
-                        if (cnxnFactory != null) {
-                            LOG.warn("Client connection arrived on Leader acceptor socket but should be handled by ServerCnxnFactory acceptor; closing socket.");
-                            socket.close();       
-                        } else {
-                            LOG.warn("No ServerCnxnFactory available; closing client connection");
-                            socket.close();
-                        }
+                        LOG.warn("Unable to read packet, closing connection");
+                        socket.close();
                     }
                 } catch (SocketException e) {
                     error = true;

@@ -630,9 +630,8 @@ public class LearnerHandler extends ZooKeeperThread {
 
             messageTracker.trackReceived(qp.getType());
             if (qp.getType() != Leader.FOLLOWERINFO && qp.getType() != Leader.OBSERVERINFO) {
-                LOG.error("Client connection routed incorrectly to LearnerHandler, closing socket. First packet: {}", 
-                          packetToString(qp));
-                closeSocket();
+                LOG.error("First packet {} is not FOLLOWERINFO or OBSERVERINFO!", qp.toString());
+
                 return;
             }
 
