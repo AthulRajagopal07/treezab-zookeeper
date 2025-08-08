@@ -73,6 +73,8 @@ import org.apache.zookeeper.server.util.ZxidUtils;
 import org.apache.zookeeper.util.ServiceUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.apache.jute.BinaryInputArchive;
+import org.apache.zookeeper.server.ServerCnxnFactory;
 
 /**
  * This class has the control logic for the Leader.
@@ -592,20 +594,45 @@ public class Leader extends LearnerMaster {
                 }
             }
 
+
             private void acceptConnections() throws IOException {
                 Socket socket = null;
                 boolean error = false;
                 try {
                     socket = serverSocket.accept();
-
-                    // start with the initLimit, once the ack is processed
-                    // in LearnerHandler switch to the syncLimit
                     socket.setSoTimeout(self.tickTime * self.initLimit);
                     socket.setTcpNoDelay(nodelay);
 
                     BufferedInputStream is = new BufferedInputStream(socket.getInputStream());
-                    LearnerHandler fh = new LearnerHandler(socket, is, Leader.this);
-                    fh.start();
+                    is.mark(1024); // Mark so we can reset after peeking
+
+                    try {
+                        // Peek at the first packet to determine connection type
+                        QuorumPacket qp = new QuorumPacket();
+                        BinaryInputArchive ia = BinaryInputArchive.getArchive(is);
+                        qp.deserialize(ia, "packet");
+                        is.reset(); // Reset to read from beginning
+
+                        if (qp.getType() == Leader.FOLLOWERINFO || qp.getType() == Leader.OBSERVERINFO) {
+                            // It's a quorum peer connection
+                            LearnerHandler fh = new LearnerHandler(socket, is, Leader.this);
+                            fh.start();
+                        } else {
+                            LOG.warn("No ServerCnxnFactory available; closing client connection");
+                            socket.close();
+                        }
+                    } catch (IOException e) {
+                        // If we can't read the packet, treat as client connection
+                        is.reset();
+                        ServerCnxnFactory cnxnFactory = zk.getServerCnxnFactory();
+                        if (cnxnFactory != null) {
+                            LOG.warn("Client connection arrived on Leader acceptor socket but should be handled by ServerCnxnFactory acceptor; closing socket.");
+                            socket.close();       
+                        } else {
+                            LOG.warn("No ServerCnxnFactory available; closing client connection");
+                            socket.close();
+                        }
+                    }
                 } catch (SocketException e) {
                     error = true;
                     if (stop.get()) {
@@ -630,9 +657,7 @@ public class Leader extends LearnerMaster {
                     }
                 }
             }
-
         }
-
     }
 
     StateSummary leaderStateSummary;

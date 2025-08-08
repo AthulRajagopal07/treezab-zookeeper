@@ -20,6 +20,6 @@ package org.apache.zookeeper.version;
 
 public class VersionInfoMain implements org.apache.zookeeper.version.Info {
     public static void main(String[] args) {
-        System.out.println("Apache ZooKeeper, version 3.10.0-SNAPSHOT 2025-08-06 17:42 UTC");
+        System.out.println("Apache ZooKeeper, version 3.10.0-SNAPSHOT 2025-08-08 08:25 UTC");
     }
 }
