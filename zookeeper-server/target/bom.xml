@@ -95,14 +95,14 @@
       <description>ZooKeeper jute</description>
       <scope>required</scope>
       <hashes>
-        <hash alg="MD5">136db43e603128a97b89d13441730109</hash>
-        <hash alg="SHA-1">9b6d0f5041b5b087b90cb80812f3021196adffd4</hash>
-        <hash alg="SHA-256">600add706492c1a4087a6e18999db974ea37dc3305d7a1dd851353aaae6b447a</hash>
-        <hash alg="SHA-512">bb5a4d6d0d1b745c6ec86073251d033e7ee9014e01e49424ee15541e3f5d1f00d8227474d2daeeff01988d28e2d93357bb82609c0668099f9680394d7fb882a5</hash>
-        <hash alg="SHA-384">190d1a77552c3a2f4da2fd1117b4d02f72d7116c5977a07344a57071921206971a50687362770317ee2dbfc86cc0b235</hash>
-        <hash alg="SHA3-384">a081f9fbb57f52d9e9d94053c5c5b47250c420bcc084692b3dd58c6679da95a67fc6944b2e106747045f82acb1ce8e1a</hash>
-        <hash alg="SHA3-256">862d1cb5ff5fa9278ee0143a8ffbc6ca7c2bf0bf6d4d220ada82a75fef69a0dd</hash>
-        <hash alg="SHA3-512">90e4b5225c1c50c288d7644fcd97af67f54358addd3b41d876efda0bf4f0592095e919f338b8db6341b36bdf080f97027cabe7d050b9a97f32b5335a091c56f1</hash>
+        <hash alg="MD5">4ef68b0acea96232693aed2c47581e76</hash>
+        <hash alg="SHA-1">8abedac17c87809556664ae2adfefce1887cef59</hash>
+        <hash alg="SHA-256">56461e88457ab44b3877f3df79e64a9f072a3a2b0511493f6a4fa000d88a3758</hash>
+        <hash alg="SHA-512">1c7315309e57d9c72f79543d2695ddbf35b2290b102f9c577b919455ded02f79a28e93e90375ca01c912d2da42cfe326c9c4f215ec53763b2bb98c3cb9dced58</hash>
+        <hash alg="SHA-384">1f5da8dad5c2aeac2da8f3307be112bea9a6f309851f570e86ea37c7841f06f554c2dda107d56a62ca1ba1d3efc72591</hash>
+        <hash alg="SHA3-384">124867c719c241d5102eb238b8386fe817157e998f7da175428751aa5f50e4409dc0a14548cfd4e17ad906db840a173f</hash>
+        <hash alg="SHA3-256">782c45fa6b3e1cc6f43d73fc70f611c9109dcc5b92c3f9b2d84cef76e09dda7b</hash>
+        <hash alg="SHA3-512">7dcc0b1aa6be541dbe95c958526262f517148adffa550b13a9b9dc426287af9c71db7e925c47c038fb8e33831c79e07ea47e9dc75f96b1ef112709383108e3a0</hash>
       </hashes>
       <licenses>
         <license>

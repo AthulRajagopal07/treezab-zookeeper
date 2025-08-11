@@ -28,6 +28,7 @@ import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.net.SocketTimeoutException;
 import java.net.SocketAddress;
 import java.net.SocketException;
 import java.nio.ByteBuffer;
@@ -364,6 +365,8 @@ public class Leader extends LearnerMaster {
         this.self = self;
         this.proposalStats = new BufferStats();
 
+        LOG.warn("DEBUG: Raw QuorumAddress from self.getQuorumAddress() = {}", self.getQuorumAddress());
+
         Set<InetSocketAddress> addresses;
         if (self.getQuorumListenOnAllIPs()) {
             addresses = self.getQuorumAddress().getWildcardAddresses();
@@ -374,6 +377,12 @@ public class Leader extends LearnerMaster {
         LOG.info("Leader startup: attempting to bind quorum sockets. QuorumListenOnAllIPs={}, QuorumAddress={}",
                 self.getQuorumListenOnAllIPs(),
                 self.getQuorumAddress());
+
+        // ADDITION: Explicitly log all resolved addresses before binding
+        LOG.warn("DEBUG: Quorum bind address list = {}", addresses);
+        addresses.forEach(addr -> {
+            LOG.warn("DEBUG: Quorum bind candidate: host={}, port={}", addr.getHostString(), addr.getPort());
+        });
 
         addresses.stream()
             .peek(addr -> LOG.info("Leader attempting bind on quorum address: {}:{}", 
@@ -400,6 +409,12 @@ public class Leader extends LearnerMaster {
 
         this.zk = zk;
 
+        // DEBUG log of bound quorum sockets
+        LOG.warn("DEBUG: Leader created with {} quorum server sockets: {}", serverSockets.size(), serverSockets);
+        serverSockets.forEach(s -> 
+            LOG.warn("DEBUG: Bound quorum socket: {}", s.getLocalSocketAddress())
+        );
+
         // Initialize throughput logging
         throughputLogger.scheduleAtFixedRate(() -> {
             long commits = commitCount.getAndSet(0);
@@ -422,12 +437,27 @@ public class Leader extends LearnerMaster {
                 serverSocket = new ServerSocket();
             }
             serverSocket.setReuseAddress(true);
+
+            // Added DEBUG logs before and after binding
+            LOG.warn("DEBUG: Binding quorum socket to host={} port={}", 
+                    address.getHostString(), address.getPort());
             serverSocket.bind(new InetSocketAddress(address.getHostString(), address.getPort()));
-            LOG.info("Quorum ServerSocket bound successfully on {}:{}", address.getHostString(), address.getPort());
+            LOG.warn("DEBUG: Bound quorum socket to {}", serverSocket.getLocalSocketAddress());
+
+            // NEW: Check whether bound interface is localhost or non-localhost
+            String localAddrStr = serverSocket.getLocalSocketAddress().toString();
+            if (localAddrStr.contains("127.0.0.1")) {
+                LOG.warn("DEBUG: Bound interface appears to be localhost (127.0.0.1) - possibly not reachable remotely.");
+            } else {
+                LOG.warn("DEBUG: Bound interface is non-localhost: {}", localAddrStr);
+            }
+
+            LOG.info("Quorum ServerSocket bound successfully on {}:{}",
+                    address.getHostString(), address.getPort());
             return Optional.of(serverSocket);
         } catch (IOException e) {
-            LOG.error("Couldn't bind quorum ServerSocket on {}:{} due to {}", 
-                address.getHostString(), address.getPort(), e.getMessage(), e);
+            LOG.error("Couldn't bind quorum ServerSocket on {}:{} due to {}",
+                    address.getHostString(), address.getPort(), e.getMessage(), e);
             return Optional.empty();
         }
     }
@@ -606,7 +636,8 @@ public class Leader extends LearnerMaster {
                     }
                 } catch (Exception e) {
                     LOG.warn("Exception while accepting follower", e);
-                    if (fail.compareAndSet(false, true)) {
+                    // Don't halt the entire acceptor on the first exception unless fatal.
+                    if (isFatalAcceptorException(e) && fail.compareAndSet(false, true)) {
                         handleException(getName(), e);
                         halt();
                     }
@@ -669,6 +700,12 @@ public class Leader extends LearnerMaster {
                         }
                     }
                 }
+            }
+
+            private boolean isFatalAcceptorException(Exception e) {
+                // Example logic — customize based on your needs
+                return !(e instanceof SocketTimeoutException) &&
+                    !(e instanceof IOException);
             }
         }
     }
@@ -789,6 +826,7 @@ public class Leader extends LearnerMaster {
             // new followers.
             cnxAcceptor = new LearnerCnxAcceptor();
             cnxAcceptor.start();
+            LOG.warn("DEBUG: LearnerCnxAcceptor thread started by {}", Thread.currentThread().getName());
 
             long epoch = getEpochToPropose(self.getMyId(), self.getAcceptedEpoch());
 
@@ -1052,16 +1090,21 @@ public class Leader extends LearnerMaster {
     }
 
     synchronized void closeSockets() {
-       for (ServerSocket serverSocket : serverSockets) {
-           if (!serverSocket.isClosed()) {
-               try {
-                   serverSocket.close();
-               } catch (IOException e) {
-                   LOG.warn("Ignoring unexpected exception during close {}", serverSocket, e);
-               }
-           }
-       }
+        LOG.error("DEBUG: Closing quorum sockets by thread={} reason=closeSockets()", 
+                Thread.currentThread().getName());
+
+        for (ServerSocket serverSocket : serverSockets) {
+            LOG.error("DEBUG: Closing server socket bound to {}", serverSocket.getLocalSocketAddress());
+            if (!serverSocket.isClosed()) {
+                try {
+                    serverSocket.close();
+                } catch (IOException e) {
+                    LOG.warn("Ignoring unexpected exception during close {}", serverSocket, e);
+                }
+            }
+        }
     }
+
 
     MultipleAddresses recreateSocketAddresses(MultipleAddresses addr) {
         return new MultipleAddresses(addr.getAllAddresses().stream()
