@@ -73,7 +73,7 @@ Export-Package: org.apache.zookeeper;uses:="javax.security.auth,javax.se
  0",org.apache.zookeeper.util;uses:="javax.security.auth,javax.security.
  auth.callback,javax.security.sasl,org.apache.zookeeper.common,org.slf4j
  ";version="3.10.0",org.apache.zookeeper.version;version="3.10.0"
-Implementation-Build: 7750265af4fdb7f020d3a50eed5bd4e1e45ea38a-dirty
+Implementation-Build: 396ed65f60118e861863a194b426126c65a50c54-dirty
 Implementation-Title: Apache ZooKeeper - Server
 Implementation-Vendor: The Apache Software Foundation
 Implementation-Version: 3.10.0-SNAPSHOT

@@ -371,11 +371,28 @@ public class Leader extends LearnerMaster {
             addresses = self.getQuorumAddress().getAllAddresses();
         }
 
+        LOG.info("Leader startup: attempting to bind quorum sockets. QuorumListenOnAllIPs={}, QuorumAddress={}",
+                self.getQuorumListenOnAllIPs(),
+                self.getQuorumAddress());
+
         addresses.stream()
-          .map(address -> createServerSocket(address, self.shouldUsePortUnification(), self.isSslQuorum()))
-          .filter(Optional::isPresent)
-          .map(Optional::get)
-          .forEach(serverSockets::add);
+            .peek(addr -> LOG.info("Leader attempting bind on quorum address: {}:{}", 
+                    addr.getHostString(), addr.getPort()))
+            .map(address -> createServerSocket(address, self.shouldUsePortUnification(), self.isSslQuorum()))
+            .peek(opt -> {
+                if (opt.isPresent()) {
+                    try {
+                        LOG.info("Leader successfully bound quorum socket: {}", opt.get().getLocalSocketAddress());
+                    } catch (Exception e) {
+                        LOG.warn("Leader bound a quorum socket but could not retrieve address", e);
+                    }
+                } else {
+                    LOG.error("Leader FAILED to bind quorum socket on one of the provided addresses");
+                }
+            })
+            .filter(Optional::isPresent)
+            .map(Optional::get)
+            .forEach(serverSockets::add);
 
         if (serverSockets.isEmpty()) {
             throw new IOException("Leader failed to initialize any of the following sockets: " + addresses);
@@ -394,21 +411,25 @@ public class Leader extends LearnerMaster {
         return new InetSocketAddress(hostString, port);
     }
 
+
     Optional<ServerSocket> createServerSocket(InetSocketAddress address, boolean portUnification, boolean sslQuorum) {
-        ServerSocket serverSocket;
         try {
+            LOG.info("Creating quorum ServerSocket on {}:{}", address.getHostString(), address.getPort());
+            ServerSocket serverSocket;
             if (portUnification || sslQuorum) {
                 serverSocket = new UnifiedServerSocket(self.getX509Util(), portUnification);
             } else {
                 serverSocket = new ServerSocket();
             }
             serverSocket.setReuseAddress(true);
-            serverSocket.bind(recreateInetSocketAddr(address.getHostString(), address.getPort()));
+            serverSocket.bind(new InetSocketAddress(address.getHostString(), address.getPort()));
+            LOG.info("Quorum ServerSocket bound successfully on {}:{}", address.getHostString(), address.getPort());
             return Optional.of(serverSocket);
         } catch (IOException e) {
-            LOG.error("Couldn't bind to {}", address.toString(), e);
+            LOG.error("Couldn't bind quorum ServerSocket on {}:{} due to {}", 
+                address.getHostString(), address.getPort(), e.getMessage(), e);
+            return Optional.empty();
         }
-        return Optional.empty();
     }
 
     /**
