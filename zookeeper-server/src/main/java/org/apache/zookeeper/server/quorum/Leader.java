@@ -442,11 +442,15 @@ public class Leader extends LearnerMaster {
             }
             serverSocket.setReuseAddress(true);
 
-            // Added DEBUG logs before and after binding
-            LOG.warn("DEBUG: Binding quorum socket to host={} port={}", 
-                    address.getHostString(), address.getPort());
-            serverSocket.bind(new InetSocketAddress(address.getHostString(), address.getPort()));
-            LOG.warn("DEBUG: Bound quorum socket to {}", serverSocket.getLocalSocketAddress());
+            // Retry bind up to 3 times with 2s delay in between
+            int attempts = 0;
+            while (attempts < 3) {
+                try {
+                    LOG.warn("DEBUG: Binding quorum socket to host={} port={} attempt {}/3",
+                            address.getHostString(), address.getPort(), (attempts + 1));
+                    serverSocket.bind(new InetSocketAddress(address.getHostString(), address.getPort()));
+                    LOG.warn("DEBUG: Bound quorum socket to {}", serverSocket.getLocalSocketAddress());
+
 
             // NEW: Check whether bound interface is localhost or non-localhost
             String localAddrStr = serverSocket.getLocalSocketAddress().toString();
@@ -459,6 +463,22 @@ public class Leader extends LearnerMaster {
             LOG.info("Quorum ServerSocket bound successfully on {}:{}",
                     address.getHostString(), address.getPort());
             return Optional.of(serverSocket);
+
+            } catch (IOException bindEx) {
+                    attempts++;
+                    LOG.error("Bind attempt {}/3 failed for {}:{} due to {}",
+                            attempts, address.getHostString(), address.getPort(), bindEx.toString());
+                    if (attempts >= 3) throw bindEx;
+                    try {
+                        Thread.sleep(2000L);
+                    } catch (InterruptedException ie) {
+                        Thread.currentThread().interrupt();
+                        throw new IOException("Bind retry interrupted", ie);
+                    }
+                }
+            }
+        return Optional.empty();
+
         } catch (IOException e) {
             LOG.error("Couldn't bind quorum ServerSocket on {}:{} due to {}",
                     address.getHostString(), address.getPort(), e.getMessage(), e);
@@ -676,6 +696,31 @@ public class Leader extends LearnerMaster {
                 boolean error = false;
                 try {
                     socket = serverSocket.accept();
+
+                    // New: Detailed logging for accepted connection
+                    String remoteHost = socket.getInetAddress().getHostAddress();
+                    String remoteName = socket.getInetAddress().getHostName();
+                    LOG.info("Accepted raw connection from {} ({})", remoteHost, remoteName);
+
+                    // New: Optional allow-list check based on system property
+                    String allowedListProp = System.getProperty("QUORUM_ALLOWED");
+                    if (allowedListProp != null && !allowedListProp.trim().isEmpty()) {
+                        String[] allowed = allowedListProp.split("\\s*,\\s*");
+                        boolean allowedMatch = false;
+                        for (String entry : allowed) {
+                            if (entry.equalsIgnoreCase(remoteHost) || entry.equalsIgnoreCase(remoteName)) {
+                                allowedMatch = true;
+                                break;
+                            }
+                        }
+                        if (!allowedMatch) {
+                            LOG.warn("Connection from {} ({}) is not in QUORUM_ALLOWED list; closing socket.",
+                                    remoteHost, remoteName);
+                            socket.close();
+                            return; // reject early
+                        }
+                    }
+
                     socket.setSoTimeout(self.tickTime * self.initLimit);
                     socket.setTcpNoDelay(nodelay);
 
