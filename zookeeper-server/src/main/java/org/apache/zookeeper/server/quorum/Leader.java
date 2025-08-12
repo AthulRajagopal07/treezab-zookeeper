@@ -100,6 +100,10 @@ public class Leader extends LearnerMaster {
     private final AtomicLong commitCount = new AtomicLong(0);
     private final ScheduledExecutorService throughputLogger = Executors.newSingleThreadScheduledExecutor();
 
+    // Quorum loss tolerance settings
+    private static final int QUORUM_LOSS_GRACE_TICKS = 5;
+    private int quorumLossTicks = 0;
+
     public static class Proposal extends SyncedLearnerTracker {
 
         private QuorumPacket packet;
@@ -629,7 +633,7 @@ public class Leader extends LearnerMaster {
                     new Exception("shutdown() call trace"));
             closeSockets();
         }
-        
+
         class LearnerCnxAcceptorHandler implements Runnable {
             private ServerSocket serverSocket;
             private CountDownLatch latch;
@@ -906,7 +910,22 @@ public class Leader extends LearnerMaster {
             // us. We do this by waiting for the NEWLEADER packet to get
             // acknowledged
 
-            waitForEpochAck(self.getMyId(), leaderStateSummary);
+            try {
+                waitForEpochAck(self.getMyId(), leaderStateSummary);
+            } catch (InterruptedException e) {
+                LOG.warn("Timed out waiting for quorum of epoch acks: have {}, needed quorum {}. Retrying instead of immediate shutdown.",
+                        newLeaderProposal.ackSetsToString(),
+                        self.getQuorumVerifier());
+                quorumLossTicks++;
+                if (quorumLossTicks > QUORUM_LOSS_GRACE_TICKS) {
+                    shutdown("Epoch acks missing for too long (" + quorumLossTicks + " grace ticks)");
+                } else {
+                    Thread.sleep(self.tickTime);
+                    waitForEpochAck(self.getMyId(), leaderStateSummary);
+                }
+            } catch (IOException e) {
+                shutdown("IO exception in waitForEpochAck: " + e.getMessage());
+            }
             self.setCurrentEpoch(epoch);
             self.setLeaderAddressAndId(self.getQuorumAddress(), self.getMyId());
             self.setZabState(QuorumPeer.ZabState.SYNCHRONIZATION);
@@ -914,27 +933,16 @@ public class Leader extends LearnerMaster {
             try {
                 waitForNewLeaderAck(self.getMyId(), zk.getZxid());
             } catch (InterruptedException e) {
-                shutdown("Waiting for a quorum of followers, only synced with sids: [ "
-                         + newLeaderProposal.ackSetsToString()
-                         + " ]");
-                HashSet<Long> followerSet = new HashSet<>();
-
-                for (LearnerHandler f : getLearners()) {
-                    if (self.getQuorumVerifier().getVotingMembers().containsKey(f.getSid())) {
-                        followerSet.add(f.getSid());
-                    }
+                LOG.warn("Timed out waiting for quorum of NEWLEADER acks: have {}, needed quorum {}. Retrying instead of immediate shutdown.",
+                        newLeaderProposal.ackSetsToString(),
+                        self.getQuorumVerifier());
+                quorumLossTicks++;
+                if (quorumLossTicks > QUORUM_LOSS_GRACE_TICKS) {
+                    shutdown("NEWLEADER acks missing for too long (" + quorumLossTicks + " grace ticks)");
+                } else {
+                    Thread.sleep(self.tickTime);
+                    waitForNewLeaderAck(self.getMyId(), zk.getZxid());
                 }
-                boolean initTicksShouldBeIncreased = true;
-                for (Proposal.QuorumVerifierAcksetPair qvAckset : newLeaderProposal.qvAcksetPairs) {
-                    if (!qvAckset.getQuorumVerifier().containsQuorum(followerSet)) {
-                        initTicksShouldBeIncreased = false;
-                        break;
-                    }
-                }
-                if (initTicksShouldBeIncreased) {
-                    LOG.warn("Enough followers present. Perhaps the initTicks need to be increased.");
-                }
-                return;
             }
 
             startZkServer();
@@ -1040,15 +1048,20 @@ public class Leader extends LearnerMaster {
                      * the leader itself.
                      * */
                     if (!tickSkip && !syncedAckSet.hasAllQuorums()
-                        && !(self.getQuorumVerifier().overrideQuorumDecision(getForwardingFollowers()) && self.getQuorumVerifier().revalidateOutstandingProp(this, new ArrayList<>(outstandingProposals.values()), lastCommitted))) {
-                        // Lost quorum of last committed and/or last proposed
-                        // config, set shutdown flag
-                        shutdownMessage = "Not sufficient followers synced, only synced with sids: [ "
-                                          + syncedAckSet.ackSetsToString()
-                                          + " ]";
+                    && !(self.getQuorumVerifier().overrideQuorumDecision(getForwardingFollowers()) 
+                        && self.getQuorumVerifier().revalidateOutstandingProp(this, new ArrayList<>(outstandingProposals.values()), lastCommitted))) {
+                    quorumLossTicks++;
+                    LOG.warn("Quorum temporarily lost for {} ticks (max allowed: {}). Current synced followers: {}", 
+                        quorumLossTicks, QUORUM_LOSS_GRACE_TICKS, syncedAckSet.ackSetsToString());
+                    if (quorumLossTicks > QUORUM_LOSS_GRACE_TICKS) {
+                        shutdownMessage = "Permanently lost quorum after " + QUORUM_LOSS_GRACE_TICKS + 
+                                        " ticks. Last synced with sids: [" + syncedAckSet.ackSetsToString() + "]";
                         break;
                     }
-                    tickSkip = !tickSkip;
+                } else {
+                    quorumLossTicks = 0;
+                }
+                tickSkip = !tickSkip;
                 }
                 for (LearnerHandler f : getLearners()) {
                     f.ping();
@@ -1075,7 +1088,12 @@ public class Leader extends LearnerMaster {
             return;
         }
 
-        LOG.info("Shutdown called. reason={}", reason, new Exception("Leader.shutdown() call trace"));
+        LOG.error("Leader.shutdown() called. reason={} learners={} forwardingFollowers={} ackSets={}",
+            reason,
+            learners.size(),
+            forwardingFollowers.size(),
+            newLeaderProposal.ackSetsToString(),
+            new Exception("Leader.shutdown() call trace"));
 
         if (cnxAcceptor != null) {
             cnxAcceptor.halt();

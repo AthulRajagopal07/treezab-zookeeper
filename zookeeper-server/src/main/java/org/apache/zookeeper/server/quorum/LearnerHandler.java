@@ -629,9 +629,11 @@ public class LearnerHandler extends ZooKeeperThread {
             ia.readRecord(qp, "packet");
 
             messageTracker.trackReceived(qp.getType());
+            
+            // MODIFIED: Handle client connections - just close if we get unexpected packet type
             if (qp.getType() != Leader.FOLLOWERINFO && qp.getType() != Leader.OBSERVERINFO) {
-                LOG.error("First packet {} is not FOLLOWERINFO or OBSERVERINFO!", qp.toString());
-
+                LOG.info("First packet is not FOLLOWERINFO/OBSERVERINFO: this is a client. Closing socket (should not end up in LearnerHandler).");
+                closeSocket();
                 return;
             }
 
@@ -899,8 +901,14 @@ public class LearnerHandler extends ZooKeeperThread {
                 }
             }
         } catch (IOException e) {
-            LOG.error("Unexpected exception in LearnerHandler: ", e);
-            closeSocket();
+            LOG.error("IOException in LearnerHandler for sid={}: {}", sid, e.getMessage(), e);
+            if (e instanceof java.io.EOFException || fatalConnectionError(e)) {
+                LOG.error("Fatal connection error; closing socket.");
+                closeSocket();
+            } else {
+                LOG.warn("Non-fatal IO issue, not closing socket instantly.");
+                // Optionally: retry handshake by looping or pausing
+            }
         } catch (InterruptedException e) {
             LOG.error("Unexpected exception in LearnerHandler.", e);
         } catch (SyncThrottleException e) {
@@ -1334,6 +1342,11 @@ public class LearnerHandler extends ZooKeeperThread {
      */
     public void setFirstPacket(boolean value) {
         needOpPacket = value;
+    }
+
+    private boolean fatalConnectionError(IOException e) {
+    // Customize as needed: return true for truly unrecoverable errors only
+    return e instanceof java.net.SocketException;   
     }
 
     void closeSocket() {
