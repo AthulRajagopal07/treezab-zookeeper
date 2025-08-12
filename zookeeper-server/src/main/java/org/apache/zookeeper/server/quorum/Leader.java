@@ -613,11 +613,23 @@ public class Leader extends LearnerMaster {
         }
 
         public void halt() {
-           if (!stop.getAndSet(true)) {
-              closeSockets();
-           }
+            if (!stop.getAndSet(true)) {
+                // Distinctive tagged log so we can tell halt() from shutdown()
+                LOG.error("halt() called on LearnerCnxAcceptor by thread={}", 
+                        Thread.currentThread().getName(),
+                        new Exception("halt() call trace"));
+                closeSockets();
+            }
         }
 
+        public void shutdown() {
+            // Distinctive tagged log so we can differentiate from halt()
+            LOG.error("shutdown() called on LearnerCnxAcceptor by thread={}", 
+                    Thread.currentThread().getName(),
+                    new Exception("shutdown() call trace"));
+            closeSockets();
+        }
+        
         class LearnerCnxAcceptorHandler implements Runnable {
             private ServerSocket serverSocket;
             private CountDownLatch latch;
@@ -636,16 +648,18 @@ public class Leader extends LearnerMaster {
                         acceptConnections();
                     }
                 } catch (Exception e) {
-                    LOG.warn("Exception while accepting follower", e);
+                    LOG.warn("Exception while accepting follower: {} - {}", 
+                            e.getClass().getName(), e.getMessage(), e);
 
-                    // Call fatal only for bind errors, unrecoverable socket errors
                     if (isFatalAcceptorException(e) && fail.compareAndSet(false, true)) {
-                        LOG.error("Fatal acceptor exception on {}, halting quorum sockets", serverSocket.getLocalSocketAddress());
+                        LOG.error("Fatal acceptor exception on {}, halting quorum sockets", 
+                                serverSocket.getLocalSocketAddress());
                         handleException(getName(), e);
                         halt();
                     } else {
                         LOG.warn("Non-fatal acceptor exception on {}, continuing to accept connections",
                                 serverSocket.getLocalSocketAddress());
+                        // Do NOT halt acceptor on non-fatal exceptions
                     }
                 } finally {
                     LOG.warn("Acceptor handler for {} exiting", serverSocket.getLocalSocketAddress());
@@ -662,7 +676,7 @@ public class Leader extends LearnerMaster {
                     socket.setTcpNoDelay(nodelay);
 
                     LOG.info("Accepted quorum peer connection from {}", socket.getRemoteSocketAddress());
-                    
+
                     BufferedInputStream is = new BufferedInputStream(socket.getInputStream());
                     is.mark(1024); // Mark so we can reset after peeking
 
@@ -1061,7 +1075,7 @@ public class Leader extends LearnerMaster {
             return;
         }
 
-        LOG.info("Shutdown called. For the reason {}", reason);
+        LOG.info("Shutdown called. reason={}", reason, new Exception("Leader.shutdown() call trace"));
 
         if (cnxAcceptor != null) {
             cnxAcceptor.halt();
