@@ -613,8 +613,9 @@ public class Leader extends LearnerMaster {
         }
 
         public void halt() {
-            stop.set(true);
-            closeSockets();
+           if (!stop.getAndSet(true)) {
+              closeSockets();
+           }
         }
 
         class LearnerCnxAcceptorHandler implements Runnable {
@@ -636,12 +637,18 @@ public class Leader extends LearnerMaster {
                     }
                 } catch (Exception e) {
                     LOG.warn("Exception while accepting follower", e);
-                    // Don't halt the entire acceptor on the first exception unless fatal.
+
+                    // Call fatal only for bind errors, unrecoverable socket errors
                     if (isFatalAcceptorException(e) && fail.compareAndSet(false, true)) {
+                        LOG.error("Fatal acceptor exception on {}, halting quorum sockets", serverSocket.getLocalSocketAddress());
                         handleException(getName(), e);
                         halt();
+                    } else {
+                        LOG.warn("Non-fatal acceptor exception on {}, continuing to accept connections",
+                                serverSocket.getLocalSocketAddress());
                     }
                 } finally {
+                    LOG.warn("Acceptor handler for {} exiting", serverSocket.getLocalSocketAddress());
                     latch.countDown();
                 }
             }
@@ -654,6 +661,8 @@ public class Leader extends LearnerMaster {
                     socket.setSoTimeout(self.tickTime * self.initLimit);
                     socket.setTcpNoDelay(nodelay);
 
+                    LOG.info("Accepted quorum peer connection from {}", socket.getRemoteSocketAddress());
+                    
                     BufferedInputStream is = new BufferedInputStream(socket.getInputStream());
                     is.mark(1024); // Mark so we can reset after peeking
 
@@ -701,11 +710,11 @@ public class Leader extends LearnerMaster {
                     }
                 }
             }
-
             private boolean isFatalAcceptorException(Exception e) {
-                // Example logic — customize based on your needs
-                return !(e instanceof SocketTimeoutException) &&
-                    !(e instanceof IOException);
+                // Treat only bind failures or deadly socket errors as fatal
+                if (e instanceof java.net.BindException) return true;
+                if (e instanceof java.net.SocketException && !stop.get()) return true;
+                return false; // All others: non-fatal
             }
         }
     }
@@ -1092,6 +1101,7 @@ public class Leader extends LearnerMaster {
     synchronized void closeSockets() {
         LOG.error("DEBUG: Closing quorum sockets by thread={} reason=closeSockets()", 
                 Thread.currentThread().getName());
+        LOG.error("DEBUG: closeSockets() call stack", new Exception("Socket close trace"));
 
         for (ServerSocket serverSocket : serverSockets) {
             LOG.error("DEBUG: Closing server socket bound to {}", serverSocket.getLocalSocketAddress());
