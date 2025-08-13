@@ -2239,6 +2239,14 @@ public class QuorumPeer extends ZooKeeperThread implements QuorumStats.Provider 
         }
         return -1;
     }
+    /**
+     * Expose the already-initialized ServerCnxnFactory so Leader can attach the ZooKeeperServer
+     * without rebinding the client socket (prevents double-bind on 2181).
+     */
+    public org.apache.zookeeper.server.ServerCnxnFactory getCnxnFactory() {
+        return this.cnxnFactory;
+    }
+
 
     public int getSecureClientPort() {
         if (secureCnxnFactory != null) {
@@ -2850,3 +2858,4 @@ public class QuorumPeer extends ZooKeeperThread implements QuorumStats.Provider 
     }
 
 }
+

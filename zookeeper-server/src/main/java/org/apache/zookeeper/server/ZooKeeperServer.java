@@ -808,8 +808,13 @@ public class ZooKeeperServer implements SessionExpirer, ServerStats.Provider {
 
             // Add ServerCnxnFactory initialization if not already present
             if (serverCnxnFactory == null) {
-                initializeServerCnxnFactory();
-            }        
+            LOG.info("[CLIENT-SOCKET] No ServerCnxnFactory set; initializing a new one for standalone mode");
+            initializeServerCnxnFactory();
+        } else {
+            LOG.info("[CLIENT-SOCKET] ServerCnxnFactory already set at {}, not creating/binding another",
+                    serverCnxnFactory.getLocalAddress());
+            serverCnxnFactory.setZooKeeperServer(this);
+        }        
 
             startRequestThrottler();
 
@@ -834,6 +839,13 @@ public class ZooKeeperServer implements SessionExpirer, ServerStats.Provider {
     }
 
     private void initializeServerCnxnFactory() {
+        if (serverCnxnFactory != null) {
+            LOG.info("[CLIENT-SOCKET] initializeServerCnxnFactory: reusing already-set factory at {}",
+                    serverCnxnFactory.getLocalAddress());
+            serverCnxnFactory.setZooKeeperServer(this);
+            return;
+        }
+
         try {
             int clientPort = getClientPort();
             if (clientPort <= 0) {

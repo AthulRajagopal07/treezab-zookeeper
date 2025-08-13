@@ -1926,7 +1926,23 @@ public class Leader extends LearnerMaster {
         }
 
         leaderStartTime = Time.currentElapsedTime();
-        zk.startup();
+        // Reuse the ServerCnxnFactory that QuorumPeer created/configured to avoid double-binding 2181
+final org.apache.zookeeper.server.ServerCnxnFactory cnxn = self.getCnxnFactory();
+if (cnxn != null) {
+    LOG.info("[CLIENT-SOCKET] Reusing existing ServerCnxnFactory on {}", cnxn.getLocalAddress());
+    try {
+        cnxn.startup(zk);
+    } catch (java.io.IOException e) {
+        LOG.error("Failed to attach ZooKeeperServer to existing ServerCnxnFactory", e);
+        throw new RuntimeException("Failed to start ServerCnxnFactory", e);
+    } catch (java.lang.InterruptedException ie) {
+        java.lang.Thread.currentThread().interrupt();
+        LOG.error("Interrupted while starting ServerCnxnFactory", ie);
+        throw new RuntimeException("Interrupted starting ServerCnxnFactory", ie);
+    }} else {
+    LOG.warn("[CLIENT-SOCKET] QuorumPeer returned null cnxnFactory; falling back to zk.startup()");
+    zk.startup();
+}
         /*
          * Update the election vote here to ensure that all members of the
          * ensemble report the same vote to new servers that start up and
