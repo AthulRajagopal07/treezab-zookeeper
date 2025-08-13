@@ -18,6 +18,11 @@
 
 package org.apache.zookeeper.server;
 
+/**
+ * ServerCnxnFactory owns the client port (e.g., 2181) exclusively.
+ * Do NOT add TreeZab/quorum logic here; this class must remain pure client I/O (NIO/Netty).
+ */
+
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;

@@ -1113,7 +1113,10 @@ public class QuorumPeer extends ZooKeeperThread implements QuorumStats.Provider 
     ServerCnxnFactory cnxnFactory;
     ServerCnxnFactory secureCnxnFactory;
 
-    private FileTxnSnapLog logFactory = null;
+    
+    /** Ensures the client listener (2181) is started exactly once across role changes. */
+    private final AtomicBoolean clientListenerStarted = new AtomicBoolean(false);
+private FileTxnSnapLog logFactory = null;
 
     private final QuorumStats quorumStats;
 
@@ -2197,6 +2200,10 @@ public class QuorumPeer extends ZooKeeperThread implements QuorumStats.Provider 
     }
 
     private void startServerCnxnFactory() {
+        if (!clientListenerStarted.compareAndSet(false, true)) {
+            // already started, no-op to preserve 2181 across leader/follower transitions
+            return;
+        }
         if (cnxnFactory != null) {
             cnxnFactory.start();
         }
@@ -2206,6 +2213,8 @@ public class QuorumPeer extends ZooKeeperThread implements QuorumStats.Provider 
     }
 
     private void shutdownServerCnxnFactory() {
+        // Only called during full QuorumPeer shutdown; never on leader/follower transitions.
+
         if (cnxnFactory != null) {
             cnxnFactory.shutdown();
         }
@@ -2858,4 +2867,3 @@ public class QuorumPeer extends ZooKeeperThread implements QuorumStats.Provider 
     }
 
 }
-

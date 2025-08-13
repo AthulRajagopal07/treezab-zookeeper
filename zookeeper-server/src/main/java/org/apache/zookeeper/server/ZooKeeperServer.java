@@ -18,6 +18,11 @@
 
 package org.apache.zookeeper.server;
 
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.LinkedBlockingQueue;
+import java.util.concurrent.TimeUnit;
+
 import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import java.net.InetSocketAddress;
 import java.io.BufferedInputStream;
@@ -103,7 +108,21 @@ import org.slf4j.LoggerFactory;
  * following chain of RequestProcessors to process requests:
  * PrepRequestProcessor -> SyncRequestProcessor -> FinalRequestProcessor
  */
+/**
+ * Core request pipeline must remain non-blocking (CommitProcessor/FinalRequestProcessor).
+ * DO NOT perform blocking TreeZab waits (ACKs/parent signals) on these threads;
+ * use treeZabExecutor instead.
+ */
 public class ZooKeeperServer implements SessionExpirer, ServerStats.Provider {
+    /**
+     * Offloads any TreeZab forwarding/ACK handling to avoid blocking Commit/FinalRequestProcessor.
+     */
+    private ExecutorService treeZabExecutor = Executors.newSingleThreadExecutor(r -> {
+        Thread t = new Thread(r, "TreeZab-Async");
+        t.setDaemon(true);
+        return t;
+    });
+
 
     protected static final Logger LOG;
     private static final RateLogger RATE_LOGGER;

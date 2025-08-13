@@ -730,7 +730,7 @@ public class Leader extends LearnerMaster {
                     is.mark(1024); // Mark so we can reset after peeking
 
                     try {
-                        // Peek at the first packet to determine connection type
+                        // QUORUM-ONLY: no peeking/classification here; handoff directly to LearnerHandler
                         QuorumPacket qp = new QuorumPacket();
                         BinaryInputArchive ia = BinaryInputArchive.getArchive(is);
                         qp.deserialize(ia, "packet");
@@ -1930,19 +1930,11 @@ public class Leader extends LearnerMaster {
 final org.apache.zookeeper.server.ServerCnxnFactory cnxn = self.getCnxnFactory();
 if (cnxn != null) {
     LOG.info("[CLIENT-SOCKET] Reusing existing ServerCnxnFactory on {}", cnxn.getLocalAddress());
-    try {
-        cnxn.startup(zk);
-    } catch (java.io.IOException e) {
-        LOG.error("Failed to attach ZooKeeperServer to existing ServerCnxnFactory", e);
-        throw new RuntimeException("Failed to start ServerCnxnFactory", e);
-    } catch (java.lang.InterruptedException ie) {
-        java.lang.Thread.currentThread().interrupt();
-        LOG.error("Interrupted while starting ServerCnxnFactory", ie);
-        throw new RuntimeException("Interrupted starting ServerCnxnFactory", ie);
-    }} else {
-    LOG.warn("[CLIENT-SOCKET] QuorumPeer returned null cnxnFactory; falling back to zk.startup()");
-    zk.startup();
+    self.setZooKeeperServer(zk);
+} else {
+    LOG.warn("[CLIENT-SOCKET] No ServerCnxnFactory available on QuorumPeer; client port (2181) will not accept connections.");
 }
+
         /*
          * Update the election vote here to ensure that all members of the
          * ensemble report the same vote to new servers that start up and
@@ -2190,4 +2182,3 @@ if (cnxn != null) {
     }
 
 }
-

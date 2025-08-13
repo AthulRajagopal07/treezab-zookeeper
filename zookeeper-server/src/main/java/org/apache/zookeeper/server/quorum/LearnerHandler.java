@@ -18,6 +18,11 @@
 
 package org.apache.zookeeper.server.quorum;
 
+/**
+ * LearnerHandler is QUORUM-ONLY. It must never service client (2181) traffic.
+ * It processes leader↔follower/observer protocol messages exclusively.
+ */
+
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.ByteArrayInputStream;
@@ -628,21 +633,17 @@ public class LearnerHandler extends ZooKeeperThread {
 
             ia = BinaryInputArchive.getArchive(bufferedInput);
             bufferedOutput = new BufferedOutputStream(sock.getOutputStream());
-            oa = BinaryOutputArchive.getArchive(bufferedOutput);
-
-            QuorumPacket qp = new QuorumPacket();
+            oa = BinaryOutputArchive.getArchive(bufferedOutput);QuorumPacket qp = new QuorumPacket();
             ia.readRecord(qp, "packet");
-
             messageTracker.trackReceived(qp.getType());
-            
-            // MODIFIED: Handle client connections - just close if we get unexpected packet type
-            if (qp.getType() != Leader.FOLLOWERINFO && qp.getType() != Leader.OBSERVERINFO) {
-                LOG.info("First packet is not FOLLOWERINFO/OBSERVERINFO: this is a client. Closing socket (should not end up in LearnerHandler).");
+            // ===== QUORUM-ONLY: reject any non-follower/observer first packet =====
+            int firstType = qp.getType();
+            if (firstType != Leader.FOLLOWERINFO && firstType != Leader.OBSERVERINFO) {
+                LOG.warn("Non-quorum packet type {} on LearnerHandler; closing {}", firstType, sock.getRemoteSocketAddress());
                 closeSocket();
                 return;
             }
-
-            if (learnerMaster instanceof ObserverMaster && qp.getType() != Leader.OBSERVERINFO) {
+if (learnerMaster instanceof ObserverMaster && qp.getType() != Leader.OBSERVERINFO) {
                 throw new IOException("Non observer attempting to connect to ObserverMaster. type = " + qp.getType());
             }
             byte[] learnerInfoData = qp.getData();
@@ -942,6 +943,7 @@ public class LearnerHandler extends ZooKeeperThread {
         if (!sendingThreadStarted) {
             // Start sending packets
             new Thread() {
+                { setDaemon(true); setName("Sender-" + sock.getRemoteSocketAddress()); }
                 public void run() {
                     Thread.currentThread().setName("Sender-" + sock.getRemoteSocketAddress());
                     try {
@@ -1368,7 +1370,7 @@ public class LearnerHandler extends ZooKeeperThread {
     }
 
     void closeSockAsync() {
-        final Thread closingThread = new Thread(() -> closeSockSync(), "CloseSocketThread(sid:" + this.sid);
+        final Thread closingThread = new Thread(() -> closeSockSync(), "CloseSocketThread(sid:" + this.sid + ")");
         closingThread.setDaemon(true);
         closingThread.start();
     }
