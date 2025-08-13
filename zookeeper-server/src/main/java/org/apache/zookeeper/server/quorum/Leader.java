@@ -1856,6 +1856,7 @@ public class Leader extends LearnerMaster {
                 }
                 if (ss.getLastZxid() != -1 && isParticipant(id)) {
                     electingFollowers.add(id);
+        LOG.info("[HANDSHAKE][EPOCH] ack from sid={} nowHave={}", id, electingFollowers);
                 }
             }
             QuorumVerifier verifier = self.getQuorumVerifier();
@@ -1969,6 +1970,7 @@ public class Leader extends LearnerMaster {
              * is a PARTICIPANT.
              */
             newLeaderProposal.addAck(sid);
+        LOG.info("[HANDSHAKE][NEWLEADER] ack from sid={} nowHave={}", sid, newLeaderProposal.ackSetsToString());
 
             if (newLeaderProposal.hasAllQuorums()) {
                 quorumFormed = true;
@@ -2150,4 +2152,26 @@ public class Leader extends LearnerMaster {
         }
     }
 
+
+
+    // --- Added helper: allow-list check by host/IP (QUORUM_ALLOWED via -D or env) ---
+    private boolean isAllowedPeer(java.net.Socket socket) {
+        try {
+            String allowed = System.getProperty("QUORUM_ALLOWED", System.getenv("QUORUM_ALLOWED"));
+            if (allowed == null || allowed.isEmpty()) return true; // no allow-list -> allow
+            String remoteHost = socket.getInetAddress().getHostName();
+            String remoteIp = socket.getInetAddress().getHostAddress();
+            for (String entry : allowed.split(",")) {
+                String e = entry.trim();
+                if (e.equalsIgnoreCase(remoteHost) || e.equalsIgnoreCase(remoteIp)) {
+                    return true;
+                }
+            }
+            return false;
+        } catch (Exception e) {
+            return true; // fail-open to avoid self-partitioning
+        }
+    }
+
 }
+

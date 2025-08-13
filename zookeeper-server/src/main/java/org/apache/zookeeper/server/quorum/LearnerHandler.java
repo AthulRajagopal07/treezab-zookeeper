@@ -339,7 +339,8 @@ public class LearnerHandler extends ZooKeeperThread {
                 authServer.authenticate(sock, new DataInputStream(bufferedInput));
             }
         } catch (IOException e) {
-            LOG.error("Server failed to authenticate quorum learner, addr: {}, closing connection", sock.getRemoteSocketAddress(), e);
+            
+            LOG.warn("[HANDSHAKE] IOException during handshake: {}", e.toString());
             closeSocket();
 
             throw new SaslException("Authentication failure: " + e.getMessage());
@@ -526,7 +527,8 @@ public class LearnerHandler extends ZooKeeperThread {
                 packetsSent.incrementAndGet();
                 messageTracker.trackSent(p.getType());
             } catch (IOException e) {
-                LOG.error("Exception while sending packets in LearnerHandler", e);
+                
+            LOG.warn("[HANDSHAKE] IOException during handshake: {}", e.toString());
                 // this will cause everything to shutdown on
                 // this learner handler and will help notify
                 // the learner/observer instantaneously
@@ -570,7 +572,8 @@ public class LearnerHandler extends ZooKeeperThread {
                 long id = dis.readLong();
                 mess = " sessionid = " + id;
             } catch (IOException e) {
-                LOG.warn("Unexpected exception", e);
+                
+            LOG.warn("[HANDSHAKE] IOException during handshake: {}", e.toString());
             }
 
             break;
@@ -617,6 +620,8 @@ public class LearnerHandler extends ZooKeeperThread {
      */
     @Override
     public void run() {
+        LOG.info("[HANDSHAKE][{}] learner handler started", sock != null ? sock.getRemoteSocketAddress() : "n/a");
+
         try {
             learnerMaster.addLearnerHandler(this);
             tickOfNextAckDeadline = learnerMaster.getTickOfInitialAckDeadline();
@@ -901,7 +906,8 @@ public class LearnerHandler extends ZooKeeperThread {
                 }
             }
         } catch (IOException e) {
-            LOG.error("IOException in LearnerHandler for sid={}: {}", sid, e.getMessage(), e);
+            
+            LOG.warn("[HANDSHAKE] IOException during handshake: {}", e.toString());
             if (e instanceof java.io.EOFException || fatalConnectionError(e)) {
                 LOG.error("Fatal connection error; closing socket.");
                 closeSocket();
@@ -1375,7 +1381,8 @@ public class LearnerHandler extends ZooKeeperThread {
                 ServerMetrics.getMetrics().SOCKET_CLOSING_TIME.add(Time.currentElapsedTime() - startTime);
             }
         } catch (IOException e) {
-            LOG.warn("Ignoring error closing connection to learner {}", getSid(), e);
+            
+            LOG.warn("[HANDSHAKE] IOException during handshake: {}", e.toString());
         }
     }
 }
