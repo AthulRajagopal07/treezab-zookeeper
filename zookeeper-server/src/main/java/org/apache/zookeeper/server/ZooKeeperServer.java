@@ -1036,14 +1036,13 @@ public class ZooKeeperServer implements SessionExpirer, ServerStats.Provider {
      */
     protected void shutdownComponents() {
         // unregister all metrics that are keeping a strong reference to this object
-        // subclasses will do their specific clean up
         unregisterMetrics();
 
         if (requestThrottler != null) {
             requestThrottler.shutdown();
         }
 
-        // Since sessionTracker and syncThreads poll we just have to set running to false,
+        // Since sessionTracker and sync threads poll we just have to set running to false,
         // and they will detect it during the poll interval.
         if (sessionTracker != null) {
             sessionTracker.shutdown();
@@ -1057,7 +1056,7 @@ public class ZooKeeperServer implements SessionExpirer, ServerStats.Provider {
 
         requestPathMetricsCollector.shutdown();
         unregisterJMX();
-    }
+}
 
     protected void unregisterJMX() {
         // unregister from JMX

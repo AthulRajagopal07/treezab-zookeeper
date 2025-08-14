@@ -1067,7 +1067,7 @@ public class Leader extends LearnerMaster {
                     }
 
                     // check leader running status
-                    if (!this.isRunning()) {
+                    if (!self.isRunning()) {
                         // set shutdown flag
                         shutdownMessage = "Unexpected internal error";
                         break;
@@ -1342,7 +1342,7 @@ public class Leader extends LearnerMaster {
      */
     @Override
     public synchronized void processAck(long sid, long zxid, SocketAddress followerAddr) {
-        if (!allowedToCommit) {
+        if (((zxid & 0xffffffffL) != 0L) && !allowedToCommit) {
             return; // last op committed was a leader change - from now on
         }
         // the new leader should commit

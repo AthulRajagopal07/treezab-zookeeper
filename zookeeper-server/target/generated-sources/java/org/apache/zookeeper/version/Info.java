@@ -24,6 +24,6 @@ public interface Info {
     int MICRO=0;
     String QUALIFIER="SNAPSHOT".isEmpty() ? null : "SNAPSHOT";
     int REVISION=-1; //@deprecated, please use REVISION_HASH
-    String REVISION_HASH="7f948dd9eadc6ffd2d4f2749daea5a2ae387d958-dirty";
-    String BUILD_DATE="2025-08-13 09:26 UTC";
+    String REVISION_HASH="88a63c1e6f306c853e07878ba6baf68a5801647e-dirty";
+    String BUILD_DATE="2025-08-14 19:06 UTC";
 }
