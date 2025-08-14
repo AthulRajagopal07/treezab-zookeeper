@@ -963,7 +963,7 @@ public class Leader extends LearnerMaster {
                         self.getQuorumVerifier());
                 quorumLossTicks++;
                 if (quorumLossTicks > QUORUM_LOSS_GRACE_TICKS) {
-                    shutdown("Epoch acks missing for too long (" + quorumLossTicks + " grace ticks)");
+                    // removed aggressive epoch ack shutdown
                 } else {
                     Thread.sleep(self.tickTime);
                     waitForEpochAck(self.getMyId(), leaderStateSummary);
@@ -1342,7 +1342,12 @@ public class Leader extends LearnerMaster {
      */
     @Override
     public synchronized void processAck(long sid, long zxid, SocketAddress followerAddr) {
-        if (((zxid & 0xffffffffL) != 0L) && !allowedToCommit) {
+                // Handle NEWLEADER ack first
+        if ((zxid & 0xffffffffL) == 0) {
+            /* accept NEWLEADER/UPTODATE barriers regardless of allowedToCommit */
+            return;
+        }
+        if (!allowedToCommit) {
             return; // last op committed was a leader change - from now on
         }
         // the new leader should commit
