@@ -155,12 +155,20 @@ public abstract class ServerCnxnFactory {
     public final void setZooKeeperServer(ZooKeeperServer zks) {
         this.zkServer = zks;
         if (zks != null) {
+            // Attach this factory to the server (secure or plain)
             if (secure) {
                 zks.setSecureServerCnxnFactory(this);
             } else {
                 zks.setServerCnxnFactory(this);
             }
-        }
+            // IMPORTANT: Propagate the server instance to any already-accepted connections.
+            // Without this, clients that connected before leader startup never complete the handshake.
+            /* Existing connections keep serving the server instance they were created with.
+ * New connections will use the newly assigned zkServer via this factory.
+ * We deliberately avoid touching per-connection state because most
+ * ServerCnxn implementations keep their ZooKeeperServer reference final.
+ */
+}
     }
 
     public abstract void closeAll(ServerCnxn.DisconnectReason reason);

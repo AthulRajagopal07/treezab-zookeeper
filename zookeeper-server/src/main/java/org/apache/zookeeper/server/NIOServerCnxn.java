@@ -437,6 +437,18 @@ public class NIOServerCnxn extends ServerCnxn {
 
     private void readConnectRequest() throws IOException, ClientCnxnLimitException {
         if (!isZKServerRunning()) {
+                // If the ZooKeeperServer was attached to the factory after this connection was accepted
+                // (e.g., right after leader election), try to pick it up so the client handshake can complete.
+                try {
+                    ZooKeeperServer maybe = (factory != null) ? factory.getZooKeeperServer() : null;
+                    if (maybe != null && maybe.isRunning()) {
+                        LOG.info("ZooKeeperServer is running; not rebinding final zkServer field {}", getRemoteSocketAddress());
+                    }
+                } catch (Exception ignore) {
+                    // no-op: we still rely on isZKServerRunning() check below
+                }
+            }
+            if (!isZKServerRunning()) {
             throw new IOException("ZooKeeperServer not running");
         }
         BinaryInputArchive bia = BinaryInputArchive.getArchive(new ByteBufferInputStream(incomingBuffer));

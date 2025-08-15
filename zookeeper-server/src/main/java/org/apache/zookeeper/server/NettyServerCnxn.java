@@ -688,3 +688,4 @@ public class NettyServerCnxn extends ServerCnxn {
         return this.handshakeState;
     }
 }
+

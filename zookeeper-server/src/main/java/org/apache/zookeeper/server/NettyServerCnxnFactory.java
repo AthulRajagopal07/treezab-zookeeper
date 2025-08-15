@@ -778,7 +778,7 @@ public class NettyServerCnxnFactory extends ServerCnxnFactory {
         });
     }
 
-    void removeCnxnFromIpMap(NettyServerCnxn cnxn, InetAddress remoteAddress) {
+    public void removeCnxnFromIpMap(NettyServerCnxn cnxn, InetAddress remoteAddress) {
         ipMap.compute(remoteAddress, (addr, cnxnCount) -> {
             if (cnxnCount == null) {
                 LOG.error("Unexpected remote address {} when removing cnxn {}", remoteAddress, cnxn);
@@ -851,3 +851,4 @@ public class NettyServerCnxnFactory extends ServerCnxnFactory {
         return outstandingHandshake.get();
     }
 }
+

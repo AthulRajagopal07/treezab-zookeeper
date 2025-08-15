@@ -963,7 +963,7 @@ public class Leader extends LearnerMaster {
                         self.getQuorumVerifier());
                 quorumLossTicks++;
                 if (quorumLossTicks > QUORUM_LOSS_GRACE_TICKS) {
-                    // removed aggressive epoch ack shutdown
+                    shutdown("Epoch acks missing for too long (" + quorumLossTicks + " grace ticks)");
                 } else {
                     Thread.sleep(self.tickTime);
                     waitForEpochAck(self.getMyId(), leaderStateSummary);
@@ -1067,7 +1067,7 @@ public class Leader extends LearnerMaster {
                     }
 
                     // check leader running status
-                    if (!self.isRunning()) {
+                    if (!this.isRunning()) {
                         // set shutdown flag
                         shutdownMessage = "Unexpected internal error";
                         break;
@@ -1342,11 +1342,6 @@ public class Leader extends LearnerMaster {
      */
     @Override
     public synchronized void processAck(long sid, long zxid, SocketAddress followerAddr) {
-                // Handle NEWLEADER ack first
-        if ((zxid & 0xffffffffL) == 0) {
-            /* accept NEWLEADER/UPTODATE barriers regardless of allowedToCommit */
-            return;
-        }
         if (!allowedToCommit) {
             return; // last op committed was a leader change - from now on
         }
@@ -1936,19 +1931,28 @@ final org.apache.zookeeper.server.ServerCnxnFactory cnxn = self.getCnxnFactory()
 if (cnxn != null) {
     LOG.info("[CLIENT-SOCKET] Reusing existing ServerCnxnFactory on {}", cnxn.getLocalAddress());
     self.setZooKeeperServer(zk);
-
-        // Ensure the leader ZooKeeperServer is started so learners don't block in waitForStartup()
-        try {
-            if (!zk.isRunning()) {
-                LOG.info("[STARTUP] Starting LeaderZooKeeperServer");
-                zk.startup();
-            } else {
-                LOG.info("[STARTUP] LeaderZooKeeperServer already running");
+            // Ensure the leader ZooKeeperServer is started so clients and learners can complete handshake
+            try {
+                if (!zk.isRunning()) {
+                    LOG.info("[STARTUP] Starting LeaderZooKeeperServer");
+                    zk.startup();
+                } else {
+                    LOG.info("[STARTUP] LeaderZooKeeperServer already running");
+                }
+            } catch (Exception e) {
+                LOG.error("[STARTUP] Failed to start LeaderZooKeeperServer", e);
+                throw new RuntimeException("Failed to start LeaderZooKeeperServer", e);
             }
-        } catch (Exception e) {
-            LOG.error("[STARTUP] Failed to start LeaderZooKeeperServer", e);
-            throw new RuntimeException("Failed to start LeaderZooKeeperServer", e);
-        }
+
+            // Make sure the client connection factory is bound to this ZooKeeperServer
+            try {
+                if (cnxn != null) {
+                    cnxn.setZooKeeperServer(zk);
+                    LOG.info("[CLIENT-SOCKET] Bound client connection factory to LeaderZooKeeperServer");
+                }
+            } catch (Exception e) {
+                LOG.warn("[CLIENT-SOCKET] Failed to bind ServerCnxnFactory to ZooKeeperServer", e);
+            }
 
 } else {
     LOG.warn("[CLIENT-SOCKET] No ServerCnxnFactory available on QuorumPeer; client port (2181) will not accept connections.");

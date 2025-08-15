@@ -105,6 +105,20 @@ public class Follower extends Learner {
                 self.setLeaderAddressAndId(leaderServer.addr, leaderServer.getId());
                 self.setZabState(QuorumPeer.ZabState.SYNCHRONIZATION);
                 syncWithLeader(newEpochZxid);
+            // Ensure the follower ZooKeeperServer is started so clients can connect
+            try {
+                if (fzk != null && !fzk.isRunning()) {
+                    LOG.info("[STARTUP] Starting FollowerZooKeeperServer");
+                    fzk.startup();
+                } else if (fzk != null) {
+                    LOG.info("[STARTUP] FollowerZooKeeperServer already running");
+                } else {
+                    LOG.warn("[STARTUP] FollowerZooKeeperServer instance is null");
+                }
+            } catch (Exception e) {
+                LOG.error("[STARTUP] Failed to start FollowerZooKeeperServer", e);
+                throw new RuntimeException("Failed to start FollowerZooKeeperServer", e);
+            }
                 self.setZabState(QuorumPeer.ZabState.BROADCAST);
                 completedSync = true;
                 long syncTime = Time.currentElapsedTime() - startTime;

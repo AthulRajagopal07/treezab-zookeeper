@@ -2225,10 +2225,13 @@ private FileTxnSnapLog logFactory = null;
 
     // Leader and learner will control the zookeeper server and pass it into QuorumPeer.
     public void setZooKeeperServer(ZooKeeperServer zks) {
+        LOG.info("[SET-ZKS] Updating cnxn factories with {}.", (zks != null ? zks.getClass().getSimpleName() : "null"));
         if (cnxnFactory != null) {
+            LOG.info("[SET-ZKS] Propagating to cnxnFactory: {}", cnxnFactory.getClass().getSimpleName());
             cnxnFactory.setZooKeeperServer(zks);
         }
         if (secureCnxnFactory != null) {
+            LOG.info("[SET-ZKS] Propagating to secureCnxnFactory: {}", secureCnxnFactory.getClass().getSimpleName());
             secureCnxnFactory.setZooKeeperServer(zks);
         }
     }
