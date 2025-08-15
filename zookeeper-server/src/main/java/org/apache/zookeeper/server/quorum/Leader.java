@@ -1936,6 +1936,20 @@ final org.apache.zookeeper.server.ServerCnxnFactory cnxn = self.getCnxnFactory()
 if (cnxn != null) {
     LOG.info("[CLIENT-SOCKET] Reusing existing ServerCnxnFactory on {}", cnxn.getLocalAddress());
     self.setZooKeeperServer(zk);
+
+        // Ensure the leader ZooKeeperServer is started so learners don't block in waitForStartup()
+        try {
+            if (!zk.isRunning()) {
+                LOG.info("[STARTUP] Starting LeaderZooKeeperServer");
+                zk.startup();
+            } else {
+                LOG.info("[STARTUP] LeaderZooKeeperServer already running");
+            }
+        } catch (Exception e) {
+            LOG.error("[STARTUP] Failed to start LeaderZooKeeperServer", e);
+            throw new RuntimeException("Failed to start LeaderZooKeeperServer", e);
+        }
+
 } else {
     LOG.warn("[CLIENT-SOCKET] No ServerCnxnFactory available on QuorumPeer; client port (2181) will not accept connections.");
 }

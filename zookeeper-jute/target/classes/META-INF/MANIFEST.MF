@@ -18,7 +18,7 @@ Export-Package: org.apache.zookeeper.data;uses:="org.apache.jute,org.apa
  te.compiler;uses:="org.apache.jute.compiler.generated";version="3.10.0"
  ,org.apache.jute.compiler.generated;uses:="org.apache.jute.compiler";ve
  rsion="3.10.0"
-Implementation-Build: 95897d2a76887d148e0a9351cbc7e69656a2b6ab-dirty
+Implementation-Build: cc15c7a080615035a9fac9c01e7819960984aed6-dirty
 Implementation-Title: Apache ZooKeeper - Jute
 Implementation-Vendor: The Apache Software Foundation
 Implementation-Version: 3.10.0-SNAPSHOT
